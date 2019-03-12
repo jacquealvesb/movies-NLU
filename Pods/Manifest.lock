@@ -1,0 +1,20 @@
+PODS:
+  - IBMWatsonNaturalLanguageUnderstandingV1 (1.4.0):
+    - IBMWatsonRestKit (~> 2.0.0)
+  - IBMWatsonRestKit (2.0.0)
+
+DEPENDENCIES:
+  - IBMWatsonNaturalLanguageUnderstandingV1 (~> 1.4.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - IBMWatsonNaturalLanguageUnderstandingV1
+    - IBMWatsonRestKit
+
+SPEC CHECKSUMS:
+  IBMWatsonNaturalLanguageUnderstandingV1: be949314559656a2e5f1bfb241e7fd0332d72109
+  IBMWatsonRestKit: 0a8d0f2f1cc757a0231729e9206e0b774cda0997
+
+PODFILE CHECKSUM: 94affc51dd185c3bbffbdb0b9aff87ad6c7de302
+
+COCOAPODS: 1.5.3
