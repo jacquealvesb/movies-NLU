@@ -20,4 +20,11 @@ class Review {
         self.id = id
         self.url = url
     }
+    
+    init(withDictionary dict: [String:Any]) {
+        self.author = dict["author"] as? String ?? ""
+        self.content = dict["content"] as? String ?? ""
+        self.id = dict["id"] as? String ?? ""
+        self.url = dict["url"] as? String ?? ""
+    }
 }
