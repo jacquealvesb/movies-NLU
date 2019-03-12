@@ -1,0 +1,1343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05A44B9066ED55BC8C606AC0AB92BF87 /* MetadataOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C6839AE3AE1E0D10A079F858E1F7AF /* MetadataOptions.swift */; };
+		08690EFB6168F64073EB965AA231184E /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A1E6B468B1F626410B79B3D765320B /* Feed.swift */; };
+		0C717A9F15E95E162D9602CD2AE29B2A /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DB60EBCCFF448E4F8DBD5ED4BBE5F8 /* Authentication.swift */; };
+		180AD0FF6E48B24331B6EB6CC878AC06 /* SemanticRolesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5B24E646FA00FD8C0FA3738053B377 /* SemanticRolesResult.swift */; };
+		194F9828EDBD1CBA94891F2588FB7958 /* EntityMention.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B520DA5456848A38D2C645CC16495 /* EntityMention.swift */; };
+		1F6C8359D660FE672C3DD53E1236A609 /* RestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC052143F06854DE232B2356D3B2F9C9 /* RestRequest.swift */; };
+		226EFF2E10A5F228B3008E6C6F4EDECE /* IBMWatsonRestKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CDA16C8909A758EC4CA684158F4FD31E /* IBMWatsonRestKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		244779317094ED39A23D3F9B913A8623 /* ListModelsResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41066041428FAB52EE0CD8C036CD562A /* ListModelsResults.swift */; };
+		249DE8A6F43BE164D4D9DB8C20285C10 /* EntitiesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB39D25213A89CA9459452B9AFE8FF0 /* EntitiesResult.swift */; };
+		2790A2424F4D131A19935C5AEA6FC2DD /* AnalysisResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE0D9D1F3DC62FC76553765A744DAE6 /* AnalysisResults.swift */; };
+		2886337E7981AC84C5E82E42D39F07B2 /* EmotionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DAC6583A0C650E907EB619BC56C5CD /* EmotionResult.swift */; };
+		2B93B145E61A21851A00B4A888041F47 /* NaturalLanguageUnderstanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A10386E393A844463584FA24EF7986 /* NaturalLanguageUnderstanding.swift */; };
+		2DA386AD01FE7F55812AB37339DADDF8 /* RestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9092839E8E3F1A7AA07596F4D684FD4 /* RestError.swift */; };
+		33B1C50078FEBE58D96A12D9A7C10A5F /* DisambiguationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05BEE98172DAB816C5BE4D2BDCD79F2 /* DisambiguationResult.swift */; };
+		34153F2AB0C4C0B7936B5FC9FF528C0D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C4E62C5A3B3A20D04D06BDF007691C /* Model.swift */; };
+		3902D88F87C98459635048ADE296DCA7 /* TargetedSentimentResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B43C3FAFE83045CC951712DC016BAFC /* TargetedSentimentResults.swift */; };
+		3BF894CE506F1383609C955BB0842D35 /* Usage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5A35B73CAE2986F2144CE58B984088 /* Usage.swift */; };
+		3FC5A18E7B7B2558DC67253939EDCB9C /* SemanticRolesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547BD99DA3C98F6A688BC1FC7CA5E5D7 /* SemanticRolesEntity.swift */; };
+		416551603141D24848D877B43E958F04 /* EntitiesOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9263CAC583DD0069AF4BB2A9B6B2A3 /* EntitiesOptions.swift */; };
+		42FB3677CAE1B609A08D8B604B1EBFD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE230D46590F18D612A53B4B959F840E /* Foundation.framework */; };
+		45970E579CE8321B473BB60D318A6D38 /* Pods-moviesNLUTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C67EE791CF0DBD35B41C95F7C71B93AE /* Pods-moviesNLUTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4778A82FF18EAD6A546DB7410DACE6E6 /* RelationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3800CDDF6559317FA45F430FA0F6E6E /* RelationEntity.swift */; };
+		4A0E969D296EB32DC9C3CE6A4715035C /* RelationsOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5783B779821AE753F0D41EDBCB824FC3 /* RelationsOptions.swift */; };
+		4B6311D920022E261F8B924D43FCE7FD /* Pods-moviesNLUTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCB1F91D3CB62A26C95556B2DE1FFA4 /* Pods-moviesNLUTests-dummy.m */; };
+		535B9D1657DBC6F2BFA00BA91271A9F0 /* IBMWatsonRestKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 890E1ABA5728AC886846D4423BFE5644 /* IBMWatsonRestKit-dummy.m */; };
+		53B24628FD12B1719DF62764631C44E1 /* KeywordsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE13933CAFCFFA095F6E28385109770F /* KeywordsResult.swift */; };
+		54369E0EAE80DB2720205417F94501B9 /* EmotionScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCEAC530382FBF3AA2EB2FCED965046 /* EmotionScores.swift */; };
+		554E8209BAD0E7146206C857088E7E76 /* Pods-moviesNLUUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AB58F685A58ED52408E89163DE887C9D /* Pods-moviesNLUUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5588D9A400A8E5E792098BC6755DE612 /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = A808C675535AB434E25CB11380347829 /* Features.swift */; };
+		57F66C77A3C98BB98EE39F8A791F381C /* SemanticRolesSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0C0BC645B4F678C891D6A3CD9B5A01 /* SemanticRolesSubject.swift */; };
+		5DD90EAF11DA267008D6F42E4EA42671 /* EmotionOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857E80CEDC9D3049145BC9E512ABB34 /* EmotionOptions.swift */; };
+		5DEB57804103B20F372282291249978C /* SemanticRolesVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A52D2D977BE2C29198A44414E1D08D /* SemanticRolesVerb.swift */; };
+		5E29632DE80AAAC00401366F001A4651 /* SemanticRolesKeyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2C6CB0718A2FE02F17D2E040DA012 /* SemanticRolesKeyword.swift */; };
+		67D7F49AB51C4B0F82EF5ADE6C23E9C3 /* Pods-moviesNLU-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B76476EDBB53597768E46A199AB24002 /* Pods-moviesNLU-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		69652151C4864B5A137BC671ACB28574 /* IBMWatsonNaturalLanguageUnderstandingV1-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B822F969B5F15423CB43D84C5ADD813A /* IBMWatsonNaturalLanguageUnderstandingV1-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6ABB665DD2A7906FDEE1C8AD6CFFC9D3 /* DeleteModelResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0254905B7D605ADE1DABA0FD7DC37AD5 /* DeleteModelResults.swift */; };
+		6C49F25F96C1C0DE102BA1803DD76C0B /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C35E36D87774C839EB85797D6BB09BF /* Parameters.swift */; };
+		7139CAE39341C4DB48FD3CA3B08FEB4F /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7512D298B0B6A85E6280DECA8F773427 /* MultipartFormData.swift */; };
+		778727D27522A0646D19EAFCD2071BDA /* RelationsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0B6E895DA87E51B24044DFE71A4B4C /* RelationsResult.swift */; };
+		7CF3F4EECF1BD78EB008599A46F2FCD5 /* ConceptsOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B1314B0EE6EFDED450A16823D368F /* ConceptsOptions.swift */; };
+		7F36E0AE248822DF8431F5CEC747C684 /* SemanticRolesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DC4FF99A170CBC53812DBB2A464D5 /* SemanticRolesAction.swift */; };
+		80FC480C0A9D72681630C8F27C0D333A /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E5A82C475FAEB9DE5E774206D3FA32 /* Shared.swift */; };
+		874863770145B0A8157320F3F7A5C14E /* SentimentResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6130B69FCE6EA7BCD8E01EEF440CC524 /* SentimentResult.swift */; };
+		8CBEBDC90E7EDFDE17DBBC535900D56D /* RestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B8EF99E6594238349FF6272431C615 /* RestResponse.swift */; };
+		90C9DB74EBAB03F0755D2D7ACB4F87D7 /* IBMWatsonNaturalLanguageUnderstandingV1-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F55E2960332EDE962468939E437E2E /* IBMWatsonNaturalLanguageUnderstandingV1-dummy.m */; };
+		911E05FCF88F661DB451FF3366795E69 /* Pods-moviesNLU-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DE18BEFD6A707D0F152E331FEAD1CD /* Pods-moviesNLU-dummy.m */; };
+		92229283B7A3293F5003F524F1B2E6A3 /* TargetedEmotionResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC30C23C0BD13A12BBB7A92E9E64FBC /* TargetedEmotionResults.swift */; };
+		9A8F2FD3A1A481534291F1C2C656D703 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C2752D1A1FFDA35308296A00A340618 /* RestKit.framework */; };
+		9F7C72AEFA5E620F005872058A86510B /* DocumentEmotionResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9D85E18409DFF5344974A7A4D51EA3 /* DocumentEmotionResults.swift */; };
+		A7C67B0C89D38CCC4F29B8923A8D3E92 /* FeatureSentimentResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C07C186701BB36156463284A806EFAF /* FeatureSentimentResults.swift */; };
+		AC8A42AC9702B5D4B03F5716212A5AA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE230D46590F18D612A53B4B959F840E /* Foundation.framework */; };
+		AE41EF5D35B8CE340989F48923620F02 /* CategoriesOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FD8C678229553033A90D26872F9F36 /* CategoriesOptions.swift */; };
+		B7ED7E81329D4F5F470279876A6C8E85 /* RelationArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B751653752BA0C7C8446AC3FB88F37F /* RelationArgument.swift */; };
+		B99A790082A4B20214904FE2059B6A0A /* SemanticRolesObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4447D974F76C1DEF1F09AFBB92A9ECAB /* SemanticRolesObject.swift */; };
+		B9B41038C522814FE6D8B0D3551F42FE /* SemanticRolesOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA7BF09256AD7FC1509E2D7C8C398CB /* SemanticRolesOptions.swift */; };
+		BAD2D3ACE56E84060E6925D1CA67F114 /* MetadataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A104A02CC7A08E3F8219CF4233233C /* MetadataResult.swift */; };
+		C8D3F90608492DC80A1495EDAC0C310D /* SentimentOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D29BD61139BD44C2ACB1DCD83FC211D /* SentimentOptions.swift */; };
+		D186AFB8DDD3D2D9C2F6E7A0B8FC99FF /* DocumentSentimentResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D649947B34E965DC20560C3EBC37DA /* DocumentSentimentResults.swift */; };
+		D3C73491114C7A7023B38A220E443C7B /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DB9821F4424BED1B20251E230E5143 /* CodableExtensions.swift */; };
+		D51AADCB66E91A41D7D00EB26232F40D /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5BF689E18E007D0586D999A4313886 /* Author.swift */; };
+		D5B3D4C770C2DAE114902BC460D81377 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE230D46590F18D612A53B4B959F840E /* Foundation.framework */; };
+		E00102FEE19A392B3130B8DEB86E35B1 /* KeywordsOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2735B2AE8B816B2D744FD0145699D0C /* KeywordsOptions.swift */; };
+		EB52AA751EE03D966D4AAC80B86B169D /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A6B8616A43500F4515CEE0D5188FCF /* JSON.swift */; };
+		EF07FE25475131357B6B76CEB7C48CF2 /* RestUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0605DE8CC4DEEA13D54AC3B58F87F259 /* RestUtilities.swift */; };
+		F2C8C2ABB0654C8EA487C0EC31BEE410 /* Pods-moviesNLUUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0E247C0EE231545CB85C744D36F660 /* Pods-moviesNLUUITests-dummy.m */; };
+		F30D8E724345F145D2DB294E906E5B12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE230D46590F18D612A53B4B959F840E /* Foundation.framework */; };
+		F94D99C90F939F2AF8A90AAEFBD8EB05 /* CategoriesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A9D098E2ACB1D252F8F27F06372ADD /* CategoriesResult.swift */; };
+		F9B45714F48E33FC8C0136A004E0D696 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE230D46590F18D612A53B4B959F840E /* Foundation.framework */; };
+		FBE54155637A0601F0CF12D7855695FB /* ConceptsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAAA36D467863287CAFD4457CCCAA10 /* ConceptsResult.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0A4DDA66A086C32FFAE08E2377910E3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF79663B44F04C69678E9628055A48BA;
+			remoteInfo = "Pods-moviesNLU";
+		};
+		6986AC549D0612F3613160CA800E3604 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF79663B44F04C69678E9628055A48BA;
+			remoteInfo = "Pods-moviesNLU";
+		};
+		D4A019EB0BD6089076640007047EE15D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0134240899C40CE08449AD4B2B932F60;
+			remoteInfo = IBMWatsonRestKit;
+		};
+		D500BFA4FB4E0EF8272106095FC023C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC16236CC9E1015085BC1C84B1C967FE;
+			remoteInfo = IBMWatsonNaturalLanguageUnderstandingV1;
+		};
+		D61B30DCC3E0B7C4C6BED1E97A778D78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0134240899C40CE08449AD4B2B932F60;
+			remoteInfo = IBMWatsonRestKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0254905B7D605ADE1DABA0FD7DC37AD5 /* DeleteModelResults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeleteModelResults.swift; path = Source/NaturalLanguageUnderstandingV1/Models/DeleteModelResults.swift; sourceTree = "<group>"; };
+		0605DE8CC4DEEA13D54AC3B58F87F259 /* RestUtilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RestUtilities.swift; path = Sources/RestKit/RestUtilities.swift; sourceTree = "<group>"; };
+		096394DAB5C272C280AAC10AD4606F47 /* IBMWatsonNaturalLanguageUnderstandingV1.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IBMWatsonNaturalLanguageUnderstandingV1.modulemap; sourceTree = "<group>"; };
+		0BCB1F91D3CB62A26C95556B2DE1FFA4 /* Pods-moviesNLUTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-moviesNLUTests-dummy.m"; sourceTree = "<group>"; };
+		0BD448BD0D174F081B35B29644D18EB7 /* RestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RestKit.framework; path = IBMWatsonRestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D29BD61139BD44C2ACB1DCD83FC211D /* SentimentOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SentimentOptions.swift; path = Source/NaturalLanguageUnderstandingV1/Models/SentimentOptions.swift; sourceTree = "<group>"; };
+		1001844E2798BE95D619948202CB1E3D /* Pods-moviesNLUTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-moviesNLUTests-resources.sh"; sourceTree = "<group>"; };
+		19217573D225F872B7A26CABB38D98DD /* IBMWatsonNaturalLanguageUnderstandingV1.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IBMWatsonNaturalLanguageUnderstandingV1.xcconfig; sourceTree = "<group>"; };
+		1C2752D1A1FFDA35308296A00A340618 /* RestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F57CBEDCE1412F75C71F47977BB0D47 /* Pods-moviesNLUUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-moviesNLUUITests-frameworks.sh"; sourceTree = "<group>"; };
+		20D649947B34E965DC20560C3EBC37DA /* DocumentSentimentResults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DocumentSentimentResults.swift; path = Source/NaturalLanguageUnderstandingV1/Models/DocumentSentimentResults.swift; sourceTree = "<group>"; };
+		24A6B8616A43500F4515CEE0D5188FCF /* JSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSON.swift; path = Sources/RestKit/JSON.swift; sourceTree = "<group>"; };
+		24C6839AE3AE1E0D10A079F858E1F7AF /* MetadataOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MetadataOptions.swift; path = Source/NaturalLanguageUnderstandingV1/Models/MetadataOptions.swift; sourceTree = "<group>"; };
+		252ED5B80596FC26D79C6860421D5A52 /* Pods_moviesNLUTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_moviesNLUTests.framework; path = "Pods-moviesNLUTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		286ADB6B914CF5AA232D085AD778C620 /* Pods-moviesNLUUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-moviesNLUUITests-resources.sh"; sourceTree = "<group>"; };
+		28FA29469EBB067AA73628FAEAB7A1A0 /* Pods-moviesNLUTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-moviesNLUTests.modulemap"; sourceTree = "<group>"; };
+		2C35E36D87774C839EB85797D6BB09BF /* Parameters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parameters.swift; path = Source/NaturalLanguageUnderstandingV1/Models/Parameters.swift; sourceTree = "<group>"; };
+		2C9D85E18409DFF5344974A7A4D51EA3 /* DocumentEmotionResults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DocumentEmotionResults.swift; path = Source/NaturalLanguageUnderstandingV1/Models/DocumentEmotionResults.swift; sourceTree = "<group>"; };
+		2DA7BF09256AD7FC1509E2D7C8C398CB /* SemanticRolesOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SemanticRolesOptions.swift; path = Source/NaturalLanguageUnderstandingV1/Models/SemanticRolesOptions.swift; sourceTree = "<group>"; };
+		2E0A3CE99133C249780C104654E50C35 /* Pods-moviesNLUTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-moviesNLUTests.debug.xcconfig"; sourceTree = "<group>"; };
+		34B2C6CB0718A2FE02F17D2E040DA012 /* SemanticRolesKeyword.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SemanticRolesKeyword.swift; path = Source/NaturalLanguageUnderstandingV1/Models/SemanticRolesKeyword.swift; sourceTree = "<group>"; };
+		3AB39D25213A89CA9459452B9AFE8FF0 /* EntitiesResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EntitiesResult.swift; path = Source/NaturalLanguageUnderstandingV1/Models/EntitiesResult.swift; sourceTree = "<group>"; };
+		3BCEAC530382FBF3AA2EB2FCED965046 /* EmotionScores.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmotionScores.swift; path = Source/NaturalLanguageUnderstandingV1/Models/EmotionScores.swift; sourceTree = "<group>"; };
+		3F28B6F41F0B13DAA7A3DDA4671EA650 /* Pods-moviesNLU-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-moviesNLU-acknowledgements.markdown"; sourceTree = "<group>"; };
+		41066041428FAB52EE0CD8C036CD562A /* ListModelsResults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ListModelsResults.swift; path = Source/NaturalLanguageUnderstandingV1/Models/ListModelsResults.swift; sourceTree = "<group>"; };
+		41A104A02CC7A08E3F8219CF4233233C /* MetadataResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MetadataResult.swift; path = Source/NaturalLanguageUnderstandingV1/Models/MetadataResult.swift; sourceTree = "<group>"; };
+		4447D974F76C1DEF1F09AFBB92A9ECAB /* SemanticRolesObject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SemanticRolesObject.swift; path = Source/NaturalLanguageUnderstandingV1/Models/SemanticRolesObject.swift; sourceTree = "<group>"; };
+		4896D2245CB55B5B8AB5A24DC38460A2 /* Pods-moviesNLUUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-moviesNLUUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		49CA8723D7B79C6D653FCF2C6A925662 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B43C3FAFE83045CC951712DC016BAFC /* TargetedSentimentResults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TargetedSentimentResults.swift; path = Source/NaturalLanguageUnderstandingV1/Models/TargetedSentimentResults.swift; sourceTree = "<group>"; };
+		4D5B24E646FA00FD8C0FA3738053B377 /* SemanticRolesResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SemanticRolesResult.swift; path = Source/NaturalLanguageUnderstandingV1/Models/SemanticRolesResult.swift; sourceTree = "<group>"; };
+		51F55E2960332EDE962468939E437E2E /* IBMWatsonNaturalLanguageUnderstandingV1-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IBMWatsonNaturalLanguageUnderstandingV1-dummy.m"; sourceTree = "<group>"; };
+		547BD99DA3C98F6A688BC1FC7CA5E5D7 /* SemanticRolesEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SemanticRolesEntity.swift; path = Source/NaturalLanguageUnderstandingV1/Models/SemanticRolesEntity.swift; sourceTree = "<group>"; };
+		56DE18BEFD6A707D0F152E331FEAD1CD /* Pods-moviesNLU-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-moviesNLU-dummy.m"; sourceTree = "<group>"; };
+		5783B779821AE753F0D41EDBCB824FC3 /* RelationsOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RelationsOptions.swift; path = Source/NaturalLanguageUnderstandingV1/Models/RelationsOptions.swift; sourceTree = "<group>"; };
+		585CE80529C9B86C1CD1A7D3C46E7B48 /* Pods-moviesNLU-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-moviesNLU-acknowledgements.plist"; sourceTree = "<group>"; };
+		5CE0D9D1F3DC62FC76553765A744DAE6 /* AnalysisResults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnalysisResults.swift; path = Source/NaturalLanguageUnderstandingV1/Models/AnalysisResults.swift; sourceTree = "<group>"; };
+		5EAAA36D467863287CAFD4457CCCAA10 /* ConceptsResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConceptsResult.swift; path = Source/NaturalLanguageUnderstandingV1/Models/ConceptsResult.swift; sourceTree = "<group>"; };
+		60B8EF99E6594238349FF6272431C615 /* RestResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RestResponse.swift; path = Sources/RestKit/RestResponse.swift; sourceTree = "<group>"; };
+		6130B69FCE6EA7BCD8E01EEF440CC524 /* SentimentResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SentimentResult.swift; path = Source/NaturalLanguageUnderstandingV1/Models/SentimentResult.swift; sourceTree = "<group>"; };
+		64C4E62C5A3B3A20D04D06BDF007691C /* Model.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Source/NaturalLanguageUnderstandingV1/Models/Model.swift; sourceTree = "<group>"; };
+		6E61A41C2164DD2327776FF63D896FD2 /* IBMWatsonRestKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IBMWatsonRestKit-prefix.pch"; sourceTree = "<group>"; };
+		7512D298B0B6A85E6280DECA8F773427 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Sources/RestKit/MultipartFormData.swift; sourceTree = "<group>"; };
+		77E56B180971FE9ED4EC5E4BD866360C /* IBMWatsonRestKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IBMWatsonRestKit.modulemap; sourceTree = "<group>"; };
+		78641441D8D0AC6B06B457AA78826C86 /* Pods-moviesNLU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-moviesNLU.debug.xcconfig"; sourceTree = "<group>"; };
+		7C07C186701BB36156463284A806EFAF /* FeatureSentimentResults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FeatureSentimentResults.swift; path = Source/NaturalLanguageUnderstandingV1/Models/FeatureSentimentResults.swift; sourceTree = "<group>"; };
+		7C89AAC80CBDE909351C88C0A7E4624E /* Pods_moviesNLUUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_moviesNLUUITests.framework; path = "Pods-moviesNLUUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CCE2C11BD8E171398837537070402BA /* Pods-moviesNLUTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-moviesNLUTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7E645C853D3B419FDC00F8275895EDB9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F8EAE0BEE967AD3E05649C1B185A4B /* NaturalLanguageUnderstanding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NaturalLanguageUnderstanding.framework; path = IBMWatsonNaturalLanguageUnderstandingV1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8857E80CEDC9D3049145BC9E512ABB34 /* EmotionOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmotionOptions.swift; path = Source/NaturalLanguageUnderstandingV1/Models/EmotionOptions.swift; sourceTree = "<group>"; };
+		890E1ABA5728AC886846D4423BFE5644 /* IBMWatsonRestKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IBMWatsonRestKit-dummy.m"; sourceTree = "<group>"; };
+		8EC30C23C0BD13A12BBB7A92E9E64FBC /* TargetedEmotionResults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TargetedEmotionResults.swift; path = Source/NaturalLanguageUnderstandingV1/Models/TargetedEmotionResults.swift; sourceTree = "<group>"; };
+		9259C68EB3E552A01569028F06C87425 /* IBMWatsonRestKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IBMWatsonRestKit.xcconfig; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		95116F07F1BD7C57FF8F25BDCDBE0B9B /* Pods_moviesNLU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_moviesNLU.framework; path = "Pods-moviesNLU.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97E5A82C475FAEB9DE5E774206D3FA32 /* Shared.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shared.swift; path = Source/SupportingFiles/Shared.swift; sourceTree = "<group>"; };
+		9B751653752BA0C7C8446AC3FB88F37F /* RelationArgument.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RelationArgument.swift; path = Source/NaturalLanguageUnderstandingV1/Models/RelationArgument.swift; sourceTree = "<group>"; };
+		9F0E247C0EE231545CB85C744D36F660 /* Pods-moviesNLUUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-moviesNLUUITests-dummy.m"; sourceTree = "<group>"; };
+		A808C675535AB434E25CB11380347829 /* Features.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Features.swift; path = Source/NaturalLanguageUnderstandingV1/Models/Features.swift; sourceTree = "<group>"; };
+		A8B4B62CD3F0295E0E30AB95FAAAB0A2 /* Pods-moviesNLU.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-moviesNLU.modulemap"; sourceTree = "<group>"; };
+		AB58F685A58ED52408E89163DE887C9D /* Pods-moviesNLUUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-moviesNLUUITests-umbrella.h"; sourceTree = "<group>"; };
+		AD92E1398E8EDAEE9CFC0B94D0ECB52D /* Pods-moviesNLUUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-moviesNLUUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B0A10386E393A844463584FA24EF7986 /* NaturalLanguageUnderstanding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NaturalLanguageUnderstanding.swift; path = Source/NaturalLanguageUnderstandingV1/NaturalLanguageUnderstanding.swift; sourceTree = "<group>"; };
+		B2735B2AE8B816B2D744FD0145699D0C /* KeywordsOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeywordsOptions.swift; path = Source/NaturalLanguageUnderstandingV1/Models/KeywordsOptions.swift; sourceTree = "<group>"; };
+		B6DB9821F4424BED1B20251E230E5143 /* CodableExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CodableExtensions.swift; path = Sources/RestKit/CodableExtensions.swift; sourceTree = "<group>"; };
+		B76476EDBB53597768E46A199AB24002 /* Pods-moviesNLU-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-moviesNLU-umbrella.h"; sourceTree = "<group>"; };
+		B7A52D2D977BE2C29198A44414E1D08D /* SemanticRolesVerb.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SemanticRolesVerb.swift; path = Source/NaturalLanguageUnderstandingV1/Models/SemanticRolesVerb.swift; sourceTree = "<group>"; };
+		B822F969B5F15423CB43D84C5ADD813A /* IBMWatsonNaturalLanguageUnderstandingV1-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IBMWatsonNaturalLanguageUnderstandingV1-umbrella.h"; sourceTree = "<group>"; };
+		B8A9D098E2ACB1D252F8F27F06372ADD /* CategoriesResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CategoriesResult.swift; path = Source/NaturalLanguageUnderstandingV1/Models/CategoriesResult.swift; sourceTree = "<group>"; };
+		BA0C0BC645B4F678C891D6A3CD9B5A01 /* SemanticRolesSubject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SemanticRolesSubject.swift; path = Source/NaturalLanguageUnderstandingV1/Models/SemanticRolesSubject.swift; sourceTree = "<group>"; };
+		BBFAFA41835C4A8E54013015E04DC0D3 /* Pods-moviesNLU-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-moviesNLU-frameworks.sh"; sourceTree = "<group>"; };
+		BC79BACE99D97B4FCDA21936325305F0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD5A35B73CAE2986F2144CE58B984088 /* Usage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Usage.swift; path = Source/NaturalLanguageUnderstandingV1/Models/Usage.swift; sourceTree = "<group>"; };
+		BDCF0C5BDE7EEEB713E2B85BBF99C827 /* Pods-moviesNLUUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-moviesNLUUITests.modulemap"; sourceTree = "<group>"; };
+		BE5A99BDFC9CFAFA7B2E6672AE30EE1A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C53B520DA5456848A38D2C645CC16495 /* EntityMention.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EntityMention.swift; path = Source/NaturalLanguageUnderstandingV1/Models/EntityMention.swift; sourceTree = "<group>"; };
+		C5DB60EBCCFF448E4F8DBD5ED4BBE5F8 /* Authentication.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Authentication.swift; path = Sources/RestKit/Authentication.swift; sourceTree = "<group>"; };
+		C67EE791CF0DBD35B41C95F7C71B93AE /* Pods-moviesNLUTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-moviesNLUTests-umbrella.h"; sourceTree = "<group>"; };
+		C8066A08A3A0CD3DC80DCB68AA474046 /* Pods-moviesNLUTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-moviesNLUTests.release.xcconfig"; sourceTree = "<group>"; };
+		CC32A1855A91E9F55DBEAE35C6B6B991 /* Pods-moviesNLUUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-moviesNLUUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CDA16C8909A758EC4CA684158F4FD31E /* IBMWatsonRestKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IBMWatsonRestKit-umbrella.h"; sourceTree = "<group>"; };
+		D05BEE98172DAB816C5BE4D2BDCD79F2 /* DisambiguationResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DisambiguationResult.swift; path = Source/NaturalLanguageUnderstandingV1/Models/DisambiguationResult.swift; sourceTree = "<group>"; };
+		D1E18876E7688871A084C59ACAD1F356 /* Pods-moviesNLU-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-moviesNLU-resources.sh"; sourceTree = "<group>"; };
+		D3A7CC7B2C20C3BFCFDF0A912743A347 /* Pods-moviesNLU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-moviesNLU.release.xcconfig"; sourceTree = "<group>"; };
+		D4DE049CDB56FD3B3316CF3C62D5A4D1 /* Pods-moviesNLUUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-moviesNLUUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D80DC4FF99A170CBC53812DBB2A464D5 /* SemanticRolesAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SemanticRolesAction.swift; path = Source/NaturalLanguageUnderstandingV1/Models/SemanticRolesAction.swift; sourceTree = "<group>"; };
+		D8A1E6B468B1F626410B79B3D765320B /* Feed.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Feed.swift; path = Source/NaturalLanguageUnderstandingV1/Models/Feed.swift; sourceTree = "<group>"; };
+		DE0B6E895DA87E51B24044DFE71A4B4C /* RelationsResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RelationsResult.swift; path = Source/NaturalLanguageUnderstandingV1/Models/RelationsResult.swift; sourceTree = "<group>"; };
+		DE230D46590F18D612A53B4B959F840E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DF5B1314B0EE6EFDED450A16823D368F /* ConceptsOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConceptsOptions.swift; path = Source/NaturalLanguageUnderstandingV1/Models/ConceptsOptions.swift; sourceTree = "<group>"; };
+		E2DAC6583A0C650E907EB619BC56C5CD /* EmotionResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmotionResult.swift; path = Source/NaturalLanguageUnderstandingV1/Models/EmotionResult.swift; sourceTree = "<group>"; };
+		E3FD8C678229553033A90D26872F9F36 /* CategoriesOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CategoriesOptions.swift; path = Source/NaturalLanguageUnderstandingV1/Models/CategoriesOptions.swift; sourceTree = "<group>"; };
+		EB5BF689E18E007D0586D999A4313886 /* Author.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Author.swift; path = Source/NaturalLanguageUnderstandingV1/Models/Author.swift; sourceTree = "<group>"; };
+		EB89F26B3EBB22A817BBA0CE83DD0119 /* Pods-moviesNLUTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-moviesNLUTests-frameworks.sh"; sourceTree = "<group>"; };
+		EC052143F06854DE232B2356D3B2F9C9 /* RestRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RestRequest.swift; path = Sources/RestKit/RestRequest.swift; sourceTree = "<group>"; };
+		F3800CDDF6559317FA45F430FA0F6E6E /* RelationEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RelationEntity.swift; path = Source/NaturalLanguageUnderstandingV1/Models/RelationEntity.swift; sourceTree = "<group>"; };
+		F4A981D2D0AE195AEF03748951084D7E /* IBMWatsonNaturalLanguageUnderstandingV1-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IBMWatsonNaturalLanguageUnderstandingV1-prefix.pch"; sourceTree = "<group>"; };
+		F9092839E8E3F1A7AA07596F4D684FD4 /* RestError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RestError.swift; path = Sources/RestKit/RestError.swift; sourceTree = "<group>"; };
+		FA7E94055E0BB877E1A0595C9C26454D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC9263CAC583DD0069AF4BB2A9B6B2A3 /* EntitiesOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EntitiesOptions.swift; path = Source/NaturalLanguageUnderstandingV1/Models/EntitiesOptions.swift; sourceTree = "<group>"; };
+		FDD4F4853FB9EBB305A043EFF25D5D74 /* Pods-moviesNLUTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-moviesNLUTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		FE13933CAFCFFA095F6E28385109770F /* KeywordsResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeywordsResult.swift; path = Source/NaturalLanguageUnderstandingV1/Models/KeywordsResult.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		86CE2D1239CF2BAC98CF80D536E95BFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC8A42AC9702B5D4B03F5716212A5AA8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACA7EC81EB30DA2D0D4F70A738F1331C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5B3D4C770C2DAE114902BC460D81377 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0E9BF7C2752BE568A4FDDBE3336B657 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F30D8E724345F145D2DB294E906E5B12 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD2C5670A3F9A4EE5806A2FACFF0463C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9B45714F48E33FC8C0136A004E0D696 /* Foundation.framework in Frameworks */,
+				9A8F2FD3A1A481534291F1C2C656D703 /* RestKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD7D2B9C601436629F1CA4B5BEBC1730 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42FB3677CAE1B609A08D8B604B1EBFD9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B1F91473F35F18323BE590280C62086 /* IBMWatsonNaturalLanguageUnderstandingV1 */ = {
+			isa = PBXGroup;
+			children = (
+				5CE0D9D1F3DC62FC76553765A744DAE6 /* AnalysisResults.swift */,
+				EB5BF689E18E007D0586D999A4313886 /* Author.swift */,
+				E3FD8C678229553033A90D26872F9F36 /* CategoriesOptions.swift */,
+				B8A9D098E2ACB1D252F8F27F06372ADD /* CategoriesResult.swift */,
+				DF5B1314B0EE6EFDED450A16823D368F /* ConceptsOptions.swift */,
+				5EAAA36D467863287CAFD4457CCCAA10 /* ConceptsResult.swift */,
+				0254905B7D605ADE1DABA0FD7DC37AD5 /* DeleteModelResults.swift */,
+				D05BEE98172DAB816C5BE4D2BDCD79F2 /* DisambiguationResult.swift */,
+				2C9D85E18409DFF5344974A7A4D51EA3 /* DocumentEmotionResults.swift */,
+				20D649947B34E965DC20560C3EBC37DA /* DocumentSentimentResults.swift */,
+				8857E80CEDC9D3049145BC9E512ABB34 /* EmotionOptions.swift */,
+				E2DAC6583A0C650E907EB619BC56C5CD /* EmotionResult.swift */,
+				3BCEAC530382FBF3AA2EB2FCED965046 /* EmotionScores.swift */,
+				FC9263CAC583DD0069AF4BB2A9B6B2A3 /* EntitiesOptions.swift */,
+				3AB39D25213A89CA9459452B9AFE8FF0 /* EntitiesResult.swift */,
+				C53B520DA5456848A38D2C645CC16495 /* EntityMention.swift */,
+				A808C675535AB434E25CB11380347829 /* Features.swift */,
+				7C07C186701BB36156463284A806EFAF /* FeatureSentimentResults.swift */,
+				D8A1E6B468B1F626410B79B3D765320B /* Feed.swift */,
+				B2735B2AE8B816B2D744FD0145699D0C /* KeywordsOptions.swift */,
+				FE13933CAFCFFA095F6E28385109770F /* KeywordsResult.swift */,
+				41066041428FAB52EE0CD8C036CD562A /* ListModelsResults.swift */,
+				24C6839AE3AE1E0D10A079F858E1F7AF /* MetadataOptions.swift */,
+				41A104A02CC7A08E3F8219CF4233233C /* MetadataResult.swift */,
+				64C4E62C5A3B3A20D04D06BDF007691C /* Model.swift */,
+				B0A10386E393A844463584FA24EF7986 /* NaturalLanguageUnderstanding.swift */,
+				2C35E36D87774C839EB85797D6BB09BF /* Parameters.swift */,
+				9B751653752BA0C7C8446AC3FB88F37F /* RelationArgument.swift */,
+				F3800CDDF6559317FA45F430FA0F6E6E /* RelationEntity.swift */,
+				5783B779821AE753F0D41EDBCB824FC3 /* RelationsOptions.swift */,
+				DE0B6E895DA87E51B24044DFE71A4B4C /* RelationsResult.swift */,
+				D80DC4FF99A170CBC53812DBB2A464D5 /* SemanticRolesAction.swift */,
+				547BD99DA3C98F6A688BC1FC7CA5E5D7 /* SemanticRolesEntity.swift */,
+				34B2C6CB0718A2FE02F17D2E040DA012 /* SemanticRolesKeyword.swift */,
+				4447D974F76C1DEF1F09AFBB92A9ECAB /* SemanticRolesObject.swift */,
+				2DA7BF09256AD7FC1509E2D7C8C398CB /* SemanticRolesOptions.swift */,
+				4D5B24E646FA00FD8C0FA3738053B377 /* SemanticRolesResult.swift */,
+				BA0C0BC645B4F678C891D6A3CD9B5A01 /* SemanticRolesSubject.swift */,
+				B7A52D2D977BE2C29198A44414E1D08D /* SemanticRolesVerb.swift */,
+				0D29BD61139BD44C2ACB1DCD83FC211D /* SentimentOptions.swift */,
+				6130B69FCE6EA7BCD8E01EEF440CC524 /* SentimentResult.swift */,
+				97E5A82C475FAEB9DE5E774206D3FA32 /* Shared.swift */,
+				8EC30C23C0BD13A12BBB7A92E9E64FBC /* TargetedEmotionResults.swift */,
+				4B43C3FAFE83045CC951712DC016BAFC /* TargetedSentimentResults.swift */,
+				BD5A35B73CAE2986F2144CE58B984088 /* Usage.swift */,
+				2C1817F1111918DFDE3AAECFF5E75EE4 /* Support Files */,
+			);
+			name = IBMWatsonNaturalLanguageUnderstandingV1;
+			path = IBMWatsonNaturalLanguageUnderstandingV1;
+			sourceTree = "<group>";
+		};
+		2C1817F1111918DFDE3AAECFF5E75EE4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				096394DAB5C272C280AAC10AD4606F47 /* IBMWatsonNaturalLanguageUnderstandingV1.modulemap */,
+				19217573D225F872B7A26CABB38D98DD /* IBMWatsonNaturalLanguageUnderstandingV1.xcconfig */,
+				51F55E2960332EDE962468939E437E2E /* IBMWatsonNaturalLanguageUnderstandingV1-dummy.m */,
+				F4A981D2D0AE195AEF03748951084D7E /* IBMWatsonNaturalLanguageUnderstandingV1-prefix.pch */,
+				B822F969B5F15423CB43D84C5ADD813A /* IBMWatsonNaturalLanguageUnderstandingV1-umbrella.h */,
+				BE5A99BDFC9CFAFA7B2E6672AE30EE1A /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/IBMWatsonNaturalLanguageUnderstandingV1";
+			sourceTree = "<group>";
+		};
+		305785E91BA5AAE0BC3DFF8372B93955 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B1F91473F35F18323BE590280C62086 /* IBMWatsonNaturalLanguageUnderstandingV1 */,
+				A4AC5B766F1BC8E6C4B7F1500F89D2C9 /* IBMWatsonRestKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3E5F1E19751F99DF84614D3C81BD2405 /* Pods-moviesNLUUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BC79BACE99D97B4FCDA21936325305F0 /* Info.plist */,
+				BDCF0C5BDE7EEEB713E2B85BBF99C827 /* Pods-moviesNLUUITests.modulemap */,
+				CC32A1855A91E9F55DBEAE35C6B6B991 /* Pods-moviesNLUUITests-acknowledgements.markdown */,
+				AD92E1398E8EDAEE9CFC0B94D0ECB52D /* Pods-moviesNLUUITests-acknowledgements.plist */,
+				9F0E247C0EE231545CB85C744D36F660 /* Pods-moviesNLUUITests-dummy.m */,
+				1F57CBEDCE1412F75C71F47977BB0D47 /* Pods-moviesNLUUITests-frameworks.sh */,
+				286ADB6B914CF5AA232D085AD778C620 /* Pods-moviesNLUUITests-resources.sh */,
+				AB58F685A58ED52408E89163DE887C9D /* Pods-moviesNLUUITests-umbrella.h */,
+				4896D2245CB55B5B8AB5A24DC38460A2 /* Pods-moviesNLUUITests.debug.xcconfig */,
+				D4DE049CDB56FD3B3316CF3C62D5A4D1 /* Pods-moviesNLUUITests.release.xcconfig */,
+			);
+			name = "Pods-moviesNLUUITests";
+			path = "Target Support Files/Pods-moviesNLUUITests";
+			sourceTree = "<group>";
+		};
+		474540D6120A0D5F3DEC256E763525A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84F8EAE0BEE967AD3E05649C1B185A4B /* NaturalLanguageUnderstanding.framework */,
+				95116F07F1BD7C57FF8F25BDCDBE0B9B /* Pods_moviesNLU.framework */,
+				252ED5B80596FC26D79C6860421D5A52 /* Pods_moviesNLUTests.framework */,
+				7C89AAC80CBDE909351C88C0A7E4624E /* Pods_moviesNLUUITests.framework */,
+				0BD448BD0D174F081B35B29644D18EB7 /* RestKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49D3E8E69BBF3C82E6B9A7BF3C1C6DF9 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				DE230D46590F18D612A53B4B959F840E /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7431C7D46D5BC8E097E57171AAB03DF4 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A83218D4C33F496651CA6D15D679B118 /* Pods-moviesNLU */,
+				B5155F8929A078515595B54026DA8800 /* Pods-moviesNLUTests */,
+				3E5F1E19751F99DF84614D3C81BD2405 /* Pods-moviesNLUUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				A5711CD249B57C3EE3689B79CF7118DA /* Frameworks */,
+				305785E91BA5AAE0BC3DFF8372B93955 /* Pods */,
+				474540D6120A0D5F3DEC256E763525A5 /* Products */,
+				7431C7D46D5BC8E097E57171AAB03DF4 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7E2E1CE8A81B3C4FB546A10A32032DB7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				77E56B180971FE9ED4EC5E4BD866360C /* IBMWatsonRestKit.modulemap */,
+				9259C68EB3E552A01569028F06C87425 /* IBMWatsonRestKit.xcconfig */,
+				890E1ABA5728AC886846D4423BFE5644 /* IBMWatsonRestKit-dummy.m */,
+				6E61A41C2164DD2327776FF63D896FD2 /* IBMWatsonRestKit-prefix.pch */,
+				CDA16C8909A758EC4CA684158F4FD31E /* IBMWatsonRestKit-umbrella.h */,
+				FA7E94055E0BB877E1A0595C9C26454D /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/IBMWatsonRestKit";
+			sourceTree = "<group>";
+		};
+		A4AC5B766F1BC8E6C4B7F1500F89D2C9 /* IBMWatsonRestKit */ = {
+			isa = PBXGroup;
+			children = (
+				C5DB60EBCCFF448E4F8DBD5ED4BBE5F8 /* Authentication.swift */,
+				B6DB9821F4424BED1B20251E230E5143 /* CodableExtensions.swift */,
+				24A6B8616A43500F4515CEE0D5188FCF /* JSON.swift */,
+				7512D298B0B6A85E6280DECA8F773427 /* MultipartFormData.swift */,
+				F9092839E8E3F1A7AA07596F4D684FD4 /* RestError.swift */,
+				EC052143F06854DE232B2356D3B2F9C9 /* RestRequest.swift */,
+				60B8EF99E6594238349FF6272431C615 /* RestResponse.swift */,
+				0605DE8CC4DEEA13D54AC3B58F87F259 /* RestUtilities.swift */,
+				7E2E1CE8A81B3C4FB546A10A32032DB7 /* Support Files */,
+			);
+			name = IBMWatsonRestKit;
+			path = IBMWatsonRestKit;
+			sourceTree = "<group>";
+		};
+		A5711CD249B57C3EE3689B79CF7118DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C2752D1A1FFDA35308296A00A340618 /* RestKit.framework */,
+				49D3E8E69BBF3C82E6B9A7BF3C1C6DF9 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A83218D4C33F496651CA6D15D679B118 /* Pods-moviesNLU */ = {
+			isa = PBXGroup;
+			children = (
+				49CA8723D7B79C6D653FCF2C6A925662 /* Info.plist */,
+				A8B4B62CD3F0295E0E30AB95FAAAB0A2 /* Pods-moviesNLU.modulemap */,
+				3F28B6F41F0B13DAA7A3DDA4671EA650 /* Pods-moviesNLU-acknowledgements.markdown */,
+				585CE80529C9B86C1CD1A7D3C46E7B48 /* Pods-moviesNLU-acknowledgements.plist */,
+				56DE18BEFD6A707D0F152E331FEAD1CD /* Pods-moviesNLU-dummy.m */,
+				BBFAFA41835C4A8E54013015E04DC0D3 /* Pods-moviesNLU-frameworks.sh */,
+				D1E18876E7688871A084C59ACAD1F356 /* Pods-moviesNLU-resources.sh */,
+				B76476EDBB53597768E46A199AB24002 /* Pods-moviesNLU-umbrella.h */,
+				78641441D8D0AC6B06B457AA78826C86 /* Pods-moviesNLU.debug.xcconfig */,
+				D3A7CC7B2C20C3BFCFDF0A912743A347 /* Pods-moviesNLU.release.xcconfig */,
+			);
+			name = "Pods-moviesNLU";
+			path = "Target Support Files/Pods-moviesNLU";
+			sourceTree = "<group>";
+		};
+		B5155F8929A078515595B54026DA8800 /* Pods-moviesNLUTests */ = {
+			isa = PBXGroup;
+			children = (
+				7E645C853D3B419FDC00F8275895EDB9 /* Info.plist */,
+				28FA29469EBB067AA73628FAEAB7A1A0 /* Pods-moviesNLUTests.modulemap */,
+				7CCE2C11BD8E171398837537070402BA /* Pods-moviesNLUTests-acknowledgements.markdown */,
+				FDD4F4853FB9EBB305A043EFF25D5D74 /* Pods-moviesNLUTests-acknowledgements.plist */,
+				0BCB1F91D3CB62A26C95556B2DE1FFA4 /* Pods-moviesNLUTests-dummy.m */,
+				EB89F26B3EBB22A817BBA0CE83DD0119 /* Pods-moviesNLUTests-frameworks.sh */,
+				1001844E2798BE95D619948202CB1E3D /* Pods-moviesNLUTests-resources.sh */,
+				C67EE791CF0DBD35B41C95F7C71B93AE /* Pods-moviesNLUTests-umbrella.h */,
+				2E0A3CE99133C249780C104654E50C35 /* Pods-moviesNLUTests.debug.xcconfig */,
+				C8066A08A3A0CD3DC80DCB68AA474046 /* Pods-moviesNLUTests.release.xcconfig */,
+			);
+			name = "Pods-moviesNLUTests";
+			path = "Target Support Files/Pods-moviesNLUTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		340A9AE9A5534C9FF1F3968871929DEC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				226EFF2E10A5F228B3008E6C6F4EDECE /* IBMWatsonRestKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81ED0B7CB9ABA489227F33FCAAB15724 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45970E579CE8321B473BB60D318A6D38 /* Pods-moviesNLUTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC3E6319C7D81E8268C0587D66F76FC6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69652151C4864B5A137BC671ACB28574 /* IBMWatsonNaturalLanguageUnderstandingV1-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFBD14634FCA0109F05E75D7AA33F26F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67D7F49AB51C4B0F82EF5ADE6C23E9C3 /* Pods-moviesNLU-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE9E02BF6EF9C68D03390D20973BC471 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				554E8209BAD0E7146206C857088E7E76 /* Pods-moviesNLUUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0134240899C40CE08449AD4B2B932F60 /* IBMWatsonRestKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8003D1F2B0CAA9012E2200A85627EAE /* Build configuration list for PBXNativeTarget "IBMWatsonRestKit" */;
+			buildPhases = (
+				A9C8A352CF202AE375BD2BAD0A7F6820 /* Sources */,
+				ACA7EC81EB30DA2D0D4F70A738F1331C /* Frameworks */,
+				340A9AE9A5534C9FF1F3968871929DEC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IBMWatsonRestKit;
+			productName = IBMWatsonRestKit;
+			productReference = 0BD448BD0D174F081B35B29644D18EB7 /* RestKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3B39956263E2247A806FB569A00DFEE2 /* Pods-moviesNLUUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6A6FE469495DF786B783659BC0C1E05 /* Build configuration list for PBXNativeTarget "Pods-moviesNLUUITests" */;
+			buildPhases = (
+				7918487F2D3CDF4D0532369C533AF844 /* Sources */,
+				B0E9BF7C2752BE568A4FDDBE3336B657 /* Frameworks */,
+				FE9E02BF6EF9C68D03390D20973BC471 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				748B9115E50DE46F4CBB6B1CB4BCA792 /* PBXTargetDependency */,
+			);
+			name = "Pods-moviesNLUUITests";
+			productName = "Pods-moviesNLUUITests";
+			productReference = 7C89AAC80CBDE909351C88C0A7E4624E /* Pods_moviesNLUUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BC16236CC9E1015085BC1C84B1C967FE /* IBMWatsonNaturalLanguageUnderstandingV1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7F912AB3B1CF0BD2E7E0690BB56AE97 /* Build configuration list for PBXNativeTarget "IBMWatsonNaturalLanguageUnderstandingV1" */;
+			buildPhases = (
+				7675E26F2F664CD57A8DCBA542EFAB51 /* Sources */,
+				BD2C5670A3F9A4EE5806A2FACFF0463C /* Frameworks */,
+				BC3E6319C7D81E8268C0587D66F76FC6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB1EB9B7374C5D93F14E8708ECC521E9 /* PBXTargetDependency */,
+			);
+			name = IBMWatsonNaturalLanguageUnderstandingV1;
+			productName = IBMWatsonNaturalLanguageUnderstandingV1;
+			productReference = 84F8EAE0BEE967AD3E05649C1B185A4B /* NaturalLanguageUnderstanding.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BF4F7BC97851C38E78C45C37254B2C6A /* Pods-moviesNLUTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB379B0C565AFE0BFC3ED5CDAB12E305 /* Build configuration list for PBXNativeTarget "Pods-moviesNLUTests" */;
+			buildPhases = (
+				D1BC8747E8F4BAEF273FAA650A20CA36 /* Sources */,
+				FD7D2B9C601436629F1CA4B5BEBC1730 /* Frameworks */,
+				81ED0B7CB9ABA489227F33FCAAB15724 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D38A85BBAF0CB6F7CB8787EB373F504C /* PBXTargetDependency */,
+			);
+			name = "Pods-moviesNLUTests";
+			productName = "Pods-moviesNLUTests";
+			productReference = 252ED5B80596FC26D79C6860421D5A52 /* Pods_moviesNLUTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CF79663B44F04C69678E9628055A48BA /* Pods-moviesNLU */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E15CF73A639FDC1E9F923D244A435B7 /* Build configuration list for PBXNativeTarget "Pods-moviesNLU" */;
+			buildPhases = (
+				573BFCCBD3C3AC6D7FDC857EFE03FAAB /* Sources */,
+				86CE2D1239CF2BAC98CF80D536E95BFA /* Frameworks */,
+				BFBD14634FCA0109F05E75D7AA33F26F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				449206FC4EAC931815A085F8437FAA4B /* PBXTargetDependency */,
+				6B16ADF3540C16CB16646BD195A822FF /* PBXTargetDependency */,
+			);
+			name = "Pods-moviesNLU";
+			productName = "Pods-moviesNLU";
+			productReference = 95116F07F1BD7C57FF8F25BDCDBE0B9B /* Pods_moviesNLU.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 474540D6120A0D5F3DEC256E763525A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC16236CC9E1015085BC1C84B1C967FE /* IBMWatsonNaturalLanguageUnderstandingV1 */,
+				0134240899C40CE08449AD4B2B932F60 /* IBMWatsonRestKit */,
+				CF79663B44F04C69678E9628055A48BA /* Pods-moviesNLU */,
+				BF4F7BC97851C38E78C45C37254B2C6A /* Pods-moviesNLUTests */,
+				3B39956263E2247A806FB569A00DFEE2 /* Pods-moviesNLUUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		573BFCCBD3C3AC6D7FDC857EFE03FAAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				911E05FCF88F661DB451FF3366795E69 /* Pods-moviesNLU-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7675E26F2F664CD57A8DCBA542EFAB51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2790A2424F4D131A19935C5AEA6FC2DD /* AnalysisResults.swift in Sources */,
+				D51AADCB66E91A41D7D00EB26232F40D /* Author.swift in Sources */,
+				AE41EF5D35B8CE340989F48923620F02 /* CategoriesOptions.swift in Sources */,
+				F94D99C90F939F2AF8A90AAEFBD8EB05 /* CategoriesResult.swift in Sources */,
+				7CF3F4EECF1BD78EB008599A46F2FCD5 /* ConceptsOptions.swift in Sources */,
+				FBE54155637A0601F0CF12D7855695FB /* ConceptsResult.swift in Sources */,
+				6ABB665DD2A7906FDEE1C8AD6CFFC9D3 /* DeleteModelResults.swift in Sources */,
+				33B1C50078FEBE58D96A12D9A7C10A5F /* DisambiguationResult.swift in Sources */,
+				9F7C72AEFA5E620F005872058A86510B /* DocumentEmotionResults.swift in Sources */,
+				D186AFB8DDD3D2D9C2F6E7A0B8FC99FF /* DocumentSentimentResults.swift in Sources */,
+				5DD90EAF11DA267008D6F42E4EA42671 /* EmotionOptions.swift in Sources */,
+				2886337E7981AC84C5E82E42D39F07B2 /* EmotionResult.swift in Sources */,
+				54369E0EAE80DB2720205417F94501B9 /* EmotionScores.swift in Sources */,
+				416551603141D24848D877B43E958F04 /* EntitiesOptions.swift in Sources */,
+				249DE8A6F43BE164D4D9DB8C20285C10 /* EntitiesResult.swift in Sources */,
+				194F9828EDBD1CBA94891F2588FB7958 /* EntityMention.swift in Sources */,
+				5588D9A400A8E5E792098BC6755DE612 /* Features.swift in Sources */,
+				A7C67B0C89D38CCC4F29B8923A8D3E92 /* FeatureSentimentResults.swift in Sources */,
+				08690EFB6168F64073EB965AA231184E /* Feed.swift in Sources */,
+				90C9DB74EBAB03F0755D2D7ACB4F87D7 /* IBMWatsonNaturalLanguageUnderstandingV1-dummy.m in Sources */,
+				E00102FEE19A392B3130B8DEB86E35B1 /* KeywordsOptions.swift in Sources */,
+				53B24628FD12B1719DF62764631C44E1 /* KeywordsResult.swift in Sources */,
+				244779317094ED39A23D3F9B913A8623 /* ListModelsResults.swift in Sources */,
+				05A44B9066ED55BC8C606AC0AB92BF87 /* MetadataOptions.swift in Sources */,
+				BAD2D3ACE56E84060E6925D1CA67F114 /* MetadataResult.swift in Sources */,
+				34153F2AB0C4C0B7936B5FC9FF528C0D /* Model.swift in Sources */,
+				2B93B145E61A21851A00B4A888041F47 /* NaturalLanguageUnderstanding.swift in Sources */,
+				6C49F25F96C1C0DE102BA1803DD76C0B /* Parameters.swift in Sources */,
+				B7ED7E81329D4F5F470279876A6C8E85 /* RelationArgument.swift in Sources */,
+				4778A82FF18EAD6A546DB7410DACE6E6 /* RelationEntity.swift in Sources */,
+				4A0E969D296EB32DC9C3CE6A4715035C /* RelationsOptions.swift in Sources */,
+				778727D27522A0646D19EAFCD2071BDA /* RelationsResult.swift in Sources */,
+				7F36E0AE248822DF8431F5CEC747C684 /* SemanticRolesAction.swift in Sources */,
+				3FC5A18E7B7B2558DC67253939EDCB9C /* SemanticRolesEntity.swift in Sources */,
+				5E29632DE80AAAC00401366F001A4651 /* SemanticRolesKeyword.swift in Sources */,
+				B99A790082A4B20214904FE2059B6A0A /* SemanticRolesObject.swift in Sources */,
+				B9B41038C522814FE6D8B0D3551F42FE /* SemanticRolesOptions.swift in Sources */,
+				180AD0FF6E48B24331B6EB6CC878AC06 /* SemanticRolesResult.swift in Sources */,
+				57F66C77A3C98BB98EE39F8A791F381C /* SemanticRolesSubject.swift in Sources */,
+				5DEB57804103B20F372282291249978C /* SemanticRolesVerb.swift in Sources */,
+				C8D3F90608492DC80A1495EDAC0C310D /* SentimentOptions.swift in Sources */,
+				874863770145B0A8157320F3F7A5C14E /* SentimentResult.swift in Sources */,
+				80FC480C0A9D72681630C8F27C0D333A /* Shared.swift in Sources */,
+				92229283B7A3293F5003F524F1B2E6A3 /* TargetedEmotionResults.swift in Sources */,
+				3902D88F87C98459635048ADE296DCA7 /* TargetedSentimentResults.swift in Sources */,
+				3BF894CE506F1383609C955BB0842D35 /* Usage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7918487F2D3CDF4D0532369C533AF844 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2C8C2ABB0654C8EA487C0EC31BEE410 /* Pods-moviesNLUUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9C8A352CF202AE375BD2BAD0A7F6820 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C717A9F15E95E162D9602CD2AE29B2A /* Authentication.swift in Sources */,
+				D3C73491114C7A7023B38A220E443C7B /* CodableExtensions.swift in Sources */,
+				535B9D1657DBC6F2BFA00BA91271A9F0 /* IBMWatsonRestKit-dummy.m in Sources */,
+				EB52AA751EE03D966D4AAC80B86B169D /* JSON.swift in Sources */,
+				7139CAE39341C4DB48FD3CA3B08FEB4F /* MultipartFormData.swift in Sources */,
+				2DA386AD01FE7F55812AB37339DADDF8 /* RestError.swift in Sources */,
+				1F6C8359D660FE672C3DD53E1236A609 /* RestRequest.swift in Sources */,
+				8CBEBDC90E7EDFDE17DBBC535900D56D /* RestResponse.swift in Sources */,
+				EF07FE25475131357B6B76CEB7C48CF2 /* RestUtilities.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1BC8747E8F4BAEF273FAA650A20CA36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B6311D920022E261F8B924D43FCE7FD /* Pods-moviesNLUTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		449206FC4EAC931815A085F8437FAA4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IBMWatsonNaturalLanguageUnderstandingV1;
+			target = BC16236CC9E1015085BC1C84B1C967FE /* IBMWatsonNaturalLanguageUnderstandingV1 */;
+			targetProxy = D500BFA4FB4E0EF8272106095FC023C8 /* PBXContainerItemProxy */;
+		};
+		6B16ADF3540C16CB16646BD195A822FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IBMWatsonRestKit;
+			target = 0134240899C40CE08449AD4B2B932F60 /* IBMWatsonRestKit */;
+			targetProxy = D61B30DCC3E0B7C4C6BED1E97A778D78 /* PBXContainerItemProxy */;
+		};
+		748B9115E50DE46F4CBB6B1CB4BCA792 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-moviesNLU";
+			target = CF79663B44F04C69678E9628055A48BA /* Pods-moviesNLU */;
+			targetProxy = 6986AC549D0612F3613160CA800E3604 /* PBXContainerItemProxy */;
+		};
+		D38A85BBAF0CB6F7CB8787EB373F504C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-moviesNLU";
+			target = CF79663B44F04C69678E9628055A48BA /* Pods-moviesNLU */;
+			targetProxy = 0A4DDA66A086C32FFAE08E2377910E3E /* PBXContainerItemProxy */;
+		};
+		FB1EB9B7374C5D93F14E8708ECC521E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IBMWatsonRestKit;
+			target = 0134240899C40CE08449AD4B2B932F60 /* IBMWatsonRestKit */;
+			targetProxy = D4A019EB0BD6089076640007047EE15D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		063198AB09B9CDB3A695432FC17AD8CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		126C87B0B1BFD01B770DF4B5EBD8DA90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19217573D225F872B7A26CABB38D98DD /* IBMWatsonNaturalLanguageUnderstandingV1.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/IBMWatsonNaturalLanguageUnderstandingV1/IBMWatsonNaturalLanguageUnderstandingV1-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IBMWatsonNaturalLanguageUnderstandingV1/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/IBMWatsonNaturalLanguageUnderstandingV1/IBMWatsonNaturalLanguageUnderstandingV1.modulemap";
+				PRODUCT_MODULE_NAME = NaturalLanguageUnderstanding;
+				PRODUCT_NAME = NaturalLanguageUnderstanding;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		29C220C58E608C6D20144E971795B3D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9259C68EB3E552A01569028F06C87425 /* IBMWatsonRestKit.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/IBMWatsonRestKit/IBMWatsonRestKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IBMWatsonRestKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/IBMWatsonRestKit/IBMWatsonRestKit.modulemap";
+				PRODUCT_MODULE_NAME = RestKit;
+				PRODUCT_NAME = RestKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2D5B5323CE616E80CA7E26D6EC01EE4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4896D2245CB55B5B8AB5A24DC38460A2 /* Pods-moviesNLUUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-moviesNLUUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-moviesNLUUITests/Pods-moviesNLUUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		53B388954A5173221CBA34E9BAE37419 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3A7CC7B2C20C3BFCFDF0A912743A347 /* Pods-moviesNLU.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-moviesNLU/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-moviesNLU/Pods-moviesNLU.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		57B65F42D54AAE50C6A5FF20EA1AB921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19217573D225F872B7A26CABB38D98DD /* IBMWatsonNaturalLanguageUnderstandingV1.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/IBMWatsonNaturalLanguageUnderstandingV1/IBMWatsonNaturalLanguageUnderstandingV1-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IBMWatsonNaturalLanguageUnderstandingV1/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/IBMWatsonNaturalLanguageUnderstandingV1/IBMWatsonNaturalLanguageUnderstandingV1.modulemap";
+				PRODUCT_MODULE_NAME = NaturalLanguageUnderstanding;
+				PRODUCT_NAME = NaturalLanguageUnderstanding;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		853BFACC0B5FF2FF242111F4B3311C80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78641441D8D0AC6B06B457AA78826C86 /* Pods-moviesNLU.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-moviesNLU/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-moviesNLU/Pods-moviesNLU.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		87EAC867385563488A6D8F1E74AC46B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		94649D1C679E6CBC130AA0DD405183F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E0A3CE99133C249780C104654E50C35 /* Pods-moviesNLUTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-moviesNLUTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-moviesNLUTests/Pods-moviesNLUTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ACBC69FC9AEFE953A583E700D1B7BB9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8066A08A3A0CD3DC80DCB68AA474046 /* Pods-moviesNLUTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-moviesNLUTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-moviesNLUTests/Pods-moviesNLUTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B202D650BABC5F73632F8299AD1BC453 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4DE049CDB56FD3B3316CF3C62D5A4D1 /* Pods-moviesNLUUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-moviesNLUUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-moviesNLUUITests/Pods-moviesNLUUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EC52E727D600A121CBAFF27D64FB3B72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9259C68EB3E552A01569028F06C87425 /* IBMWatsonRestKit.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/IBMWatsonRestKit/IBMWatsonRestKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IBMWatsonRestKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/IBMWatsonRestKit/IBMWatsonRestKit.modulemap";
+				PRODUCT_MODULE_NAME = RestKit;
+				PRODUCT_NAME = RestKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87EAC867385563488A6D8F1E74AC46B4 /* Debug */,
+				063198AB09B9CDB3A695432FC17AD8CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E15CF73A639FDC1E9F923D244A435B7 /* Build configuration list for PBXNativeTarget "Pods-moviesNLU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				853BFACC0B5FF2FF242111F4B3311C80 /* Debug */,
+				53B388954A5173221CBA34E9BAE37419 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB379B0C565AFE0BFC3ED5CDAB12E305 /* Build configuration list for PBXNativeTarget "Pods-moviesNLUTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94649D1C679E6CBC130AA0DD405183F9 /* Debug */,
+				ACBC69FC9AEFE953A583E700D1B7BB9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6A6FE469495DF786B783659BC0C1E05 /* Build configuration list for PBXNativeTarget "Pods-moviesNLUUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D5B5323CE616E80CA7E26D6EC01EE4F /* Debug */,
+				B202D650BABC5F73632F8299AD1BC453 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7F912AB3B1CF0BD2E7E0690BB56AE97 /* Build configuration list for PBXNativeTarget "IBMWatsonNaturalLanguageUnderstandingV1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				126C87B0B1BFD01B770DF4B5EBD8DA90 /* Debug */,
+				57B65F42D54AAE50C6A5FF20EA1AB921 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8003D1F2B0CAA9012E2200A85627EAE /* Build configuration list for PBXNativeTarget "IBMWatsonRestKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC52E727D600A121CBAFF27D64FB3B72 /* Debug */,
+				29C220C58E608C6D20144E971795B3D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
