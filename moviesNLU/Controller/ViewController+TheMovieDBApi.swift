@@ -16,7 +16,7 @@ extension ViewController {
             if let data = data {
                 do {
                     if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] {
-                        if let results = json["results"] as? [[String:Any]] {
+                        if let results = json["results"] as? [[String:Any]], results.count > 0 {
                             if let id = results.first!["id"] as? Int {
                                 completionHandler(id)
                             } else {
@@ -39,5 +39,7 @@ extension ViewController {
         
         task.resume()
     }
+    
+    //func getMovieReviews(withID id: Int, completionHandler: (_ ))
 
 }
