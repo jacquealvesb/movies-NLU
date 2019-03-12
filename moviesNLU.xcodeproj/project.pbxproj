@@ -14,6 +14,7 @@
 		1739275822369A750046A9EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1739275622369A750046A9EB /* LaunchScreen.storyboard */; };
 		1739276322369A750046A9EB /* moviesNLUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739276222369A750046A9EB /* moviesNLUTests.swift */; };
 		1739276E22369A750046A9EB /* moviesNLUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739276D22369A750046A9EB /* moviesNLUUITests.swift */; };
+		173927862237D4EB0046A9EB /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173927852237D4EB0046A9EB /* Review.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		1739276922369A750046A9EB /* moviesNLUUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moviesNLUUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1739276D22369A750046A9EB /* moviesNLUUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moviesNLUUITests.swift; sourceTree = "<group>"; };
 		1739276F22369A750046A9EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		173927852237D4EB0046A9EB /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +99,7 @@
 		1739274C22369A740046A9EB /* moviesNLU */ = {
 			isa = PBXGroup;
 			children = (
-				1739277D22369AB90046A9EB /* Model */,
+				173927832237D4DA0046A9EB /* Model */,
 				1739277C22369AB20046A9EB /* View */,
 				1739277B22369AA80046A9EB /* Controller */,
 				1739274D22369A740046A9EB /* AppDelegate.swift */,
@@ -142,9 +144,10 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1739277D22369AB90046A9EB /* Model */ = {
+		173927832237D4DA0046A9EB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				173927852237D4EB0046A9EB /* Review.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			files = (
 				1739275022369A740046A9EB /* ViewController.swift in Sources */,
 				1739274E22369A740046A9EB /* AppDelegate.swift in Sources */,
+				173927862237D4EB0046A9EB /* Review.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
