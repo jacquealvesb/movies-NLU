@@ -8,12 +8,12 @@
 
 import UIKit
 
-let apiKey = "094fd8f84048425f068f6965ca8bb6af"
-
 class ViewController: UIViewController {
-    
+    let apiKey = "094fd8f84048425f068f6965ca8bb6af"
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 
 
