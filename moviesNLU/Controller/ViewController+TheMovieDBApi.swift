@@ -9,6 +9,31 @@
 import Foundation
 
 extension ViewController {
+    
+    func getConfiguration(completionHandler: @escaping (_ configuration: Configuration?) -> ()) {
+        let configurationURL = URL(string: "https://api.themoviedb.org/3/configuration?api_key=\(apiKey)")
+        
+        let task = URLSession.shared.dataTask(with: configurationURL!) { (data, response, error) in
+            if let data = data {
+                do {
+                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] {
+                        print(json)
+                        let configuration = Configuration(withDictionary: json)
+                        
+                        completionHandler(configuration)
+                    } else {
+                        completionHandler(nil)
+                    }
+                } catch {
+                    print(error)
+                    completionHandler(nil)
+                }
+            }
+        }
+        
+        task.resume()
+    }
+    
     func getMovie(withName name:String, completionHandler: @escaping (_ id: Movie?) -> ()) {
         let nameFormatted = name.replacingOccurrences(of: " ", with: "+")
         let movieURL = URL(string: "https://api.themoviedb.org/3/search/movie?api_key=\(apiKey)&query=\(nameFormatted)")
