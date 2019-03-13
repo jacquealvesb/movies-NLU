@@ -40,4 +40,41 @@ extension ViewController {
         
         return nil
     }
+    
+    func emotionAverage(_ scores: [EmotionScores]) -> EmotionScores? {
+        do {
+            let decoder = JSONDecoder()
+            var average = try decoder.decode(EmotionScores.self, from: Data("""
+            {
+                "anger": 0.0,
+                "disgust": 0.0,
+                "fear": 0.0,
+                "joy": 0.0,
+                "sadness": 0.0
+            }
+            """.utf8))
+            
+            for score in scores {
+                average.anger! += score.anger!
+                average.disgust! += score.disgust!
+                average.fear! += score.fear!
+                average.joy! += score.joy!
+                average.sadness! += score.sadness!
+            }
+            
+            average.anger = average.anger!/Double(exactly: scores.count)!
+            average.disgust = average.disgust!/Double(exactly: scores.count)!
+            average.fear = average.fear!/Double(exactly: scores.count)!
+            average.joy = average.joy!/Double(exactly: scores.count)!
+            average.sadness = average.sadness!/Double(exactly: scores.count)!
+            
+            return average
+            
+        } catch {
+            print("Error")
+        }
+        
+        return nil
+        
+    }
 }
