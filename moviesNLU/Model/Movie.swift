@@ -6,10 +6,11 @@
 //  Copyright © 2019 jacqueline.alves.moviesNLU. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Movie {
     var posterPath: String
+    var poster: UIImage?
     var adult: Bool
     var overview: String
     var releaseDate: Date?
