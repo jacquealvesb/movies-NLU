@@ -9,6 +9,7 @@
 import UIKit
 
 class Movie {
+    var posterPath: String
     var poster: UIImage?
     var adult: Bool
     var overview: String
@@ -25,6 +26,7 @@ class Movie {
     var voteAvarage: Double
     
     init(withDictionary dict: [String:Any]) {
+        self.posterPath = dict["poster_path"] as? String ?? ""
         self.adult = dict["adult"] as? Bool ?? false
         self.overview = dict["overview"] as? String ?? ""
         
@@ -47,5 +49,17 @@ class Movie {
         self.voteCount = dict["vote_count"] as? Int ?? 0
         self.video = dict["video"] as? Bool ?? false
         self.voteAvarage = dict["vote_average"] as? Double ?? 0.0
+    }
+    
+    func setPoster(baseURL: String, fileSize: String) {
+        let posterURL = "\(baseURL)/\(fileSize)/\(self.posterPath)"
+        
+        if let posterURL = URL(string: posterURL) {
+            URLSession.shared.dataTask(with: posterURL) { (data, response, error) in
+                if let data = data {
+                    self.poster = UIImage(data: data)
+                }
+            }
+        }
     }
 }
