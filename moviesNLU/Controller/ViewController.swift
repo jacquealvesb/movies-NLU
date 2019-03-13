@@ -10,9 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
     let apiKey = "094fd8f84048425f068f6965ca8bb6af"
+    var configuration: Configuration?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.getConfiguration { (configuration) in
+            if let configuration = configuration {
+                self.configuration = configuration
+            }
+        }
         
     }
 
