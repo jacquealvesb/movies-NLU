@@ -55,11 +55,13 @@ class Movie {
         let posterURL = "\(baseURL)/\(fileSize)/\(self.posterPath)"
         
         if let posterURL = URL(string: posterURL) {
-            URLSession.shared.dataTask(with: posterURL) { (data, response, error) in
+            let task = URLSession.shared.dataTask(with: posterURL) { (data, response, error) in
                 if let data = data {
                     self.poster = UIImage(data: data)
                 }
             }
+            
+            task.resume()
         }
     }
 }
