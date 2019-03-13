@@ -9,7 +9,7 @@
 import Foundation
 
 extension ViewController {
-    func getMovieID(of name:String, completionHandler: @escaping (_ id: Int?) -> ()) {
+    func getMovie(withName name:String, completionHandler: @escaping (_ id: Movie?) -> ()) {
         let nameFormatted = name.replacingOccurrences(of: " ", with: "+")
         let movieURL = URL(string: "https://api.themoviedb.org/3/search/movie?api_key=\(apiKey)&query=\(nameFormatted)")
         
@@ -18,11 +18,9 @@ extension ViewController {
                 do {
                     if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] {
                         if let results = json["results"] as? [[String:Any]], results.count > 0 {
-                            if let id = results.first!["id"] as? Int {
-                                completionHandler(id)
-                            } else {
-                                completionHandler(nil)
-                            }
+                            let movie = Movie(withDictionary: results.first!)
+                            
+                            completionHandler(movie)
                             
                         } else {
                             completionHandler(nil)
