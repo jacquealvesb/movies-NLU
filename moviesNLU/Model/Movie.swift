@@ -6,10 +6,10 @@
 //  Copyright © 2019 jacqueline.alves.moviesNLU. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Movie {
-    var posterPath: String
+    var poster: UIImage?
     var adult: Bool
     var overview: String
     var releaseDate: Date?
@@ -25,7 +25,6 @@ class Movie {
     var voteAvarage: Double
     
     init(withDictionary dict: [String:Any]) {
-        self.posterPath = dict["poster_path"] as? String ?? ""
         self.adult = dict["adult"] as? Bool ?? false
         self.overview = dict["overview"] as? String ?? ""
         
