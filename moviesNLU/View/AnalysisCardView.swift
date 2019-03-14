@@ -13,6 +13,7 @@ class AnalysisCardView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var readReviewsButton: UIButton!
     @IBOutlet weak var joyProgressView: UIProgressView!
     @IBOutlet weak var joyPercentageLabel: UILabel!
     @IBOutlet weak var angerProgressView: UIProgressView!
