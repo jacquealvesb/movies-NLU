@@ -65,6 +65,9 @@
                                             <constraint firstAttribute="height" constant="2" id="kIz-NO-Jxs"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColorFromUIColor">
                                                 <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
