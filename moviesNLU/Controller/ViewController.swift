@@ -17,12 +17,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var analysisCard: AnalysisCardView!
     
     var spinnerView: UIView?
+    var movieID:Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.analysisCard.transform = CGAffineTransform(translationX: 0, y: self.analysisCard.frame.size.height)
         self.analysisCard.closeButton.addTarget(self, action: #selector(hideCard), for: .touchUpInside)
+        self.analysisCard.readReviewsButton.addTarget(self, action: #selector(self.openReviewsURL), for: .touchUpInside)
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissViewOrKeyboard))
         view.addGestureRecognizer(tap)
@@ -44,7 +46,8 @@ class ViewController: UIViewController {
                 if let movie = movie {
                     //Setting card information
                     DispatchQueue.main.async {
-                         self.analysisCard.nameLabel.text = movie.title;
+                        self.analysisCard.nameLabel.text = movie.title;
+                        self.movieID = movie.id
                     }
                    
                     self.downloadImage(withPath: movie.posterPath, completionHandler: { (image) in
@@ -135,6 +138,16 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    @objc func openReviewsURL() {
+        if let movieID = movieID {
+            let url = "https://www.themoviedb.org/movie/\(movieID)/reviews"
+            
+            if let url = URL(string: url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
+    }
 
     //MARK: - Analysis card
     
@@ -154,6 +167,7 @@ class ViewController: UIViewController {
         if(movieTextField.isFirstResponder) {
             view.endEditing(true)
         } else {
+            self.movieID = nil
             hideCard()
         }
     }
