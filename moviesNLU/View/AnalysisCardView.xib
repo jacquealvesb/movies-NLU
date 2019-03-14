@@ -44,7 +44,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ed6-3i-sFg">
-                            <rect key="frame" x="249.5" y="0.0" width="106.5" height="37.5"/>
+                            <rect key="frame" x="249.5" y="0.0" width="106.5" height="40"/>
                             <state key="normal">
                                 <attributedString key="attributedTitle">
                                     <fragment content="read reviews">
@@ -486,7 +486,7 @@
                         <constraint firstItem="OaN-Hz-znA" firstAttribute="centerX" secondItem="TPQ-J5-ow8" secondAttribute="centerX" id="6xM-68-JHt"/>
                         <constraint firstItem="ed6-3i-sFg" firstAttribute="top" secondItem="TPQ-J5-ow8" secondAttribute="top" id="9yv-dh-Uat"/>
                         <constraint firstAttribute="trailing" secondItem="ed6-3i-sFg" secondAttribute="trailing" id="PoK-ha-qAu"/>
-                        <constraint firstItem="ed6-3i-sFg" firstAttribute="height" secondItem="TPQ-J5-ow8" secondAttribute="height" multiplier="0.15" id="QxK-yt-knB"/>
+                        <constraint firstItem="ed6-3i-sFg" firstAttribute="height" secondItem="TPQ-J5-ow8" secondAttribute="height" multiplier="0.16" id="QxK-yt-knB"/>
                         <constraint firstItem="OaN-Hz-znA" firstAttribute="top" secondItem="FxV-Br-dy0" secondAttribute="bottom" id="RC6-kh-W3b"/>
                         <constraint firstItem="OaN-Hz-znA" firstAttribute="width" secondItem="TPQ-J5-ow8" secondAttribute="width" id="U3n-BA-yYP"/>
                         <constraint firstItem="OaN-Hz-znA" firstAttribute="height" secondItem="TPQ-J5-ow8" secondAttribute="height" multiplier="0.8" id="VCS-YN-VfN"/>
