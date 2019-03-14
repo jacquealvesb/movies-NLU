@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U1n-Qk-cAU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,18 +11,116 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="jz3-M1-hx1">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="moviesNLU" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="U1n-Qk-cAU" customClass="ViewController" customModule="moviesNLU" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Umr-hU-i0P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqU-D9-yzg">
+                                <rect key="frame" x="37.5" y="107" width="300" height="267"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBe-hR-cXY">
+                                        <rect key="frame" x="60" y="213.5" width="180" height="53.5"/>
+                                        <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="34"/>
+                                        <state key="normal" title="analyze">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColorFromUIColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                                <size key="value" width="0.0" height="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="analyzeMovie:" destination="U1n-Qk-cAU" eventType="touchUpInside" id="86i-gh-exg"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="type a movie" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZKW-gV-KLf">
+                                        <rect key="frame" x="15" y="0.0" width="270" height="53.5"/>
+                                        <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="34"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lBY-gu-TV1">
+                                        <rect key="frame" x="15" y="53.5" width="270" height="2"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="kIz-NO-Jxs"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColorFromUIColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                                <size key="value" width="0.0" height="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="LBe-hR-cXY" firstAttribute="width" secondItem="pqU-D9-yzg" secondAttribute="width" multiplier="0.6" id="2QT-05-OOh"/>
+                                    <constraint firstItem="lBY-gu-TV1" firstAttribute="width" secondItem="pqU-D9-yzg" secondAttribute="width" multiplier="0.9" id="60r-0s-V94"/>
+                                    <constraint firstItem="ZKW-gV-KLf" firstAttribute="top" secondItem="pqU-D9-yzg" secondAttribute="top" id="QTK-DH-5s2"/>
+                                    <constraint firstItem="LBe-hR-cXY" firstAttribute="height" secondItem="pqU-D9-yzg" secondAttribute="height" multiplier="0.2" id="bxJ-si-B9h"/>
+                                    <constraint firstItem="lBY-gu-TV1" firstAttribute="centerX" secondItem="pqU-D9-yzg" secondAttribute="centerX" id="dgC-mQ-pTh"/>
+                                    <constraint firstItem="ZKW-gV-KLf" firstAttribute="centerX" secondItem="pqU-D9-yzg" secondAttribute="centerX" id="hnE-XL-aog"/>
+                                    <constraint firstItem="LBe-hR-cXY" firstAttribute="centerX" secondItem="pqU-D9-yzg" secondAttribute="centerX" id="jih-Ow-Tbl"/>
+                                    <constraint firstItem="ZKW-gV-KLf" firstAttribute="width" secondItem="pqU-D9-yzg" secondAttribute="width" multiplier="0.9" id="mw4-a4-TTN"/>
+                                    <constraint firstAttribute="bottom" secondItem="LBe-hR-cXY" secondAttribute="bottom" id="qTK-hU-Asb"/>
+                                    <constraint firstItem="ZKW-gV-KLf" firstAttribute="height" secondItem="pqU-D9-yzg" secondAttribute="height" multiplier="0.2" id="s0Y-KM-fDT"/>
+                                    <constraint firstItem="lBY-gu-TV1" firstAttribute="top" secondItem="ZKW-gV-KLf" secondAttribute="bottom" id="tXH-sK-hjX"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NiW-hI-91B" customClass="AnalysisCardView" customModule="moviesNLU" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="96.5" width="375" height="600.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92941176469999998" green="0.45098039220000002" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NiW-hI-91B" firstAttribute="width" secondItem="Umr-hU-i0P" secondAttribute="width" id="0Y0-GE-iZQ"/>
+                            <constraint firstItem="pqU-D9-yzg" firstAttribute="width" secondItem="Umr-hU-i0P" secondAttribute="width" multiplier="0.8" id="4hP-bp-5yP"/>
+                            <constraint firstItem="pqU-D9-yzg" firstAttribute="height" secondItem="Umr-hU-i0P" secondAttribute="height" multiplier="0.4" id="EuM-JB-8dN"/>
+                            <constraint firstItem="pqU-D9-yzg" firstAttribute="centerY" secondItem="SA3-I0-6Ww" secondAttribute="centerY" multiplier="0.7" id="Kru-cs-bj2"/>
+                            <constraint firstItem="NiW-hI-91B" firstAttribute="centerX" secondItem="SA3-I0-6Ww" secondAttribute="centerX" id="QcR-iL-Wqk"/>
+                            <constraint firstItem="SA3-I0-6Ww" firstAttribute="bottom" secondItem="NiW-hI-91B" secondAttribute="bottom" constant="-30" id="Uit-R9-R2J"/>
+                            <constraint firstItem="NiW-hI-91B" firstAttribute="height" secondItem="Umr-hU-i0P" secondAttribute="height" multiplier="0.9" id="XTw-bd-8Nc"/>
+                            <constraint firstItem="pqU-D9-yzg" firstAttribute="centerX" secondItem="SA3-I0-6Ww" secondAttribute="centerX" id="oxf-7f-mo4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SA3-I0-6Ww"/>
                     </view>
+                    <connections>
+                        <outlet property="analysisCard" destination="NiW-hI-91B" id="x86-OT-hiF"/>
+                        <outlet property="movieTextField" destination="ZKW-gV-KLf" id="0By-pn-GGt"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3aI-bH-CLc" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-116" y="279"/>
         </scene>
     </scenes>
 </document>
