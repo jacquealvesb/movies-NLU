@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var movieTextField: UITextField!
     @IBOutlet weak var analysisCard: AnalysisCardView!
     
+    var spinnerView: UIView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +36,8 @@ class ViewController: UIViewController {
         
     }
 
+    //MARK: - Analysis card
+    
     func showCard() {
         UIView.animate(withDuration: 0.5, animations: {
             self.analysisCard.transform = CGAffineTransform(translationX: 0, y: 0)
@@ -54,11 +58,36 @@ class ViewController: UIViewController {
         }
     }
     
+    // MARK: - Spinner
+
+    func showSpinner() {
+        let spinnerView = UIView(frame: self.view.frame)
+        spinnerView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6)
+        
+        let ai = UIActivityIndicatorView(style: .whiteLarge)
+        ai.startAnimating()
+        ai.center = spinnerView.center
+        
+        DispatchQueue.main.async {
+            spinnerView.addSubview(ai)
+            self.view.addSubview(spinnerView)
+        }
+        
+        self.spinnerView = spinnerView
+    }
+    
+    func removeSpinner() {
+        DispatchQueue.main.async {
+            self.spinnerView?.removeFromSuperview()
+            self.spinnerView = nil
+        }
+    }
+    
     // MARK: - Actions
     
     @IBAction func analyzeMovie(_ sender: Any) {
+        showSpinner()
         dismissViewOrKeyboard()
-        showCard()
     }
 
 }
