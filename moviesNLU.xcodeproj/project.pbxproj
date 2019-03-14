@@ -17,6 +17,7 @@
 		1739275822369A750046A9EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1739275622369A750046A9EB /* LaunchScreen.storyboard */; };
 		1739276322369A750046A9EB /* moviesNLUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739276222369A750046A9EB /* moviesNLUTests.swift */; };
 		1739276E22369A750046A9EB /* moviesNLUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739276D22369A750046A9EB /* moviesNLUUITests.swift */; };
+		17D535EB223A905E002C88CB /* UIView+SetAnchorPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D535EA223A905E002C88CB /* UIView+SetAnchorPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		1739276922369A750046A9EB /* moviesNLUUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moviesNLUUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1739276D22369A750046A9EB /* moviesNLUUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moviesNLUUITests.swift; sourceTree = "<group>"; };
 		1739276F22369A750046A9EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17D535EA223A905E002C88CB /* UIView+SetAnchorPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SetAnchorPoint.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		1739277D22369AB90046A9EB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				17D535EA223A905E002C88CB /* UIView+SetAnchorPoint.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				1739275022369A740046A9EB /* ViewController.swift in Sources */,
 				1739274E22369A740046A9EB /* AppDelegate.swift in Sources */,
 				1708C7AE223A77520070E370 /* ViewController+TextFieldDelegate.swift in Sources */,
+				17D535EB223A905E002C88CB /* UIView+SetAnchorPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
