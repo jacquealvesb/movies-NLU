@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NaturalLanguageUnderstanding
 
 class ViewController: UIViewController {
     let apiKey = "094fd8f84048425f068f6965ca8bb6af"
@@ -32,6 +33,105 @@ class ViewController: UIViewController {
             if let configuration = configuration {
                 self.configuration = configuration
             }
+        }
+        
+    }
+    
+    func analyze(movieNamed name: String) {
+        if(name.trimmingCharacters(in: .whitespacesAndNewlines) != "") { //Checking if name isnt empty
+            //Find movie
+            self.getMovie(withName: name) { (movie) in
+                if let movie = movie {
+                    //Setting card information
+                    DispatchQueue.main.async {
+                         self.analysisCard.nameLabel.text = movie.title;
+                    }
+                   
+                    self.downloadImage(withPath: movie.posterPath, completionHandler: { (image) in
+                        DispatchQueue.main.async {
+                            self.analysisCard.posterImageView.image = image
+                        }
+                    })
+                    
+                    //Get reviews
+                    self.getMovieReviews(withID: movie.id, completionHandler: { (reviews) in
+                        
+                        if(reviews.count > 0) {
+                            let dispathGroup = DispatchGroup()
+                            var emotionScores = [EmotionScores]()
+                            
+                            for review in reviews {
+                                dispathGroup.enter()
+                                //Analyzes comment
+                                self.analyze(text: review.content, completionHandler: { (result) in
+                                    if let result = result {
+                                        if let emotionScore = self.emotionScores(of: result) {
+                                            emotionScores.append(emotionScore)
+                                        }
+                                    }
+                                    dispathGroup.leave()
+                                })
+                            }
+                            
+                            dispathGroup.notify(queue: DispatchQueue.main, execute: {
+                                if let emotionScoreAverage = self.emotionAverage(emotionScores) {
+                                    self.analysisCard.setBars(joy: emotionScoreAverage.joy, anger: emotionScoreAverage.anger, disgust: emotionScoreAverage.disgust, sadness: emotionScoreAverage.sadness, fear: emotionScoreAverage.fear)
+                                }
+                                
+                                self.removeSpinner()
+                                self.showCard()
+                            })
+                            
+                        } else {
+                            self.removeSpinner()
+                            self.showAlert(withTitle: "No reviews", message: "This movie doesn't have any reviews.", andAction: nil)
+                        }
+                        
+                    })
+                } else {
+                    self.removeSpinner()
+                    self.showAlert(withTitle: "Movie not found", message: "I couldn't find this movie. Try another one.", andAction: { (_) in
+                        self.movieTextField.text = ""
+                    })
+                }
+            }
+        } else {
+            self.removeSpinner()
+            self.showAlert(withTitle: "Empty name", message: "Type a movie name", andAction: nil)
+        }
+    }
+    
+    func showAlert(withTitle title: String, message: String, andAction actionHandler: ((UIAlertAction) -> Void)?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let ok = UIAlertAction(title: "Ok", style: .cancel, handler: actionHandler)
+        alert.addAction(ok)
+        
+        self.present(alert, animated: true)
+    }
+    
+    func downloadImage(withPath path: String, completionHandler: @escaping (_ image: UIImage?) -> ()) {
+        if let baseURL = configuration?.images?.secureBaseURL, let posterSize = configuration?.images?.posterSizes.last {
+            let imageURL = "\(baseURL)\(posterSize)\(path)"
+            print(imageURL)
+            
+            if let imageURL = URL(string: imageURL) {
+                let task = URLSession.shared.dataTask(with: imageURL) { (data, response, error) in
+                    if let data = data {
+                        completionHandler(UIImage(data: data))
+                    } else {
+                        print(error)
+                        completionHandler(nil)
+                    }
+                }
+                
+                task.resume()
+            } else {
+                completionHandler(nil)
+            }
+            
+        } else {
+            completionHandler(nil)
         }
         
     }
@@ -86,8 +186,17 @@ class ViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func analyzeMovie(_ sender: Any) {
-        showSpinner()
-        dismissViewOrKeyboard()
+        self.showSpinner()
+        self.dismissViewOrKeyboard()
+        
+        if let movieName = self.movieTextField.text {
+            self.analyze(movieNamed: movieName)
+        } else {
+            self.removeSpinner()
+        }
+        
+        self.movieTextField.text = ""
+
     }
 
 }
