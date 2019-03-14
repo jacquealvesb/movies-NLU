@@ -13,6 +13,7 @@ class AnalysisCardView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var readReviewsButton: UIButton!
     @IBOutlet weak var joyProgressView: UIProgressView!
     @IBOutlet weak var joyPercentageLabel: UILabel!
     @IBOutlet weak var angerProgressView: UIProgressView!
@@ -42,6 +43,15 @@ class AnalysisCardView: UIView {
         addSubview(contentView)
         self.contentView.frame = self.bounds
         self.contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        
+        let attrs = [
+            NSAttributedString.Key.font : UIFont.systemFont(ofSize: 18.0),
+            NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.8196078431, green: 0.431372549, blue: 0.4117647059, alpha: 1),
+            NSAttributedString.Key.underlineStyle : 1] as [NSAttributedString.Key : Any]
+        
+        let buttonTitleStr = NSMutableAttributedString(string:"read reviews", attributes: attrs)
+        
+        self.readReviewsButton.setAttributedTitle(buttonTitleStr, for: .normal)
         
         //Making progress bar rounded
         self.joyProgressView.subviews[1].layer.cornerRadius = self.joyProgressView.layer.cornerRadius

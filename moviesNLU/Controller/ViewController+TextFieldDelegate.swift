@@ -11,7 +11,17 @@ import UIKit
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
-        self.showCard()
+        
+        self.showSpinner()
+        
+        if let movieName = self.movieTextField.text {
+            self.analyze(movieNamed: movieName)
+        } else {
+            self.removeSpinner()
+        }
+        
+        self.movieTextField.text = ""
+
         
         return true
     }
