@@ -23,6 +23,8 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(tap)
         
         self.movieTextField.delegate = self
+        
+        //self.analysisCard.setBars(joy: 1, anger: 0.5, disgust: 0.1, sadness: 0.61, fear: 0.2)
     }
 
     func showCard() {

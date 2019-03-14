@@ -12,20 +12,20 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnalysisCardView" customModule="moviesNLU" customModuleProvider="target">
             <connections>
-                <outlet property="angerBarView" destination="N54-Z7-2SG" id="yeM-34-iqB"/>
                 <outlet property="angerPercentageLabel" destination="VHn-Nd-ShO" id="Vu8-Zt-OsL"/>
+                <outlet property="angerProgressView" destination="rJC-ox-J5R" id="4fS-1P-tgc"/>
                 <outlet property="closeButton" destination="QhA-cw-w5S" id="oRq-vz-qsM"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="S9t-xc-1oS"/>
-                <outlet property="disgustBarView" destination="0IW-OP-EVz" id="BXh-dv-5y3"/>
                 <outlet property="disgustPercentageLabel" destination="3ZN-6q-wqy" id="cqQ-O8-Cqr"/>
-                <outlet property="fearBarView" destination="aNM-la-Fkc" id="A0W-HZ-HZg"/>
+                <outlet property="disgustProgressView" destination="Deg-pI-Uab" id="bD2-79-Eq9"/>
                 <outlet property="fearPercentageLabel" destination="RwY-6K-9sI" id="CeS-Vd-XJP"/>
-                <outlet property="joyBarView" destination="wlI-Xy-HRt" id="Z0w-34-NEP"/>
+                <outlet property="fearProgressView" destination="hXg-kJ-FCV" id="Jzs-Xh-pRs"/>
                 <outlet property="joyPercentageLabel" destination="pKj-p9-tPA" id="d3E-Yu-0yu"/>
+                <outlet property="joyProgressView" destination="4AT-2g-b11" id="jdM-rq-ItP"/>
                 <outlet property="nameLabel" destination="ufb-wd-dle" id="AQj-2G-NTz"/>
                 <outlet property="posterImageView" destination="Jwt-mC-EeL" id="cTM-Qj-OGg"/>
-                <outlet property="sadnessBarView" destination="C8m-IE-7zp" id="V7G-Jb-v9q"/>
                 <outlet property="sadnessPercentageLabel" destination="LPY-L5-yxc" id="XqD-8w-NIc"/>
+                <outlet property="sadnessProgressView" destination="oEz-Ts-z6D" id="05j-A2-Mpl"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -58,11 +58,11 @@
                                             <rect key="frame" x="89" y="0.0" width="213.5" height="29.5"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4DV-Uv-0ac">
-                                                    <rect key="frame" x="10.5" y="8.5" width="192.5" height="12"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="10.5" y="10" width="192.5" height="9"/>
+                                                    <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="7"/>
+                                                            <integer key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColorFromUIColor">
                                                             <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -78,26 +78,27 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wlI-Xy-HRt">
-                                                    <rect key="frame" x="10.5" y="8.5" width="96.5" height="12"/>
-                                                    <color key="backgroundColor" red="0.81960784310000001" green="0.43137254899999999" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4AT-2g-b11">
+                                                    <rect key="frame" x="10.5" y="10" width="192.5" height="9"/>
+                                                    <color key="progressTintColor" red="0.81960784310000001" green="0.43137254899999999" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="7"/>
+                                                            <integer key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
-                                                </view>
+                                                </progressView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="wlI-Xy-HRt" firstAttribute="leading" secondItem="4DV-Uv-0ac" secondAttribute="leading" id="2UU-8e-u9p"/>
-                                                <constraint firstItem="4DV-Uv-0ac" firstAttribute="centerY" secondItem="f42-yI-8vm" secondAttribute="centerY" id="4Qv-zk-yAv"/>
-                                                <constraint firstItem="4DV-Uv-0ac" firstAttribute="width" secondItem="f42-yI-8vm" secondAttribute="width" multiplier="0.9" id="BaV-df-6LU"/>
-                                                <constraint firstItem="wlI-Xy-HRt" firstAttribute="centerY" secondItem="4DV-Uv-0ac" secondAttribute="centerY" id="DOB-fF-n2B"/>
-                                                <constraint firstItem="4DV-Uv-0ac" firstAttribute="centerX" secondItem="f42-yI-8vm" secondAttribute="centerX" id="H2L-0T-2Oq"/>
-                                                <constraint firstItem="wlI-Xy-HRt" firstAttribute="width" secondItem="4DV-Uv-0ac" secondAttribute="width" multiplier="0.5" id="gAg-fn-ZTV"/>
-                                                <constraint firstItem="wlI-Xy-HRt" firstAttribute="height" secondItem="4DV-Uv-0ac" secondAttribute="height" id="sPg-2o-UgZ"/>
-                                                <constraint firstItem="4DV-Uv-0ac" firstAttribute="height" secondItem="f42-yI-8vm" secondAttribute="height" multiplier="0.4" id="xEZ-IO-0mD"/>
+                                                <constraint firstItem="4AT-2g-b11" firstAttribute="centerY" secondItem="f42-yI-8vm" secondAttribute="centerY" id="C0o-tG-mBt"/>
+                                                <constraint firstItem="4DV-Uv-0ac" firstAttribute="centerY" secondItem="4AT-2g-b11" secondAttribute="centerY" id="j9E-43-VMR"/>
+                                                <constraint firstItem="4AT-2g-b11" firstAttribute="height" secondItem="f42-yI-8vm" secondAttribute="height" multiplier="0.3" id="l74-wd-spi"/>
+                                                <constraint firstItem="4AT-2g-b11" firstAttribute="centerX" secondItem="f42-yI-8vm" secondAttribute="centerX" id="nrh-f2-hGE"/>
+                                                <constraint firstItem="4AT-2g-b11" firstAttribute="width" secondItem="f42-yI-8vm" secondAttribute="width" multiplier="0.9" id="qTA-Za-1gC"/>
+                                                <constraint firstItem="4DV-Uv-0ac" firstAttribute="height" secondItem="4AT-2g-b11" secondAttribute="height" id="qu9-7p-paX"/>
+                                                <constraint firstItem="4DV-Uv-0ac" firstAttribute="width" secondItem="4AT-2g-b11" secondAttribute="width" id="soi-4n-TnV"/>
+                                                <constraint firstItem="4DV-Uv-0ac" firstAttribute="centerX" secondItem="4AT-2g-b11" secondAttribute="centerX" id="uiF-XF-w5f"/>
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKj-p9-tPA">
@@ -136,11 +137,11 @@
                                             <rect key="frame" x="89" y="0.0" width="213.5" height="30"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mpE-PW-gtc">
-                                                    <rect key="frame" x="10.5" y="9" width="192.5" height="12"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="10.5" y="10.5" width="192.5" height="9"/>
+                                                    <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="7"/>
+                                                            <integer key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColorFromUIColor">
                                                             <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -156,26 +157,27 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N54-Z7-2SG">
-                                                    <rect key="frame" x="10.5" y="9" width="96.5" height="12"/>
-                                                    <color key="backgroundColor" red="0.81960784310000001" green="0.43137254899999999" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rJC-ox-J5R">
+                                                    <rect key="frame" x="10.5" y="10.5" width="192.5" height="9"/>
+                                                    <color key="progressTintColor" red="0.81960784310000001" green="0.43137254899999999" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="7"/>
+                                                            <integer key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
-                                                </view>
+                                                </progressView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="N54-Z7-2SG" firstAttribute="leading" secondItem="mpE-PW-gtc" secondAttribute="leading" id="2gw-2b-b0h"/>
-                                                <constraint firstItem="N54-Z7-2SG" firstAttribute="height" secondItem="mpE-PW-gtc" secondAttribute="height" id="7oa-3W-PzL"/>
-                                                <constraint firstItem="mpE-PW-gtc" firstAttribute="centerX" secondItem="4FZ-P2-yme" secondAttribute="centerX" id="A45-ce-igo"/>
-                                                <constraint firstItem="N54-Z7-2SG" firstAttribute="width" secondItem="mpE-PW-gtc" secondAttribute="width" multiplier="0.5" id="Jfd-fH-sjm"/>
-                                                <constraint firstItem="mpE-PW-gtc" firstAttribute="height" secondItem="4FZ-P2-yme" secondAttribute="height" multiplier="0.4" id="Tjo-3m-T0Z"/>
-                                                <constraint firstItem="N54-Z7-2SG" firstAttribute="centerY" secondItem="mpE-PW-gtc" secondAttribute="centerY" id="sE7-Zd-scY"/>
-                                                <constraint firstItem="mpE-PW-gtc" firstAttribute="width" secondItem="4FZ-P2-yme" secondAttribute="width" multiplier="0.9" id="uTO-Yb-1vN"/>
-                                                <constraint firstItem="mpE-PW-gtc" firstAttribute="centerY" secondItem="4FZ-P2-yme" secondAttribute="centerY" id="zAZ-Fd-3eV"/>
+                                                <constraint firstItem="rJC-ox-J5R" firstAttribute="centerY" secondItem="4FZ-P2-yme" secondAttribute="centerY" id="Df5-fx-C5f"/>
+                                                <constraint firstItem="mpE-PW-gtc" firstAttribute="centerY" secondItem="rJC-ox-J5R" secondAttribute="centerY" id="LMM-Dz-l1v"/>
+                                                <constraint firstItem="mpE-PW-gtc" firstAttribute="centerX" secondItem="rJC-ox-J5R" secondAttribute="centerX" id="Lw1-7a-clc"/>
+                                                <constraint firstItem="rJC-ox-J5R" firstAttribute="height" secondItem="4FZ-P2-yme" secondAttribute="height" multiplier="0.3" id="OsZ-K7-IS6"/>
+                                                <constraint firstItem="mpE-PW-gtc" firstAttribute="width" secondItem="rJC-ox-J5R" secondAttribute="width" id="dXZ-aO-Nzk"/>
+                                                <constraint firstItem="rJC-ox-J5R" firstAttribute="width" secondItem="4FZ-P2-yme" secondAttribute="width" multiplier="0.9" id="lwe-M5-qvD"/>
+                                                <constraint firstItem="rJC-ox-J5R" firstAttribute="centerX" secondItem="4FZ-P2-yme" secondAttribute="centerX" id="o4D-MP-mi2"/>
+                                                <constraint firstItem="mpE-PW-gtc" firstAttribute="height" secondItem="rJC-ox-J5R" secondAttribute="height" id="z6x-xF-8pa"/>
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHn-Nd-ShO">
@@ -214,11 +216,11 @@
                                             <rect key="frame" x="89" y="0.0" width="213.5" height="29.5"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhZ-aq-6HF">
-                                                    <rect key="frame" x="10.5" y="9" width="192.5" height="12"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="10.5" y="10.5" width="192.5" height="9"/>
+                                                    <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="7"/>
+                                                            <integer key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColorFromUIColor">
                                                             <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -234,26 +236,27 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0IW-OP-EVz">
-                                                    <rect key="frame" x="10.5" y="9" width="96.5" height="12"/>
-                                                    <color key="backgroundColor" red="0.81960784310000001" green="0.43137254899999999" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Deg-pI-Uab">
+                                                    <rect key="frame" x="10.5" y="10.5" width="192.5" height="9"/>
+                                                    <color key="progressTintColor" red="0.81960784310000001" green="0.43137254899999999" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="7"/>
+                                                            <integer key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
-                                                </view>
+                                                </progressView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="dhZ-aq-6HF" firstAttribute="centerX" secondItem="SwF-nU-3cU" secondAttribute="centerX" id="BJv-bs-7X8"/>
-                                                <constraint firstItem="0IW-OP-EVz" firstAttribute="centerY" secondItem="dhZ-aq-6HF" secondAttribute="centerY" id="BLa-u1-NSj"/>
-                                                <constraint firstItem="dhZ-aq-6HF" firstAttribute="width" secondItem="SwF-nU-3cU" secondAttribute="width" multiplier="0.9" id="E0W-WF-DNo"/>
-                                                <constraint firstItem="0IW-OP-EVz" firstAttribute="height" secondItem="dhZ-aq-6HF" secondAttribute="height" id="Ot2-7T-0Nb"/>
-                                                <constraint firstItem="0IW-OP-EVz" firstAttribute="width" secondItem="dhZ-aq-6HF" secondAttribute="width" multiplier="0.5" id="R1K-Hg-gTm"/>
-                                                <constraint firstItem="0IW-OP-EVz" firstAttribute="leading" secondItem="dhZ-aq-6HF" secondAttribute="leading" id="WNb-Pv-f2h"/>
-                                                <constraint firstItem="dhZ-aq-6HF" firstAttribute="centerY" secondItem="SwF-nU-3cU" secondAttribute="centerY" id="hkc-mS-fTZ"/>
-                                                <constraint firstItem="dhZ-aq-6HF" firstAttribute="height" secondItem="SwF-nU-3cU" secondAttribute="height" multiplier="0.4" id="yfb-j0-Qba"/>
+                                                <constraint firstItem="dhZ-aq-6HF" firstAttribute="centerX" secondItem="Deg-pI-Uab" secondAttribute="centerX" id="FU7-0T-d6l"/>
+                                                <constraint firstItem="dhZ-aq-6HF" firstAttribute="centerY" secondItem="Deg-pI-Uab" secondAttribute="centerY" id="GPR-fI-fDA"/>
+                                                <constraint firstItem="Deg-pI-Uab" firstAttribute="centerY" secondItem="SwF-nU-3cU" secondAttribute="centerY" id="LNX-YP-RoT"/>
+                                                <constraint firstItem="Deg-pI-Uab" firstAttribute="centerX" secondItem="SwF-nU-3cU" secondAttribute="centerX" id="XGz-wH-9h5"/>
+                                                <constraint firstItem="dhZ-aq-6HF" firstAttribute="width" secondItem="Deg-pI-Uab" secondAttribute="width" id="ZEL-I7-ptE"/>
+                                                <constraint firstItem="Deg-pI-Uab" firstAttribute="height" secondItem="SwF-nU-3cU" secondAttribute="height" multiplier="0.3" id="byv-tE-Bgw"/>
+                                                <constraint firstItem="dhZ-aq-6HF" firstAttribute="height" secondItem="Deg-pI-Uab" secondAttribute="height" id="fuP-JJ-WlN"/>
+                                                <constraint firstItem="Deg-pI-Uab" firstAttribute="width" secondItem="SwF-nU-3cU" secondAttribute="width" multiplier="0.9" id="kna-ij-tWq"/>
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ZN-6q-wqy">
@@ -292,11 +295,11 @@
                                             <rect key="frame" x="89" y="0.0" width="213.5" height="30"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cjs-cc-Cng">
-                                                    <rect key="frame" x="10.5" y="9" width="192.5" height="12"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="10.5" y="10.5" width="192.5" height="9"/>
+                                                    <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="7"/>
+                                                            <integer key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColorFromUIColor">
                                                             <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -312,26 +315,27 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8m-IE-7zp">
-                                                    <rect key="frame" x="10.5" y="9" width="96.5" height="12"/>
-                                                    <color key="backgroundColor" red="0.81960784310000001" green="0.43137254899999999" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oEz-Ts-z6D">
+                                                    <rect key="frame" x="10.5" y="10.5" width="192.5" height="9"/>
+                                                    <color key="progressTintColor" red="0.81960784310000001" green="0.43137254899999999" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="7"/>
+                                                            <integer key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
-                                                </view>
+                                                </progressView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="C8m-IE-7zp" firstAttribute="leading" secondItem="Cjs-cc-Cng" secondAttribute="leading" id="5Hd-CP-0ja"/>
-                                                <constraint firstItem="Cjs-cc-Cng" firstAttribute="height" secondItem="AfQ-17-6IV" secondAttribute="height" multiplier="0.4" id="7iK-Wt-I24"/>
-                                                <constraint firstItem="Cjs-cc-Cng" firstAttribute="centerX" secondItem="AfQ-17-6IV" secondAttribute="centerX" id="864-3n-ewA"/>
-                                                <constraint firstItem="Cjs-cc-Cng" firstAttribute="centerY" secondItem="AfQ-17-6IV" secondAttribute="centerY" id="Mlh-p4-aGs"/>
-                                                <constraint firstItem="Cjs-cc-Cng" firstAttribute="width" secondItem="AfQ-17-6IV" secondAttribute="width" multiplier="0.9" id="edE-VS-wnU"/>
-                                                <constraint firstItem="C8m-IE-7zp" firstAttribute="centerY" secondItem="Cjs-cc-Cng" secondAttribute="centerY" id="ohC-gV-Yl8"/>
-                                                <constraint firstItem="C8m-IE-7zp" firstAttribute="height" secondItem="Cjs-cc-Cng" secondAttribute="height" id="t7L-QT-Qky"/>
-                                                <constraint firstItem="C8m-IE-7zp" firstAttribute="width" secondItem="Cjs-cc-Cng" secondAttribute="width" multiplier="0.5" id="xVE-In-zgu"/>
+                                                <constraint firstItem="Cjs-cc-Cng" firstAttribute="height" secondItem="oEz-Ts-z6D" secondAttribute="height" id="7rg-vt-xq6"/>
+                                                <constraint firstItem="Cjs-cc-Cng" firstAttribute="width" secondItem="oEz-Ts-z6D" secondAttribute="width" id="CAo-zv-FSk"/>
+                                                <constraint firstItem="oEz-Ts-z6D" firstAttribute="centerX" secondItem="AfQ-17-6IV" secondAttribute="centerX" id="GAG-Cb-hhN"/>
+                                                <constraint firstItem="Cjs-cc-Cng" firstAttribute="centerY" secondItem="oEz-Ts-z6D" secondAttribute="centerY" id="QsL-TQ-uQM"/>
+                                                <constraint firstItem="oEz-Ts-z6D" firstAttribute="centerY" secondItem="AfQ-17-6IV" secondAttribute="centerY" id="o4G-YP-0Xb"/>
+                                                <constraint firstItem="oEz-Ts-z6D" firstAttribute="height" secondItem="AfQ-17-6IV" secondAttribute="height" multiplier="0.3" id="xjc-so-eQW"/>
+                                                <constraint firstItem="oEz-Ts-z6D" firstAttribute="width" secondItem="AfQ-17-6IV" secondAttribute="width" multiplier="0.9" id="zac-EK-yFX"/>
+                                                <constraint firstItem="Cjs-cc-Cng" firstAttribute="centerX" secondItem="oEz-Ts-z6D" secondAttribute="centerX" id="zol-SA-lxq"/>
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPY-L5-yxc">
@@ -370,11 +374,11 @@
                                             <rect key="frame" x="89" y="0.0" width="213.5" height="30"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bI0-fL-oPN">
-                                                    <rect key="frame" x="10.5" y="9" width="192.5" height="12"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="10.5" y="10.5" width="192.5" height="9"/>
+                                                    <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="7"/>
+                                                            <integer key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColorFromUIColor">
                                                             <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -390,26 +394,27 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aNM-la-Fkc">
-                                                    <rect key="frame" x="10.5" y="9" width="96.5" height="12"/>
-                                                    <color key="backgroundColor" red="0.81960784310000001" green="0.43137254899999999" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hXg-kJ-FCV">
+                                                    <rect key="frame" x="10.5" y="10.5" width="192.5" height="9"/>
+                                                    <color key="progressTintColor" red="0.81960784310000001" green="0.43137254899999999" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="7"/>
+                                                            <integer key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
-                                                </view>
+                                                </progressView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="aNM-la-Fkc" firstAttribute="width" secondItem="bI0-fL-oPN" secondAttribute="width" multiplier="0.5" id="4Mr-SV-blm"/>
-                                                <constraint firstItem="bI0-fL-oPN" firstAttribute="centerY" secondItem="gHR-Ld-hmj" secondAttribute="centerY" id="8aA-pT-ikD"/>
-                                                <constraint firstItem="aNM-la-Fkc" firstAttribute="height" secondItem="bI0-fL-oPN" secondAttribute="height" id="Z9L-jc-VgO"/>
-                                                <constraint firstItem="bI0-fL-oPN" firstAttribute="width" secondItem="gHR-Ld-hmj" secondAttribute="width" multiplier="0.9" id="aUd-L7-flO"/>
-                                                <constraint firstItem="bI0-fL-oPN" firstAttribute="height" secondItem="gHR-Ld-hmj" secondAttribute="height" multiplier="0.4" id="bJu-pZ-mDG"/>
-                                                <constraint firstItem="aNM-la-Fkc" firstAttribute="centerY" secondItem="bI0-fL-oPN" secondAttribute="centerY" id="cSA-h7-lVm"/>
-                                                <constraint firstItem="aNM-la-Fkc" firstAttribute="leading" secondItem="bI0-fL-oPN" secondAttribute="leading" id="vdT-t1-6r0"/>
-                                                <constraint firstItem="bI0-fL-oPN" firstAttribute="centerX" secondItem="gHR-Ld-hmj" secondAttribute="centerX" id="ws0-Bt-dGR"/>
+                                                <constraint firstItem="hXg-kJ-FCV" firstAttribute="height" secondItem="gHR-Ld-hmj" secondAttribute="height" multiplier="0.3" id="3A0-6M-8aK"/>
+                                                <constraint firstItem="bI0-fL-oPN" firstAttribute="width" secondItem="hXg-kJ-FCV" secondAttribute="width" id="3Za-Za-o22"/>
+                                                <constraint firstItem="hXg-kJ-FCV" firstAttribute="centerY" secondItem="gHR-Ld-hmj" secondAttribute="centerY" id="b8Z-rl-KCX"/>
+                                                <constraint firstItem="bI0-fL-oPN" firstAttribute="height" secondItem="hXg-kJ-FCV" secondAttribute="height" id="pWx-5n-ZZZ"/>
+                                                <constraint firstItem="hXg-kJ-FCV" firstAttribute="width" secondItem="gHR-Ld-hmj" secondAttribute="width" multiplier="0.9" id="rEs-64-61f"/>
+                                                <constraint firstItem="bI0-fL-oPN" firstAttribute="centerX" secondItem="hXg-kJ-FCV" secondAttribute="centerX" id="rWs-Rl-ldO"/>
+                                                <constraint firstItem="bI0-fL-oPN" firstAttribute="centerY" secondItem="hXg-kJ-FCV" secondAttribute="centerY" id="rm4-3b-Vkd"/>
+                                                <constraint firstItem="hXg-kJ-FCV" firstAttribute="centerX" secondItem="gHR-Ld-hmj" secondAttribute="centerX" id="upJ-82-hPK"/>
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwY-6K-9sI">
