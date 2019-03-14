@@ -77,9 +77,8 @@ class ViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func analyzeMovie(_ sender: Any) {
-        //showSpinner()
+        showSpinner()
         dismissViewOrKeyboard()
-        showCard()
     }
 
 }
