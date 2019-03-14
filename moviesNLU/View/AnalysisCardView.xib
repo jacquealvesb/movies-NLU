@@ -24,6 +24,7 @@
                 <outlet property="joyProgressView" destination="4AT-2g-b11" id="jdM-rq-ItP"/>
                 <outlet property="nameLabel" destination="ufb-wd-dle" id="AQj-2G-NTz"/>
                 <outlet property="posterImageView" destination="Jwt-mC-EeL" id="cTM-Qj-OGg"/>
+                <outlet property="readReviewsButton" destination="ed6-3i-sFg" id="ilN-kb-qre"/>
                 <outlet property="sadnessPercentageLabel" destination="LPY-L5-yxc" id="XqD-8w-NIc"/>
                 <outlet property="sadnessProgressView" destination="oEz-Ts-z6D" id="05j-A2-Mpl"/>
             </connections>
@@ -36,12 +37,26 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TPQ-J5-ow8">
                     <rect key="frame" x="9.5" y="303.5" width="356" height="248.5"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="comments analysis:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FxV-Br-dy0">
-                            <rect key="frame" x="0.0" y="0.0" width="356" height="50"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="reviews analysis:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FxV-Br-dy0">
+                            <rect key="frame" x="0.0" y="0.0" width="249.5" height="50"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ed6-3i-sFg">
+                            <rect key="frame" x="249.5" y="0.0" width="106.5" height="37.5"/>
+                            <state key="normal">
+                                <attributedString key="attributedTitle">
+                                    <fragment content="read reviews">
+                                        <attributes>
+                                            <color key="NSColor" red="0.81960784310000001" green="0.43137254899999999" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="18" name="SFProText-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </state>
+                        </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OaN-Hz-znA">
                             <rect key="frame" x="0.0" y="50" width="356" height="198.5"/>
                             <subviews>
@@ -469,13 +484,17 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="OaN-Hz-znA" firstAttribute="centerX" secondItem="TPQ-J5-ow8" secondAttribute="centerX" id="6xM-68-JHt"/>
+                        <constraint firstItem="ed6-3i-sFg" firstAttribute="top" secondItem="TPQ-J5-ow8" secondAttribute="top" id="9yv-dh-Uat"/>
+                        <constraint firstAttribute="trailing" secondItem="ed6-3i-sFg" secondAttribute="trailing" id="PoK-ha-qAu"/>
+                        <constraint firstItem="ed6-3i-sFg" firstAttribute="height" secondItem="TPQ-J5-ow8" secondAttribute="height" multiplier="0.15" id="QxK-yt-knB"/>
                         <constraint firstItem="OaN-Hz-znA" firstAttribute="top" secondItem="FxV-Br-dy0" secondAttribute="bottom" id="RC6-kh-W3b"/>
                         <constraint firstItem="OaN-Hz-znA" firstAttribute="width" secondItem="TPQ-J5-ow8" secondAttribute="width" id="U3n-BA-yYP"/>
                         <constraint firstItem="OaN-Hz-znA" firstAttribute="height" secondItem="TPQ-J5-ow8" secondAttribute="height" multiplier="0.8" id="VCS-YN-VfN"/>
-                        <constraint firstItem="FxV-Br-dy0" firstAttribute="width" secondItem="TPQ-J5-ow8" secondAttribute="width" id="f7Q-uP-E1s"/>
+                        <constraint firstItem="ed6-3i-sFg" firstAttribute="width" secondItem="TPQ-J5-ow8" secondAttribute="width" multiplier="0.3" id="egq-bv-deu"/>
+                        <constraint firstItem="FxV-Br-dy0" firstAttribute="width" secondItem="TPQ-J5-ow8" secondAttribute="width" multiplier="0.7" id="f7Q-uP-E1s"/>
+                        <constraint firstItem="FxV-Br-dy0" firstAttribute="leading" secondItem="TPQ-J5-ow8" secondAttribute="leading" id="ggh-Xg-rEi"/>
                         <constraint firstItem="FxV-Br-dy0" firstAttribute="height" secondItem="TPQ-J5-ow8" secondAttribute="height" multiplier="0.2" id="hfs-wO-kRq"/>
                         <constraint firstItem="FxV-Br-dy0" firstAttribute="top" secondItem="TPQ-J5-ow8" secondAttribute="top" id="iNI-7b-AiM"/>
-                        <constraint firstItem="FxV-Br-dy0" firstAttribute="centerX" secondItem="TPQ-J5-ow8" secondAttribute="centerX" id="vy3-bt-OsF"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="owq-xv-vFl">
