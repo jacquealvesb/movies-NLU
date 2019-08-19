@@ -21,6 +21,7 @@
 		173927862237D4EB0046A9EB /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173927852237D4EB0046A9EB /* Review.swift */; };
 		176D8302223934EA003659EC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D8301223934EA003659EC /* Configuration.swift */; };
 		176D8304223936E1003659EC /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D8303223936E1003659EC /* Images.swift */; };
+		179338F8230B3F4E00825F4C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179338F7230B3F4E00825F4C /* Constants.swift */; };
 		17E4F7CD223805B30046FBA6 /* ViewController+NLU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E4F7CC223805B30046FBA6 /* ViewController+NLU.swift */; };
 		17E588DF22392C74009360BD /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E588DE22392C74009360BD /* Movie.swift */; };
 		7F3A609F01B5FED96DD4C2CE /* Pods_moviesNLUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 680BED558EF6ACA88EDA4C60 /* Pods_moviesNLUUITests.framework */; };
@@ -67,6 +68,7 @@
 		173927852237D4EB0046A9EB /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		176D8301223934EA003659EC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		176D8303223936E1003659EC /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		179338F7230B3F4E00825F4C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		17E4F7CC223805B30046FBA6 /* ViewController+NLU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+NLU.swift"; sourceTree = "<group>"; };
 		17E588DE22392C74009360BD /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		2F6E4F76EE5B76F4D3D96FCC /* Pods_moviesNLUTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moviesNLUTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +191,7 @@
 				17E588DE22392C74009360BD /* Movie.swift */,
 				176D8301223934EA003659EC /* Configuration.swift */,
 				176D8303223936E1003659EC /* Images.swift */,
+				179338F7230B3F4E00825F4C /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				173927822236A3330046A9EB /* ViewController+TheMovieDBApi.swift in Sources */,
+				179338F8230B3F4E00825F4C /* Constants.swift in Sources */,
 				1708C7AB223A76E00070E370 /* AnalysisCardView.swift in Sources */,
 				1739275022369A740046A9EB /* ViewController.swift in Sources */,
 				17E4F7CD223805B30046FBA6 /* ViewController+NLU.swift in Sources */,
