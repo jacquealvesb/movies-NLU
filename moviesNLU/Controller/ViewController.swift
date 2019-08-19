@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let apiKey = "094fd8f84048425f068f6965ca8bb6af"
+    let apiKey = TheMovieDBApiKey
     var configuration: Configuration?
 
     override func viewDidLoad() {
