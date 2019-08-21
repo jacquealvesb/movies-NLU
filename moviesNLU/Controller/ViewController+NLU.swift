@@ -13,7 +13,7 @@ import RestKit
 extension ViewController {
     
     func analyze(text: String, completionHandler: @escaping (_ emotion: EmotionResult?) -> ()) {
-        let nlu = NaturalLanguageUnderstanding(version: "2018-11-16", apiKey: "JO0eG_Pr5N52MYfh-nu9QXMwCrF2GYXYloye5IF5rqkA")
+        let nlu = NaturalLanguageUnderstanding(version: "2018-11-16", apiKey: NLUApiKey)
         
         let emotionOptions = EmotionOptions(document: true, targets: nil)
         
