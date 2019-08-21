@@ -26,7 +26,7 @@ To run the app on XCode, you'll have to have the keys for both APIs (The Movie D
 After getting the keys, you'll need to put them on the project so you're app will be able to use the APIs. To do so, create a new Swift file on the *Model* folder and name it *Constants.swift*.
 Open the file you've created and write the following:
 
-```
+```swift
 // Constants.swift
 
 let TheMovieDBApiKey = "YOUR API KEY FOR THE MOVIDE DB"
@@ -41,7 +41,7 @@ After doing that, you'll be able to run the project normally.
 To analyze the reviews of a movie you call the function
 
 
-```
+```swift
 // ViewController.swift
 
 analyze(movieNamed: "NAME OF THE MOVIE")
