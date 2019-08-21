@@ -35,3 +35,14 @@ let NLUApiKey = "YOUR API KEY FOR IBM WATSON"
 ```
 
 After doing that, you'll be able to run the project normally.
+
+## Usage
+
+To analyze the reviews of a movie you call the function
+
+
+```
+analyze(movieNamed: "NAME OF THE MOVIE")
+```
+
+
