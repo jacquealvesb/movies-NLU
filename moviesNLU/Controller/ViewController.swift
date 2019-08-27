@@ -10,7 +10,6 @@ import UIKit
 import NaturalLanguageUnderstanding
 
 class ViewController: UIViewController {
-    let apiKey = TheMovieDBApiKey
     var configuration: Configuration?
 
     @IBOutlet weak var movieTextField: UITextField!
@@ -31,7 +30,7 @@ class ViewController: UIViewController {
         
         self.movieTextField.delegate = self
         
-        self.getConfiguration { (configuration) in
+        TheMovieDBFacade.shared.getConfiguration { configuration in
             if let configuration = configuration {
                 self.configuration = configuration
             }
@@ -42,7 +41,7 @@ class ViewController: UIViewController {
     func analyze(movieNamed name: String) {
         if(name.trimmingCharacters(in: .whitespacesAndNewlines) != "") { //Checking if name isnt empty
             //Find movie
-            self.getMovie(withName: name) { (movie) in
+            TheMovieDBFacade.shared.getMovie(withName: name) { movie in
                 if let movie = movie {
                     //Setting card information
                     DispatchQueue.main.async {
@@ -57,7 +56,7 @@ class ViewController: UIViewController {
                     })
                     
                     //Get reviews
-                    self.getMovieReviews(withID: movie.id, completionHandler: { (reviews) in
+                    TheMovieDBFacade.shared.getReviews(of: movie) { reviews in
                         
                         if(reviews.count > 0) {
                             let dispathGroup = DispatchGroup()
@@ -90,7 +89,7 @@ class ViewController: UIViewController {
                             self.showAlert(withTitle: "No reviews", message: "This movie doesn't have any reviews.", andAction: nil)
                         }
                         
-                    })
+                    }
                 } else {
                     self.removeSpinner()
                     self.showAlert(withTitle: "Movie not found", message: "I couldn't find this movie. Try another one.", andAction: { (_) in
