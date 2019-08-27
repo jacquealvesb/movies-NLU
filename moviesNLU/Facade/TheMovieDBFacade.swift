@@ -11,6 +11,7 @@ import Foundation
 class TheMovieDBFacade {
     // MARK: - Variables
     public static let shared = TheMovieDBFacade()
+    let apiKey = TheMovieDBApiKey
     
     //MARK: - Functions
     
