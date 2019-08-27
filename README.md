@@ -42,9 +42,7 @@ To analyze the reviews of a movie you call the function
 
 
 ```swift
-// ViewController.swift
-
-analyze(movieNamed: "NAME OF THE MOVIE")
+NLUFacade.shared.analyze(movieNamed: "NAME OF THE MOVIE")
 ```
 
 
