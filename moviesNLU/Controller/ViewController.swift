@@ -66,9 +66,9 @@ class ViewController: UIViewController {
                             for review in reviews {
                                 dispathGroup.enter()
                                 //Analyzes comment
-                                self.analyze(text: review.content, completionHandler: { (result) in
+                                NLUFacade.shared.analyze(text: review.content, completionHandler: { (result) in
                                     if let result = result {
-                                        if let emotionScore = self.emotionScores(of: result) {
+                                        if let emotionScore = NLUFacade.shared.emotionScores(of: result) {
                                             emotionScores.append(emotionScore)
                                         }
                                     }
@@ -77,7 +77,7 @@ class ViewController: UIViewController {
                             }
                             
                             dispathGroup.notify(queue: DispatchQueue.main, execute: {
-                                if let emotionScoreAverage = self.emotionAverage(emotionScores) {
+                                if let emotionScoreAverage = NLUFacade.shared.emotionAverage(emotionScores) {
                                     self.analysisCard.setBars(joy: emotionScoreAverage.joy, anger: emotionScoreAverage.anger, disgust: emotionScoreAverage.disgust, sadness: emotionScoreAverage.sadness, fear: emotionScoreAverage.fear)
                                 }
                                 
