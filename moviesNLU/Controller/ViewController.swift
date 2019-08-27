@@ -10,7 +10,6 @@ import UIKit
 import NaturalLanguageUnderstanding
 
 class ViewController: UIViewController {
-    let apiKey = TheMovieDBApiKey
     var configuration: Configuration?
 
     @IBOutlet weak var movieTextField: UITextField!
@@ -31,7 +30,7 @@ class ViewController: UIViewController {
         
         self.movieTextField.delegate = self
         
-        self.getConfiguration { (configuration) in
+        TheMovieDBFacade.shared.getConfiguration { configuration in
             if let configuration = configuration {
                 self.configuration = configuration
             }
@@ -42,7 +41,7 @@ class ViewController: UIViewController {
     func analyze(movieNamed name: String) {
         if(name.trimmingCharacters(in: .whitespacesAndNewlines) != "") { //Checking if name isnt empty
             //Find movie
-            self.getMovie(withName: name) { (movie) in
+            TheMovieDBFacade.shared.getMovie(withName: name) { movie in
                 if let movie = movie {
                     //Setting card information
                     DispatchQueue.main.async {
@@ -57,7 +56,7 @@ class ViewController: UIViewController {
                     })
                     
                     //Get reviews
-                    self.getMovieReviews(withID: movie.id, completionHandler: { (reviews) in
+                    TheMovieDBFacade.shared.getReviews(of: movie) { reviews in
                         
                         if(reviews.count > 0) {
                             let dispathGroup = DispatchGroup()
@@ -66,9 +65,9 @@ class ViewController: UIViewController {
                             for review in reviews {
                                 dispathGroup.enter()
                                 //Analyzes comment
-                                self.analyze(text: review.content, completionHandler: { (result) in
+                                NLUFacade.shared.analyze(text: review.content, completionHandler: { (result) in
                                     if let result = result {
-                                        if let emotionScore = self.emotionScores(of: result) {
+                                        if let emotionScore = NLUFacade.shared.emotionScores(of: result) {
                                             emotionScores.append(emotionScore)
                                         }
                                     }
@@ -77,7 +76,7 @@ class ViewController: UIViewController {
                             }
                             
                             dispathGroup.notify(queue: DispatchQueue.main, execute: {
-                                if let emotionScoreAverage = self.emotionAverage(emotionScores) {
+                                if let emotionScoreAverage = NLUFacade.shared.emotionAverage(emotionScores) {
                                     self.analysisCard.setBars(joy: emotionScoreAverage.joy, anger: emotionScoreAverage.anger, disgust: emotionScoreAverage.disgust, sadness: emotionScoreAverage.sadness, fear: emotionScoreAverage.fear)
                                 }
                                 
@@ -90,7 +89,7 @@ class ViewController: UIViewController {
                             self.showAlert(withTitle: "No reviews", message: "This movie doesn't have any reviews.", andAction: nil)
                         }
                         
-                    })
+                    }
                 } else {
                     self.removeSpinner()
                     self.showAlert(withTitle: "Movie not found", message: "I couldn't find this movie. Try another one.", andAction: { (_) in
