@@ -71,6 +71,7 @@ class NLUFacade {
             }
             """.utf8))
             
+            // Sums all scores
             for score in scores {
                 average.anger! += score.anger!
                 average.disgust! += score.disgust!
@@ -79,6 +80,7 @@ class NLUFacade {
                 average.sadness! += score.sadness!
             }
             
+            // Divides  by the number of scores
             average.anger = average.anger!/scoreCount
             average.disgust = average.disgust!/scoreCount
             average.fear = average.fear!/scoreCount
