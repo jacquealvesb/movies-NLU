@@ -10,7 +10,6 @@ import UIKit
 import NaturalLanguageUnderstanding
 
 class ViewController: UIViewController {
-    let apiKey = TheMovieDBApiKey
     var configuration: Configuration?
 
     @IBOutlet weak var movieTextField: UITextField!
