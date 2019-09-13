@@ -11,7 +11,6 @@
 		1708C7AC223A76E00070E370 /* AnalysisCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1708C7AA223A76E00070E370 /* AnalysisCardView.xib */; };
 		1708C7AE223A77520070E370 /* ViewController+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708C7AD223A77520070E370 /* ViewController+TextFieldDelegate.swift */; };
 		170DC44C2314BE100028ED3A /* NLUFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DC44B2314BE100028ED3A /* NLUFacade.swift */; };
-		170DC44E2314BE1F0028ED3A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DC44D2314BE1F0028ED3A /* Constants.swift */; };
 		1739274E22369A740046A9EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739274D22369A740046A9EB /* AppDelegate.swift */; };
 		1739275022369A740046A9EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739274F22369A740046A9EB /* ViewController.swift */; };
 		1739275322369A740046A9EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1739275122369A740046A9EB /* Main.storyboard */; };
@@ -22,6 +21,9 @@
 		173927862237D4EB0046A9EB /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173927852237D4EB0046A9EB /* Review.swift */; };
 		176D8302223934EA003659EC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D8301223934EA003659EC /* Configuration.swift */; };
 		176D8304223936E1003659EC /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D8303223936E1003659EC /* Images.swift */; };
+		178ED081232BF50700E41C16 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178ED080232BF50700E41C16 /* Constants.swift */; };
+		178ED083232BF57E00E41C16 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178ED082232BF57E00E41C16 /* RoundButton.swift */; };
+		178ED087232C20F500E41C16 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178ED086232C20F500E41C16 /* LineView.swift */; };
 		179EDEE7231491DA0046B413 /* TheMovieDBFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179EDEE6231491DA0046B413 /* TheMovieDBFacade.swift */; };
 		17E588DF22392C74009360BD /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E588DE22392C74009360BD /* Movie.swift */; };
 		7F3A609F01B5FED96DD4C2CE /* Pods_moviesNLUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 680BED558EF6ACA88EDA4C60 /* Pods_moviesNLUUITests.framework */; };
@@ -52,7 +54,6 @@
 		1708C7AA223A76E00070E370 /* AnalysisCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnalysisCardView.xib; sourceTree = "<group>"; };
 		1708C7AD223A77520070E370 /* ViewController+TextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+TextFieldDelegate.swift"; sourceTree = "<group>"; };
 		170DC44B2314BE100028ED3A /* NLUFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLUFacade.swift; sourceTree = "<group>"; };
-		170DC44D2314BE1F0028ED3A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1739274A22369A740046A9EB /* moviesNLU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moviesNLU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1739274D22369A740046A9EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1739274F22369A740046A9EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +70,9 @@
 		173927852237D4EB0046A9EB /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		176D8301223934EA003659EC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		176D8303223936E1003659EC /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		178ED080232BF50700E41C16 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		178ED082232BF57E00E41C16 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		178ED086232C20F500E41C16 /* LineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		179EDEE6231491DA0046B413 /* TheMovieDBFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDBFacade.swift; sourceTree = "<group>"; };
 		17E588DE22392C74009360BD /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		2F6E4F76EE5B76F4D3D96FCC /* Pods_moviesNLUTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moviesNLUTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +183,8 @@
 				1739275122369A740046A9EB /* Main.storyboard */,
 				1708C7A9223A76E00070E370 /* AnalysisCardView.swift */,
 				1708C7AA223A76E00070E370 /* AnalysisCardView.xib */,
+				178ED082232BF57E00E41C16 /* RoundButton.swift */,
+				178ED086232C20F500E41C16 /* LineView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,7 +196,7 @@
 				17E588DE22392C74009360BD /* Movie.swift */,
 				176D8301223934EA003659EC /* Configuration.swift */,
 				176D8303223936E1003659EC /* Images.swift */,
-				170DC44D2314BE1F0028ED3A /* Constants.swift */,
+				178ED080232BF50700E41C16 /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -440,9 +446,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				178ED083232BF57E00E41C16 /* RoundButton.swift in Sources */,
 				1708C7AB223A76E00070E370 /* AnalysisCardView.swift in Sources */,
-				170DC44E2314BE1F0028ED3A /* Constants.swift in Sources */,
+				178ED081232BF50700E41C16 /* Constants.swift in Sources */,
 				1739275022369A740046A9EB /* ViewController.swift in Sources */,
+				178ED087232C20F500E41C16 /* LineView.swift in Sources */,
 				176D8304223936E1003659EC /* Images.swift in Sources */,
 				176D8302223934EA003659EC /* Configuration.swift in Sources */,
 				1739274E22369A740046A9EB /* AppDelegate.swift in Sources */,
