@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -521,7 +521,7 @@
                             </userDefinedRuntimeAttributes>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="how to train your dragon" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufb-wd-dle">
-                            <rect key="frame" x="94" y="193.5" width="187.5" height="69"/>
+                            <rect key="frame" x="91" y="193.5" width="193" height="57.5"/>
                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -537,12 +537,11 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="Jwt-mC-EeL" firstAttribute="height" secondItem="owq-xv-vFl" secondAttribute="height" multiplier="0.7" id="00o-aE-3xG"/>
-                        <constraint firstItem="ufb-wd-dle" firstAttribute="height" secondItem="owq-xv-vFl" secondAttribute="height" multiplier="0.25" id="9eU-di-ur8"/>
-                        <constraint firstItem="ufb-wd-dle" firstAttribute="width" secondItem="owq-xv-vFl" secondAttribute="width" multiplier="0.5" id="G47-4d-j7o"/>
                         <constraint firstItem="Jwt-mC-EeL" firstAttribute="top" secondItem="owq-xv-vFl" secondAttribute="top" id="Jyv-Hp-CYy"/>
                         <constraint firstItem="QhA-cw-w5S" firstAttribute="top" secondItem="owq-xv-vFl" secondAttribute="top" constant="-20" id="LRW-ef-qcs"/>
                         <constraint firstItem="QhA-cw-w5S" firstAttribute="width" secondItem="owq-xv-vFl" secondAttribute="width" multiplier="0.15" id="P5E-bs-tq2"/>
                         <constraint firstItem="QhA-cw-w5S" firstAttribute="height" secondItem="owq-xv-vFl" secondAttribute="height" multiplier="0.1" id="RKj-MV-C6c"/>
+                        <constraint firstItem="ufb-wd-dle" firstAttribute="width" secondItem="Jwt-mC-EeL" secondAttribute="width" multiplier="1.5" id="XBL-2e-Pg7"/>
                         <constraint firstAttribute="trailing" secondItem="QhA-cw-w5S" secondAttribute="trailing" id="evA-ez-kvG"/>
                         <constraint firstItem="Jwt-mC-EeL" firstAttribute="centerX" secondItem="owq-xv-vFl" secondAttribute="centerX" id="fzZ-2L-vRa"/>
                         <constraint firstItem="ufb-wd-dle" firstAttribute="centerX" secondItem="owq-xv-vFl" secondAttribute="centerX" id="sKg-sK-JWm"/>
