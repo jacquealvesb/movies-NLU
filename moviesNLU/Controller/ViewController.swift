@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(tap)
         
         self.movieTextField.delegate = self
+        self.analyzeButton.addTarget(self, action: #selector(analyzeMovie), for: .touchUpInside)
         
         TheMovieDBFacade.shared.getConfiguration { configuration in
             if let configuration = configuration {
