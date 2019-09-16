@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var movieTextField: UITextField!
     @IBOutlet weak var analysisCard: AnalysisCardView!
     let analyzeButton: RoundButton = RoundButton(color: UIColor(named: "darkGray")!, text: "analyze")
+    let lineView: LineView = LineView()
     
     var spinnerView: UIView?
     var movieID:Int?
@@ -38,7 +39,8 @@ class ViewController: UIViewController {
             }
         }
         
-        self.view.addSubview(analyzeButton)
+        self.view.addSubview(lineView)
+//        self.view.addSubview(analyzeButton)
     }
     
     func analyze(movieNamed name: String) {
@@ -214,112 +216,4 @@ class ViewController: UIViewController {
         self.movieTextField.text = ""
 
     }
-
 }
-
-extension ViewController {
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
-        
-        self.updateConstraints()
-    }
-    
-    func getOrientation() -> UIDeviceOrientation {
-        return UIDevice.current.orientation
-    }
-    
-    func updateConstraints() {
-        let orientation = self.getOrientation()
-        
-        self.analyzeButtonConstraints(orientation)
-    }
-    
-    func analyzeButtonConstraints(_ orientation: UIDeviceOrientation) {
-        var constraints: [NSLayoutConstraint] = []
-        
-        self.analyzeButton.translatesAutoresizingMaskIntoConstraints = false
-        self.analyzeButton.removeConstraints(self.analyzeButton.constraints)
-        
-        if orientation == .portrait || orientation == .faceUp || orientation == .faceDown {
-            constraints.append( // Leading constraint
-                NSLayoutConstraint(item: self.analyzeButton,
-                                   attribute: .leading,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .leading,
-                                   multiplier: 1,
-                                   constant: 100)
-            )
-            constraints.append( // Trailing constraint
-                NSLayoutConstraint(item: self.analyzeButton,
-                                   attribute: .trailing,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .trailing,
-                                   multiplier: 1,
-                                   constant: -100)
-            )
-            constraints.append( // Height constraint - aspect ratio 3:1 with itself
-                NSLayoutConstraint(item: self.analyzeButton,
-                                   attribute: .height,
-                                   relatedBy: .equal,
-                                   toItem: nil,
-                                   attribute: .notAnAttribute,
-                                   multiplier: 1,
-                                   constant: 56)
-            )
-            constraints.append( // Align Y
-                NSLayoutConstraint(item: self.analyzeButton,
-                                   attribute: .centerY,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .centerY,
-                                   multiplier: 1,
-                                   constant: 0)
-            )
-            
-        } else if orientation == .landscapeLeft || orientation == .landscapeRight {
-            constraints.append( // Leading constraint
-                NSLayoutConstraint(item: self.analyzeButton,
-                                   attribute: .leading,
-                                   relatedBy: .equal,
-                                   toItem: self.movieTextField,
-                                   attribute: .trailing,
-                                   multiplier: 1,
-                                   constant: 50)
-            )
-            constraints.append( // Trailing constraint
-                NSLayoutConstraint(item: self.analyzeButton,
-                                   attribute: .trailing,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .trailing,
-                                   multiplier: 1,
-                                   constant: -50)
-            )
-            constraints.append( // Height constraint - aspect ratio 3:1 with itself
-                NSLayoutConstraint(item: self.analyzeButton,
-                                   attribute: .height,
-                                   relatedBy: .equal,
-                                   toItem: nil,
-                                   attribute: .notAnAttribute,
-                                   multiplier: 1,
-                                   constant: 56)
-            )
-            constraints.append( // Align Y
-                NSLayoutConstraint(item: self.analyzeButton,
-                                   attribute: .centerY,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .centerY,
-                                   multiplier: 1,
-                                   constant: 0)
-            )
-        }
-        
-        NSLayoutConstraint.deactivate(self.analyzeButton.constraints)
-        NSLayoutConstraint.activate(constraints)
-        
-    }
-}
-

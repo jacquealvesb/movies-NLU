@@ -24,6 +24,7 @@
 		178ED081232BF50700E41C16 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178ED080232BF50700E41C16 /* Constants.swift */; };
 		178ED083232BF57E00E41C16 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178ED082232BF57E00E41C16 /* RoundButton.swift */; };
 		178ED087232C20F500E41C16 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178ED086232C20F500E41C16 /* LineView.swift */; };
+		178ED089232FBDBC00E41C16 /* ViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178ED088232FBDBC00E41C16 /* ViewController+Constraints.swift */; };
 		179EDEE7231491DA0046B413 /* TheMovieDBFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179EDEE6231491DA0046B413 /* TheMovieDBFacade.swift */; };
 		17E588DF22392C74009360BD /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E588DE22392C74009360BD /* Movie.swift */; };
 		7F3A609F01B5FED96DD4C2CE /* Pods_moviesNLUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 680BED558EF6ACA88EDA4C60 /* Pods_moviesNLUUITests.framework */; };
@@ -73,6 +74,7 @@
 		178ED080232BF50700E41C16 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		178ED082232BF57E00E41C16 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		178ED086232C20F500E41C16 /* LineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
+		178ED088232FBDBC00E41C16 /* ViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Constraints.swift"; sourceTree = "<group>"; };
 		179EDEE6231491DA0046B413 /* TheMovieDBFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDBFacade.swift; sourceTree = "<group>"; };
 		17E588DE22392C74009360BD /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		2F6E4F76EE5B76F4D3D96FCC /* Pods_moviesNLUTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moviesNLUTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				1739274F22369A740046A9EB /* ViewController.swift */,
+				178ED088232FBDBC00E41C16 /* ViewController+Constraints.swift */,
 				1708C7AD223A77520070E370 /* ViewController+TextFieldDelegate.swift */,
 			);
 			path = Controller;
@@ -452,6 +455,7 @@
 				1739275022369A740046A9EB /* ViewController.swift in Sources */,
 				178ED087232C20F500E41C16 /* LineView.swift in Sources */,
 				176D8304223936E1003659EC /* Images.swift in Sources */,
+				178ED089232FBDBC00E41C16 /* ViewController+Constraints.swift in Sources */,
 				176D8302223934EA003659EC /* Configuration.swift in Sources */,
 				1739274E22369A740046A9EB /* AppDelegate.swift in Sources */,
 				179EDEE7231491DA0046B413 /* TheMovieDBFacade.swift in Sources */,
