@@ -18,16 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="type a movie" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZKW-gV-KLf">
-                                <rect key="frame" x="52" y="100" width="270" height="53.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="34"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NiW-hI-91B" customClass="AnalysisCardView" customModule="moviesNLU" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="96.5" width="375" height="600.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -44,7 +34,6 @@
                     </view>
                     <connections>
                         <outlet property="analysisCard" destination="NiW-hI-91B" id="x86-OT-hiF"/>
-                        <outlet property="movieTextField" destination="ZKW-gV-KLf" id="0By-pn-GGt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3aI-bH-CLc" sceneMemberID="firstResponder"/>

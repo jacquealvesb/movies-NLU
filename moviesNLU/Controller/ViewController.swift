@@ -13,10 +13,10 @@ class ViewController: UIViewController {
     var configuration: Configuration?
 
     // Objects
-    @IBOutlet weak var movieTextField: UITextField!
     @IBOutlet weak var analysisCard: AnalysisCardView!
     let analyzeButton: RoundButton = RoundButton(color: UIColor(named: "darkGray")!, text: "analyze")
     let lineView: LineView = LineView()
+    let movieTextField: MovieTextField = MovieTextField(placeholder: "type a movie")
     
     var spinnerView: UIView?
     var movieID:Int?
@@ -38,9 +38,6 @@ class ViewController: UIViewController {
                 self.configuration = configuration
             }
         }
-        
-        self.view.addSubview(lineView)
-//        self.view.addSubview(analyzeButton)
     }
     
     func analyze(movieNamed name: String) {

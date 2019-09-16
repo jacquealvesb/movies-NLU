@@ -24,6 +24,7 @@ extension ViewController {
         
         self.lineViewConstraints(orientation)
         self.analyzeButtonConstraints(orientation)
+        self.movieTextFieldConstraints()
     }
     
     func analyzeButtonConstraints(_ orientation: UIDeviceOrientation) {
@@ -199,6 +200,55 @@ extension ViewController {
                                    constant: 0)
             )
         }
+        
+        NSLayoutConstraint.activate(constraints)
+        
+    }
+    
+    func movieTextFieldConstraints() {
+        var constraints: [NSLayoutConstraint] = []
+        
+        self.movieTextField.removeFromSuperview()
+        self.view.addSubview(movieTextField)
+        
+        self.movieTextField.translatesAutoresizingMaskIntoConstraints = false
+        
+        constraints.append( // Leading constraint
+            NSLayoutConstraint(item: self.movieTextField,
+                               attribute: .leading,
+                               relatedBy: .equal,
+                               toItem: self.lineView,
+                               attribute: .leading,
+                               multiplier: 1,
+                               constant: 0)
+        )
+        constraints.append( // Trailing constraint
+            NSLayoutConstraint(item: self.movieTextField,
+                               attribute: .trailing,
+                               relatedBy: .equal,
+                               toItem: self.lineView,
+                               attribute: .trailing,
+                               multiplier: 1,
+                               constant: 0)
+        )
+        constraints.append( // Height constraint - aspect ratio 3:1 with itself
+            NSLayoutConstraint(item: self.movieTextField,
+                               attribute: .height,
+                               relatedBy: .equal,
+                               toItem: nil,
+                               attribute: .notAnAttribute,
+                               multiplier: 1,
+                               constant: 56)
+        )
+        constraints.append( // Align Y
+            NSLayoutConstraint(item: self.movieTextField,
+                               attribute: .bottom,
+                               relatedBy: .equal,
+                               toItem: self.lineView,
+                               attribute: .top,
+                               multiplier: 1,
+                               constant: 0)
+        )
         
         NSLayoutConstraint.activate(constraints)
         
