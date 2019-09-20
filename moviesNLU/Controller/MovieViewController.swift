@@ -16,6 +16,8 @@ class MovieViewController: UIViewController {
     // Objects
     let posterImageView: UIImageView = UIImageView(frame: CGRect.zero)
     let nameLabel: UILabel = UILabel(frame: CGRect.zero)
+    let reviewsAnalysisLabel: UILabel = UILabel(frame: CGRect.zero)
+    let readReviewsButton: UIButton = UIButton(frame: CGRect.zero)
     
     // Variables
     
@@ -32,6 +34,8 @@ class MovieViewController: UIViewController {
         self.view.backgroundColor = UIColor(named: "darkGray")
         
         self.setupNameLabel()
+        self.setupReviewsAnalysisLabel()
+        self.setupReadReviewsButton()
     }
     
     // MARK: - Layout
@@ -39,6 +43,24 @@ class MovieViewController: UIViewController {
         self.nameLabel.font = UIFont.systemFont(ofSize: 24, weight: .light)
         self.nameLabel.textColor = .white
         self.nameLabel.textAlignment = .center
+    }
+    
+    func setupReviewsAnalysisLabel() {
+        self.reviewsAnalysisLabel.text = "reviews analysis:"
+        self.reviewsAnalysisLabel.font = UIFont.systemFont(ofSize: 28, weight: .medium)
+        self.reviewsAnalysisLabel.textColor = .white
+        self.reviewsAnalysisLabel.textAlignment = .left
+    }
+    
+    func setupReadReviewsButton() {
+        let attributes : [NSAttributedString.Key: Any] = [.font : UIFont.systemFont(ofSize: 18, weight: .light),
+                                                          .foregroundColor : UIColor(named: "pastelOrange") ?? .white,
+                                                          .underlineStyle : NSUnderlineStyle.single.rawValue]
+        
+        let attributeString = NSMutableAttributedString(string: "read reviews",
+                                                        attributes: attributes)
+        self.readReviewsButton.setAttributedTitle(attributeString, for: .normal)
+        self.readReviewsButton.addTarget(self, action: #selector(openReviewsURL), for: .touchUpInside)
     }
     
     // MARK: - Movie Reviews Analysis
