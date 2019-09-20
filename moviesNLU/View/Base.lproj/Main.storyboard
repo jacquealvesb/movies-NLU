@@ -17,24 +17,9 @@
                     <view key="view" contentMode="scaleToFill" id="Umr-hU-i0P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NiW-hI-91B" customClass="AnalysisCardView" customModule="moviesNLU" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="96.5" width="375" height="600.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" red="0.92941176469999998" green="0.45098039220000002" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="NiW-hI-91B" firstAttribute="width" secondItem="Umr-hU-i0P" secondAttribute="width" id="0Y0-GE-iZQ"/>
-                            <constraint firstItem="NiW-hI-91B" firstAttribute="centerX" secondItem="SA3-I0-6Ww" secondAttribute="centerX" id="QcR-iL-Wqk"/>
-                            <constraint firstItem="SA3-I0-6Ww" firstAttribute="bottom" secondItem="NiW-hI-91B" secondAttribute="bottom" constant="-30" id="Uit-R9-R2J"/>
-                            <constraint firstItem="NiW-hI-91B" firstAttribute="height" secondItem="Umr-hU-i0P" secondAttribute="height" multiplier="0.9" id="XTw-bd-8Nc"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SA3-I0-6Ww"/>
                     </view>
-                    <connections>
-                        <outlet property="analysisCard" destination="NiW-hI-91B" id="x86-OT-hiF"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3aI-bH-CLc" sceneMemberID="firstResponder"/>
             </objects>

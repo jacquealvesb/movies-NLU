@@ -9,6 +9,8 @@
 import UIKit
 import NaturalLanguageUnderstanding
 
+var configuration: Configuration?
+
 class MovieViewController: UIViewController {
     
     // Objects
@@ -16,7 +18,6 @@ class MovieViewController: UIViewController {
     let nameLabel: UILabel = UILabel(frame: CGRect.zero)
     
     // Variables
-    var configuration: Configuration?
     
     var joy: Double!
     var anger: Double!
@@ -28,9 +29,16 @@ class MovieViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        TheMovieDBFacade.shared.getConfiguration { configuration in
-            if let configuration = configuration {
-                self.configuration = configuration
+        self.view.backgroundColor = UIColor(named: "darkGray")
+    }
+    
+    func getConfiguration(completion: @escaping (_ success: Bool, _ error: RequestErrors?) -> Void) {
+        TheMovieDBFacade.shared.getConfiguration { conf in
+            if let conf = conf {
+                configuration = conf
+                completion(true, nil)
+            } else {
+                completion(false, .none)
             }
         }
     }
@@ -40,7 +48,10 @@ class MovieViewController: UIViewController {
             if let movie = movie {
                 
                 self.url = "https://www.themoviedb.org/movie/\(movie.id)/reviews"
-                self.nameLabel.text = movie.title
+                
+                DispatchQueue.main.async {
+                    self.nameLabel.text = movie.title
+                }
                 
                 self.downloadImage(withPath: movie.posterPath, completionHandler: { (image) in
                     DispatchQueue.main.async {

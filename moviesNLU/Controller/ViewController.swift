@@ -91,29 +91,19 @@ class ViewController: UIViewController {
             
             let movieViewController = MovieViewController()
             
-            movieViewController.setup(withMovieName: name) { (success, error) in
-                if let error = error {
-                    self.removeSpinner()
-                    
-                    switch error {
-                    case .movieNotFound:
-                        self.showAlert(withTitle: "Movie not found",
-                                       message: "I couldn't find this movie. Try another one.",
-                                       andAction: { _ in
-                                        self.movieTextField.text = ""
-                        })
-                        break
-                    case .noReviews:
-                        self.showAlert(withTitle: "No reviews",
-                                       message: "This movie doesn't have any reviews.",
+            if configuration == nil {
+                movieViewController.getConfiguration { (success, error) in
+                    if error != nil {
+                        self.removeSpinner()
+                        self.showAlert(withTitle: "Something happend",
+                                       message: "Try again",
                                        andAction: nil)
-                        break
-                    default:
-                        break
+                    } else {
+                        self.setupMovieViewController(movieViewController, withName: name)
                     }
-                } else {
-                    self.present(movieViewController, animated: true)
                 }
+            } else {
+                self.setupMovieViewController(movieViewController, withName: name)
             }
             
         } else {
@@ -121,6 +111,34 @@ class ViewController: UIViewController {
             self.showAlert(withTitle: "Empty name",
                            message: "Type a movie name",
                            andAction: nil)
+        }
+    }
+    
+    func setupMovieViewController(_ movieViewController: MovieViewController, withName name: String) {
+        movieViewController.setup(withMovieName: name) { (success, error) in
+            if let error = error {
+                self.removeSpinner()
+                
+                switch error {
+                case .movieNotFound:
+                    self.showAlert(withTitle: "Movie not found",
+                                   message: "I couldn't find this movie. Try another one.",
+                                   andAction: { _ in
+                                    self.movieTextField.text = ""
+                    })
+                    break
+                case .noReviews:
+                    self.showAlert(withTitle: "No reviews",
+                                   message: "This movie doesn't have any reviews.",
+                                   andAction: nil)
+                    break
+                default:
+                    break
+                }
+            } else {
+                self.removeSpinner()
+                self.present(movieViewController, animated: true)
+            }
         }
     }
 }
