@@ -30,8 +30,18 @@ class MovieViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor(named: "darkGray")
+        
+        self.setupNameLabel()
     }
     
+    // MARK: - Layout
+    func setupNameLabel() {
+        self.nameLabel.font = UIFont.systemFont(ofSize: 24, weight: .light)
+        self.nameLabel.textColor = .white
+        self.nameLabel.textAlignment = .center
+    }
+    
+    // MARK: - Movie Reviews Analysis
     func getConfiguration(completion: @escaping (_ success: Bool, _ error: RequestErrors?) -> Void) {
         TheMovieDBFacade.shared.getConfiguration { conf in
             if let conf = conf {

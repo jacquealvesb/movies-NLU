@@ -148,7 +148,7 @@ extension MovieViewController {
                                    toItem: self.posterImageView,
                                    attribute: .bottom,
                                    multiplier: 1,
-                                   constant: 0)
+                                   constant: 10)
             )
         } else if orientation == .landscapeLeft || orientation == .landscapeRight {
             constraints.append( // Leading constraint
@@ -156,7 +156,7 @@ extension MovieViewController {
                                    attribute: .leading,
                                    relatedBy: .equal,
                                    toItem: self.posterImageView,
-                                   attribute: .leading,
+                                   attribute: .trailing,
                                    multiplier: 1,
                                    constant: 20)
             )
