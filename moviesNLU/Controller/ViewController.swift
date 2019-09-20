@@ -10,97 +10,22 @@ import UIKit
 import NaturalLanguageUnderstanding
 
 class ViewController: UIViewController {
-    var configuration: Configuration?
-
-    @IBOutlet weak var movieTextField: UITextField!
-    @IBOutlet weak var analysisCard: AnalysisCardView!
+    // Objects
+    let analyzeButton: RoundButton = RoundButton(color: UIColor(named: "darkGray")!, text: "analyze")
+    let lineView: LineView = LineView()
+    let movieTextField: MovieTextField = MovieTextField(placeholder: "type a movie")
     
+    // Variables
     var spinnerView: UIView?
-    var movieID:Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.analysisCard.transform = CGAffineTransform(translationX: 0, y: self.analysisCard.frame.size.height)
-        self.analysisCard.closeButton.addTarget(self, action: #selector(hideCard), for: .touchUpInside)
-        self.analysisCard.readReviewsButton.addTarget(self, action: #selector(self.openReviewsURL), for: .touchUpInside)
-        
-        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissViewOrKeyboard))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
         
         self.movieTextField.delegate = self
-        
-        TheMovieDBFacade.shared.getConfiguration { configuration in
-            if let configuration = configuration {
-                self.configuration = configuration
-            }
-        }
-        
-    }
-    
-    func analyze(movieNamed name: String) {
-        if(name.trimmingCharacters(in: .whitespacesAndNewlines) != "") { //Checking if name isnt empty
-            //Find movie
-            TheMovieDBFacade.shared.getMovie(withName: name) { movie in
-                if let movie = movie {
-                    //Setting card information
-                    DispatchQueue.main.async {
-                        self.analysisCard.nameLabel.text = movie.title;
-                        self.movieID = movie.id
-                    }
-                   
-                    self.downloadImage(withPath: movie.posterPath, completionHandler: { (image) in
-                        DispatchQueue.main.async {
-                            self.analysisCard.posterImageView.image = image
-                        }
-                    })
-                    
-                    //Get reviews
-                    TheMovieDBFacade.shared.getReviews(of: movie) { reviews in
-                        
-                        if(reviews.count > 0) {
-                            let dispathGroup = DispatchGroup()
-                            var emotionScores = [EmotionScores]()
-                            
-                            for review in reviews {
-                                dispathGroup.enter()
-                                //Analyzes comment
-                                NLUFacade.shared.analyze(text: review.content, completionHandler: { (result) in
-                                    if let result = result {
-                                        if let emotionScore = NLUFacade.shared.emotionScores(of: result) {
-                                            emotionScores.append(emotionScore)
-                                        }
-                                    }
-                                    dispathGroup.leave()
-                                })
-                            }
-                            
-                            dispathGroup.notify(queue: DispatchQueue.main, execute: {
-                                if let emotionScoreAverage = NLUFacade.shared.emotionAverage(emotionScores) {
-                                    self.analysisCard.setBars(joy: emotionScoreAverage.joy, anger: emotionScoreAverage.anger, disgust: emotionScoreAverage.disgust, sadness: emotionScoreAverage.sadness, fear: emotionScoreAverage.fear)
-                                }
-                                
-                                self.removeSpinner()
-                                self.showCard()
-                            })
-                            
-                        } else {
-                            self.removeSpinner()
-                            self.showAlert(withTitle: "No reviews", message: "This movie doesn't have any reviews.", andAction: nil)
-                        }
-                        
-                    }
-                } else {
-                    self.removeSpinner()
-                    self.showAlert(withTitle: "Movie not found", message: "I couldn't find this movie. Try another one.", andAction: { (_) in
-                        self.movieTextField.text = ""
-                    })
-                }
-            }
-        } else {
-            self.removeSpinner()
-            self.showAlert(withTitle: "Empty name", message: "Type a movie name", andAction: nil)
-        }
+        self.analyzeButton.addTarget(self, action: #selector(analyzeMovie), for: .touchUpInside)
     }
     
     func showAlert(withTitle title: String, message: String, andAction actionHandler: ((UIAlertAction) -> Void)?) {
@@ -111,63 +36,12 @@ class ViewController: UIViewController {
         
         self.present(alert, animated: true)
     }
+ 
+    //MARK: - Keyboard
     
-    func downloadImage(withPath path: String, completionHandler: @escaping (_ image: UIImage?) -> ()) {
-        if let baseURL = configuration?.images?.secureBaseURL, let posterSize = configuration?.images?.posterSizes.last {
-            let imageURL = "\(baseURL)\(posterSize)\(path)"
-            print(imageURL)
-            
-            if let imageURL = URL(string: imageURL) {
-                let task = URLSession.shared.dataTask(with: imageURL) { (data, response, error) in
-                    if let data = data {
-                        completionHandler(UIImage(data: data))
-                    } else {
-                        print(error)
-                        completionHandler(nil)
-                    }
-                }
-                
-                task.resume()
-            } else {
-                completionHandler(nil)
-            }
-            
-        } else {
-            completionHandler(nil)
-        }
-        
-    }
-    
-    @objc func openReviewsURL() {
-        if let movieID = movieID {
-            let url = "https://www.themoviedb.org/movie/\(movieID)/reviews"
-            
-            if let url = URL(string: url) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            }
-        }
-    }
-
-    //MARK: - Analysis card
-    
-    func showCard() {
-        UIView.animate(withDuration: 0.5, animations: {
-            self.analysisCard.transform = CGAffineTransform(translationX: 0, y: 0)
-        }, completion: nil)
-    }
-    
-    @objc func hideCard() {
-        UIView.animate(withDuration: 0.5, animations: {
-            self.analysisCard.transform = CGAffineTransform(translationX: 0, y: self.analysisCard.frame.size.height)
-        }, completion: nil)
-    }
-    
-    @objc func dismissViewOrKeyboard() {
+    @objc func dismissKeyboard() {
         if(movieTextField.isFirstResponder) {
             view.endEditing(true)
-        } else {
-            self.movieID = nil
-            hideCard()
         }
     }
     
@@ -196,11 +70,11 @@ class ViewController: UIViewController {
         }
     }
     
-    // MARK: - Actions
+    // MARK: - Analysis
     
-    @IBAction func analyzeMovie(_ sender: Any) {
+    @objc func analyzeMovie() {
         self.showSpinner()
-        self.dismissViewOrKeyboard()
+        self.dismissKeyboard()
         
         if let movieName = self.movieTextField.text {
             self.analyze(movieNamed: movieName)
@@ -211,6 +85,60 @@ class ViewController: UIViewController {
         self.movieTextField.text = ""
 
     }
-
+    
+    func analyze(movieNamed name: String) {
+        if(name.trimmingCharacters(in: .whitespacesAndNewlines) != "") { //Checking if name isnt empty
+            
+            let movieViewController = MovieViewController()
+            
+            if configuration == nil {
+                movieViewController.getConfiguration { (success, error) in
+                    if error != nil {
+                        self.removeSpinner()
+                        self.showAlert(withTitle: "Something happend",
+                                       message: "Try again",
+                                       andAction: nil)
+                    } else {
+                        self.setupMovieViewController(movieViewController, withName: name)
+                    }
+                }
+            } else {
+                self.setupMovieViewController(movieViewController, withName: name)
+            }
+            
+        } else {
+            self.removeSpinner()
+            self.showAlert(withTitle: "Empty name",
+                           message: "Type a movie name",
+                           andAction: nil)
+        }
+    }
+    
+    func setupMovieViewController(_ movieViewController: MovieViewController, withName name: String) {
+        movieViewController.setup(withMovieName: name) { (success, error) in
+            if let error = error {
+                self.removeSpinner()
+                
+                switch error {
+                case .movieNotFound:
+                    self.showAlert(withTitle: "Movie not found",
+                                   message: "I couldn't find this movie. Try another one.",
+                                   andAction: { _ in
+                                    self.movieTextField.text = ""
+                    })
+                    break
+                case .noReviews:
+                    self.showAlert(withTitle: "No reviews",
+                                   message: "This movie doesn't have any reviews.",
+                                   andAction: nil)
+                    break
+                default:
+                    break
+                }
+            } else {
+                self.removeSpinner()
+                self.present(movieViewController, animated: true)
+            }
+        }
+    }
 }
-
