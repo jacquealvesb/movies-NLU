@@ -67,6 +67,7 @@ class ViewController: UIViewController {
         }
         
         self.spinnerView = spinnerView
+        self.spinnerView?.layer.zPosition = 10
     }
     
     func removeSpinner() {

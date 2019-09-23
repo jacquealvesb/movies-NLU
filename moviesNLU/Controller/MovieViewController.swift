@@ -86,7 +86,7 @@ class MovieViewController: UIViewController {
     func setupEmotionsTableView() {
         self.emotionsTableView.backgroundColor = .clear
         self.emotionsTableView.separatorStyle = .none
-        self.emotionsTableView.isUserInteractionEnabled = false
+        self.emotionsTableView.allowsSelection = false
         
         self.emotionsTableView.register(EmotionsTableViewCell.self, forCellReuseIdentifier: EmotionsTableViewCell.identifier)
         
