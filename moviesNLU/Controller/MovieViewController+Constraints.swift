@@ -27,6 +27,7 @@ extension MovieViewController {
         self.analysisLabelConstraints(orientation)
         self.readReviewsButtonConstraints()
         self.emotionsTableViewConstraints(orientation)
+        self.closeButtonConstraints(orientation)
     }
     
     func posterConstraints(_ orientation: UIDeviceOrientation) {
@@ -369,6 +370,76 @@ extension MovieViewController {
                                    attribute: .bottom,
                                    multiplier: 1,
                                    constant: -30)
+            )
+        }
+        
+        NSLayoutConstraint.activate(constraints)
+        
+    }
+    
+    func closeButtonConstraints(_ orientation: UIDeviceOrientation) {
+        var constraints: [NSLayoutConstraint] = []
+        
+        self.closeButton.removeFromSuperview()
+        self.view.addSubview(closeButton)
+        
+        self.closeButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        if orientation == .portrait || orientation == .faceUp || orientation == .faceDown {
+            constraints.append( // Trailing constraint
+                NSLayoutConstraint(item: self.closeButton,
+                                   attribute: .leading,
+                                   relatedBy: .equal,
+                                   toItem: self.view,
+                                   attribute: .leading,
+                                   multiplier: 1,
+                                   constant: 20)
+            )
+            constraints.append( // Top constraint
+                NSLayoutConstraint(item: self.closeButton,
+                                   attribute: .top,
+                                   relatedBy: .equal,
+                                   toItem: self.view,
+                                   attribute: .top,
+                                   multiplier: 1,
+                                   constant: -10)
+            )
+            constraints.append( // Height constraint
+                NSLayoutConstraint(item: self.closeButton,
+                                   attribute: .height,
+                                   relatedBy: .equal,
+                                   toItem: nil,
+                                   attribute: .notAnAttribute,
+                                   multiplier: 1,
+                                   constant: 100)
+            )
+        } else if orientation == .landscapeLeft || orientation == .landscapeRight {
+            constraints.append( // Leading constraint
+                NSLayoutConstraint(item: self.closeButton,
+                                   attribute: .leading,
+                                   relatedBy: .equal,
+                                   toItem: self.posterImageView,
+                                   attribute: .trailing,
+                                   multiplier: 1,
+                                   constant: 20)
+            )
+            constraints.append( // Top constraint
+                NSLayoutConstraint(item: self.closeButton,
+                                   attribute: .top,
+                                   relatedBy: .equal,
+                                   toItem: self.view,
+                                   attribute: .top,
+                                   multiplier: 1,
+                                   constant: -20)
+            )
+            constraints.append( // Height constraint
+                NSLayoutConstraint(item: self.closeButton,
+                                   attribute: .height,
+                                   relatedBy: .equal,
+                                   toItem: nil,
+                                   attribute: .notAnAttribute,
+                                   multiplier: 1,
+                                   constant: 100)
             )
         }
         

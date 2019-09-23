@@ -19,6 +19,7 @@ class MovieViewController: UIViewController {
     let reviewsAnalysisLabel: UILabel = UILabel(frame: CGRect.zero)
     let readReviewsButton: UIButton = UIButton(frame: CGRect.zero)
     let emotionsTableView: UITableView = UITableView(frame: CGRect.zero)
+    let closeButton: UIButton = UIButton(frame: CGRect.zero)
     
     // Variables
     var emotions: [Emotion] = [Emotion(name: "joy", score: 0),
@@ -42,6 +43,7 @@ class MovieViewController: UIViewController {
         self.setupReviewsAnalysisLabel()
         self.setupReadReviewsButton()
         self.setupEmotionsTableView()
+        self.setupCloseButton()
     }
     
     // MARK: - Layout
@@ -67,6 +69,16 @@ class MovieViewController: UIViewController {
                                                         attributes: attributes)
         self.readReviewsButton.setAttributedTitle(attributeString, for: .normal)
         self.readReviewsButton.addTarget(self, action: #selector(openReviewsURL), for: .touchUpInside)
+    }
+    
+    func setupCloseButton() {
+        self.closeButton.setTitle("close", for: .normal)
+        self.closeButton.setTitleColor(.systemBlue, for: .normal)
+        self.closeButton.addTarget(self, action: #selector(close), for: .touchUpInside)
+    }
+    
+    @objc func close() {
+        self.dismiss(animated: true, completion: nil)
     }
     
     

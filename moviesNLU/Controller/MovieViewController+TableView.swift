@@ -20,6 +20,4 @@ extension MovieViewController: UITableViewDataSource {
         
         return cell
     }
-    
-    
 }
