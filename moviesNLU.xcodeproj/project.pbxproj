@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1708C7AB223A76E00070E370 /* AnalysisCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708C7A9223A76E00070E370 /* AnalysisCardView.swift */; };
-		1708C7AC223A76E00070E370 /* AnalysisCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1708C7AA223A76E00070E370 /* AnalysisCardView.xib */; };
 		1708C7AE223A77520070E370 /* ViewController+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708C7AD223A77520070E370 /* ViewController+TextFieldDelegate.swift */; };
 		170DC44C2314BE100028ED3A /* NLUFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DC44B2314BE100028ED3A /* NLUFacade.swift */; };
 		171E8C872339646C002A2D2D /* MovieViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171E8C862339646C002A2D2D /* MovieViewController+TableView.swift */; };
@@ -58,8 +56,6 @@
 
 /* Begin PBXFileReference section */
 		146075550AA33F0CEEBBCF33 /* Pods-moviesNLUTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moviesNLUTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-moviesNLUTests/Pods-moviesNLUTests.debug.xcconfig"; sourceTree = "<group>"; };
-		1708C7A9223A76E00070E370 /* AnalysisCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalysisCardView.swift; sourceTree = "<group>"; };
-		1708C7AA223A76E00070E370 /* AnalysisCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnalysisCardView.xib; sourceTree = "<group>"; };
 		1708C7AD223A77520070E370 /* ViewController+TextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+TextFieldDelegate.swift"; sourceTree = "<group>"; };
 		170DC44B2314BE100028ED3A /* NLUFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLUFacade.swift; sourceTree = "<group>"; };
 		171E8C862339646C002A2D2D /* MovieViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieViewController+TableView.swift"; sourceTree = "<group>"; };
@@ -202,8 +198,6 @@
 			children = (
 				1739275122369A740046A9EB /* Main.storyboard */,
 				178ED08A232FC0D000E41C16 /* MovieTextField.swift */,
-				1708C7A9223A76E00070E370 /* AnalysisCardView.swift */,
-				1708C7AA223A76E00070E370 /* AnalysisCardView.xib */,
 				178ED082232BF57E00E41C16 /* RoundButton.swift */,
 				178ED086232C20F500E41C16 /* LineView.swift */,
 				17F00C2D23351EC200BAD781 /* EmotionsTableViewCell.swift */,
@@ -367,7 +361,6 @@
 			files = (
 				1739275822369A750046A9EB /* LaunchScreen.storyboard in Resources */,
 				1739275522369A750046A9EB /* Assets.xcassets in Resources */,
-				1708C7AC223A76E00070E370 /* AnalysisCardView.xib in Resources */,
 				1739275322369A740046A9EB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,7 +467,6 @@
 				178ED08F232FCE7100E41C16 /* RequestErrors.swift in Sources */,
 				178ED083232BF57E00E41C16 /* RoundButton.swift in Sources */,
 				17F00C2E23351EC200BAD781 /* EmotionsTableViewCell.swift in Sources */,
-				1708C7AB223A76E00070E370 /* AnalysisCardView.swift in Sources */,
 				178ED081232BF50700E41C16 /* Constants.swift in Sources */,
 				178ED08D232FC59300E41C16 /* MovieViewController.swift in Sources */,
 				1739275022369A740046A9EB /* ViewController.swift in Sources */,
