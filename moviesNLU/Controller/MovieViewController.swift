@@ -21,7 +21,11 @@ class MovieViewController: UIViewController {
     let emotionsTableView: UITableView = UITableView(frame: CGRect.zero)
     
     // Variables
-    
+    var emotions: [Emotion] = [Emotion(name: "joy", score: 0),
+                               Emotion(name: "anger", score: 0),
+                               Emotion(name: "disgust", score: 0),
+                               Emotion(name: "sadness", score: 0),
+                               Emotion(name: "fear", score: 0)]
     var joy: Double!
     var anger: Double!
     var disgust: Double!
@@ -37,6 +41,7 @@ class MovieViewController: UIViewController {
         self.setupNameLabel()
         self.setupReviewsAnalysisLabel()
         self.setupReadReviewsButton()
+        self.setupEmotionsTableView()
     }
     
     // MARK: - Layout
@@ -64,6 +69,41 @@ class MovieViewController: UIViewController {
         self.readReviewsButton.addTarget(self, action: #selector(openReviewsURL), for: .touchUpInside)
     }
     
+    
+    // MARK: - Emotions Scores
+    func setupEmotionsTableView() {
+        self.emotionsTableView.backgroundColor = .clear
+        self.emotionsTableView.separatorStyle = .none
+        self.emotionsTableView.isUserInteractionEnabled = false
+        
+        self.emotionsTableView.register(EmotionsTableViewCell.self, forCellReuseIdentifier: EmotionsTableViewCell.identifier)
+        
+        self.emotionsTableView.dataSource = self
+    }
+    
+    func emotionIndex(withName name: String) -> Int? {
+        return emotions.firstIndex { emotion -> Bool in
+            return emotion.name == name
+        }
+    }
+    
+    func setScore(_ score: Double?, toEmotion emotion: String) {
+        if let index = emotionIndex(withName: emotion), let score = score {
+            emotions[index].score = score
+        }
+    }
+    
+    func setBars(_ emotionScores: [EmotionScores]) {
+        if let emotionScoreAverage = NLUFacade.shared.emotionAverage(emotionScores) {
+            self.setScore(emotionScoreAverage.joy, toEmotion: "joy")
+            self.setScore(emotionScoreAverage.anger, toEmotion: "anger")
+            self.setScore(emotionScoreAverage.disgust, toEmotion: "disgust")
+            self.setScore(emotionScoreAverage.sadness, toEmotion: "sadness")
+            self.setScore(emotionScoreAverage.fear, toEmotion: "fear")
+            
+            self.emotionsTableView.reloadData()
+        }
+    }
     // MARK: - Movie Reviews Analysis
     func getConfiguration(completion: @escaping (_ success: Bool, _ error: RequestErrors?) -> Void) {
         TheMovieDBFacade.shared.getConfiguration { conf in
@@ -162,16 +202,6 @@ class MovieViewController: UIViewController {
             
         } else {
             completion(false, .noReviews)
-        }
-    }
-    
-    func setBars(_ emotionScores: [EmotionScores]) {
-        if let emotionScoreAverage = NLUFacade.shared.emotionAverage(emotionScores) {
-            self.joy = emotionScoreAverage.joy
-            self.anger = emotionScoreAverage.anger
-            self.disgust = emotionScoreAverage.disgust
-            self.sadness = emotionScoreAverage.sadness
-            self.fear = emotionScoreAverage.fear
         }
     }
 }

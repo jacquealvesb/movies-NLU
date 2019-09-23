@@ -11,6 +11,7 @@
 		1708C7AC223A76E00070E370 /* AnalysisCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1708C7AA223A76E00070E370 /* AnalysisCardView.xib */; };
 		1708C7AE223A77520070E370 /* ViewController+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708C7AD223A77520070E370 /* ViewController+TextFieldDelegate.swift */; };
 		170DC44C2314BE100028ED3A /* NLUFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DC44B2314BE100028ED3A /* NLUFacade.swift */; };
+		171E8C872339646C002A2D2D /* MovieViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171E8C862339646C002A2D2D /* MovieViewController+TableView.swift */; };
 		1739274E22369A740046A9EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739274D22369A740046A9EB /* AppDelegate.swift */; };
 		1739275022369A740046A9EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739274F22369A740046A9EB /* ViewController.swift */; };
 		1739275322369A740046A9EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1739275122369A740046A9EB /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		1708C7AA223A76E00070E370 /* AnalysisCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnalysisCardView.xib; sourceTree = "<group>"; };
 		1708C7AD223A77520070E370 /* ViewController+TextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+TextFieldDelegate.swift"; sourceTree = "<group>"; };
 		170DC44B2314BE100028ED3A /* NLUFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLUFacade.swift; sourceTree = "<group>"; };
+		171E8C862339646C002A2D2D /* MovieViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieViewController+TableView.swift"; sourceTree = "<group>"; };
 		1739274A22369A740046A9EB /* moviesNLU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moviesNLU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1739274D22369A740046A9EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1739274F22369A740046A9EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				178ED088232FBDBC00E41C16 /* ViewController+Constraints.swift */,
 				1708C7AD223A77520070E370 /* ViewController+TextFieldDelegate.swift */,
 				178ED08C232FC59300E41C16 /* MovieViewController.swift */,
+				171E8C862339646C002A2D2D /* MovieViewController+TableView.swift */,
 				178ED090232FD62B00E41C16 /* MovieViewController+Constraints.swift */,
 			);
 			path = Controller;
@@ -480,6 +483,7 @@
 				178ED089232FBDBC00E41C16 /* ViewController+Constraints.swift in Sources */,
 				176D8302223934EA003659EC /* Configuration.swift in Sources */,
 				178ED091232FD62B00E41C16 /* MovieViewController+Constraints.swift in Sources */,
+				171E8C872339646C002A2D2D /* MovieViewController+TableView.swift in Sources */,
 				1739274E22369A740046A9EB /* AppDelegate.swift in Sources */,
 				179EDEE7231491DA0046B413 /* TheMovieDBFacade.swift in Sources */,
 				1708C7AE223A77520070E370 /* ViewController+TextFieldDelegate.swift in Sources */,

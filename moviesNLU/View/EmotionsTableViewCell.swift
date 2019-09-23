@@ -9,6 +9,7 @@
 import UIKit
 
 class EmotionsTableViewCell: UITableViewCell {
+    public static let identifier = "emotionsTableViewCell"
     
     let nameLabel: UILabel = UILabel(frame: CGRect.zero)
     let scoreBar: UIProgressView = UIProgressView(frame: CGRect.zero)
@@ -42,12 +43,13 @@ class EmotionsTableViewCell: UITableViewCell {
         
         self.setupNameLabel()
         self.setupScoreLabel()
+        self.setupScoreBar()
     }
     
     func setup(emotion: Emotion) {
         self.nameLabel.text = emotion.name
         self.scoreBar.setProgress(Float(emotion.score), animated: true)
-        self.scoreLabel.text = "\(emotion.score * 100)%"
+        self.scoreLabel.text = "\(String(format: "%.1f", emotion.score * 100))%"
     }
     
     // MARK: - Layout
@@ -66,11 +68,15 @@ class EmotionsTableViewCell: UITableViewCell {
     func setupScoreBar() {
         self.scoreBar.progressTintColor = UIColor(named: "pastelOrange")
         self.scoreBar.trackTintColor = .white
+        
+        self.scoreBar.layer.cornerRadius = 5
+        self.scoreBar.clipsToBounds = true
     }
     
     func nameLabelConstraints() {
         var constraints: [NSLayoutConstraint] = []
         
+        self.addSubview(nameLabel)
         self.nameLabel.translatesAutoresizingMaskIntoConstraints = false
         
         constraints.append( // Height constraint
@@ -107,6 +113,7 @@ class EmotionsTableViewCell: UITableViewCell {
     func scoreLabelConstraints() {
         var constraints: [NSLayoutConstraint] = []
         
+        self.addSubview(scoreLabel)
         self.scoreLabel.translatesAutoresizingMaskIntoConstraints = false
         
         constraints.append( // Height constraint
@@ -143,7 +150,8 @@ class EmotionsTableViewCell: UITableViewCell {
     func scoreBarConstraints() {
         var constraints: [NSLayoutConstraint] = []
         
-        self.scoreLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(scoreBar)
+        self.scoreBar.translatesAutoresizingMaskIntoConstraints = false
         
         constraints.append( // Leading constraint
             NSLayoutConstraint(item: self.scoreBar,
@@ -170,6 +178,15 @@ class EmotionsTableViewCell: UITableViewCell {
                                toItem: self,
                                attribute: .height,
                                multiplier: 0.3,
+                               constant: 0)
+        )
+        constraints.append( // Center Y
+            NSLayoutConstraint(item: self.scoreBar,
+                               attribute: .centerY,
+                               relatedBy: .equal,
+                               toItem: self,
+                               attribute: .centerY,
+                               multiplier: 1,
                                constant: 0)
         )
         
