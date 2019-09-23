@@ -18,6 +18,7 @@ class MovieViewController: UIViewController {
     let nameLabel: UILabel = UILabel(frame: CGRect.zero)
     let reviewsAnalysisLabel: UILabel = UILabel(frame: CGRect.zero)
     let readReviewsButton: UIButton = UIButton(frame: CGRect.zero)
+    let emotionsTableView: UITableView = UITableView(frame: CGRect.zero)
     
     // Variables
     
@@ -172,6 +173,5 @@ class MovieViewController: UIViewController {
             self.sadness = emotionScoreAverage.sadness
             self.fear = emotionScoreAverage.fear
         }
-        
     }
 }
