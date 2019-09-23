@@ -28,6 +28,12 @@ class ViewController: UIViewController {
         self.analyzeButton.addTarget(self, action: #selector(analyzeMovie), for: .touchUpInside)
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        self.updateConstraints()
+    }
+    
     func showAlert(withTitle title: String, message: String, andAction actionHandler: ((UIAlertAction) -> Void)?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
@@ -61,6 +67,7 @@ class ViewController: UIViewController {
         }
         
         self.spinnerView = spinnerView
+        self.spinnerView?.layer.zPosition = 10
     }
     
     func removeSpinner() {
