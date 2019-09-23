@@ -91,6 +91,7 @@ class MovieViewController: UIViewController {
         self.emotionsTableView.register(EmotionsTableViewCell.self, forCellReuseIdentifier: EmotionsTableViewCell.identifier)
         
         self.emotionsTableView.dataSource = self
+        self.emotionsTableView.delegate = self
     }
     
     func emotionIndex(withName name: String) -> Int? {
