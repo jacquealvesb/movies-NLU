@@ -56,91 +56,38 @@ extension ViewController {
     }
     
     func lineViewConstraints(_ orientation: UIDeviceOrientation) {
-        var constraints: [NSLayoutConstraint] = []
-        
         self.lineView.removeFromSuperview()
         self.view.addSubview(lineView)
         
         self.lineView.translatesAutoresizingMaskIntoConstraints = false
         
         if orientation == .portrait || orientation == .faceUp || orientation == .faceDown {
-            constraints.append( // Leading constraint
-                NSLayoutConstraint(item: self.lineView,
-                                   attribute: .leading,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .leading,
-                                   multiplier: 1,
-                                   constant: 50)
-            )
-            constraints.append( // Trailing constraint
-                NSLayoutConstraint(item: self.lineView,
-                                   attribute: .trailing,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .trailing,
-                                   multiplier: 1,
-                                   constant: -50)
-            )
-            constraints.append( // Height constraint - aspect ratio 3:1 with itself
-                NSLayoutConstraint(item: self.lineView,
-                                   attribute: .height,
-                                   relatedBy: .equal,
-                                   toItem: nil,
-                                   attribute: .notAnAttribute,
-                                   multiplier: 1,
-                                   constant: 2)
-            )
-            constraints.append( // Align Y
-                NSLayoutConstraint(item: self.lineView,
-                                   attribute: .centerY,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .centerY,
-                                   multiplier: 0.5,
-                                   constant: 0)
-            )
+            NSLayoutConstraint.activate([
+                self.lineView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,
+                                                       constant: 50),
+                self.lineView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,
+                                                        constant: -50),
+                self.lineView.heightAnchor.constraint(equalToConstant: 2),
+            ])
+            
+            let centerYConstraint =  NSLayoutConstraint(item: self.lineView,
+                                                        attribute: .centerY,
+                                                        relatedBy: .equal,
+                                                        toItem: self.view,
+                                                        attribute: .centerY,
+                                                        multiplier: 0.5,
+                                                        constant: 0)
+            NSLayoutConstraint.activate([centerYConstraint])
+                       
             
         } else if orientation == .landscapeLeft || orientation == .landscapeRight {
-            constraints.append( // Leading constraint
-                NSLayoutConstraint(item: self.lineView,
-                                   attribute: .leading,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .leading,
-                                   multiplier: 1,
-                                   constant: 50)
-            )
-            constraints.append( // Width constraint
-                NSLayoutConstraint(item: self.lineView,
-                                   attribute: .width,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .width,
-                                   multiplier: 0.5,
-                                   constant: 0)
-            )
-            constraints.append( // Height constraint - aspect ratio 3:1 with itself
-                NSLayoutConstraint(item: self.lineView,
-                                   attribute: .height,
-                                   relatedBy: .equal,
-                                   toItem: nil,
-                                   attribute: .notAnAttribute,
-                                   multiplier: 1,
-                                   constant: 2)
-            )
-            constraints.append( // Align Y
-                NSLayoutConstraint(item: self.lineView,
-                                   attribute: .centerY,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .centerY,
-                                   multiplier: 1,
-                                   constant: 0)
-            )
+            NSLayoutConstraint.activate([
+                self.lineView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 50),
+                self.lineView.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.5),
+                self.lineView.heightAnchor.constraint(equalToConstant: 2),
+                self.lineView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+            ])
         }
-        
-        NSLayoutConstraint.activate(constraints)
         
     }
     
