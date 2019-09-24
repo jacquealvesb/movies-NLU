@@ -125,91 +125,31 @@ extension MovieViewController {
     }
     
     func emotionsTableViewConstraints(_ orientation: UIDeviceOrientation) {
-        var constraints: [NSLayoutConstraint] = []
-        
         self.emotionsTableView.removeFromSuperview()
         self.view.addSubview(emotionsTableView)
         
         self.emotionsTableView.translatesAutoresizingMaskIntoConstraints = false
         
         if orientation == .portrait || orientation == .faceUp || orientation == .faceDown {
-            constraints.append( // Leading constraint
-                NSLayoutConstraint(item: self.emotionsTableView,
-                                   attribute: .leading,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .leading,
-                                   multiplier: 1,
-                                   constant: 20)
-            )
-            constraints.append( // Trailing constraint
-                NSLayoutConstraint(item: self.emotionsTableView,
-                                   attribute: .trailing,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .trailing,
-                                   multiplier: 1,
-                                   constant: -20)
-            )
-            constraints.append( // Top constraint
-                NSLayoutConstraint(item: self.emotionsTableView,
-                                   attribute: .top,
-                                   relatedBy: .equal,
-                                   toItem: self.reviewsAnalysisLabel,
-                                   attribute: .bottom,
-                                   multiplier: 1,
-                                   constant: 30)
-            )
-            constraints.append( // Bottom constraint
-                NSLayoutConstraint(item: self.emotionsTableView,
-                                   attribute: .bottom,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .bottom,
-                                   multiplier: 1,
-                                   constant: -30)
-            )
+            NSLayoutConstraint.activate([
+                self.emotionsTableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,
+                                                                constant: 20),
+                self.emotionsTableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,
+                                                                 constant: -20),
+                self.emotionsTableView.topAnchor.constraint(equalTo: self.reviewsAnalysisLabel.bottomAnchor, constant: 30),
+                self.emotionsTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
+                                                               constant: -30)
+            ])
         } else if orientation == .landscapeLeft || orientation == .landscapeRight {
-            constraints.append( // Leading constraint
-                NSLayoutConstraint(item: self.emotionsTableView,
-                                   attribute: .leading,
-                                   relatedBy: .equal,
-                                   toItem: self.posterImageView,
-                                   attribute: .trailing,
-                                   multiplier: 1,
-                                   constant: 20)
-            )
-            constraints.append( // Trailing constraint
-                NSLayoutConstraint(item: self.emotionsTableView,
-                                   attribute: .trailing,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .trailing,
-                                   multiplier: 1,
-                                   constant: -20)
-            )
-            constraints.append( // Top constraint
-                NSLayoutConstraint(item: self.emotionsTableView,
-                                   attribute: .top,
-                                   relatedBy: .equal,
-                                   toItem: self.reviewsAnalysisLabel,
-                                   attribute: .bottom,
-                                   multiplier: 1,
-                                   constant: 30)
-            )
-            constraints.append( // Bottom constraint
-                NSLayoutConstraint(item: self.emotionsTableView,
-                                   attribute: .bottom,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .bottom,
-                                   multiplier: 1,
-                                   constant: -30)
-            )
+            NSLayoutConstraint.activate([
+                self.emotionsTableView.leadingAnchor.constraint(equalTo: self.posterImageView.trailingAnchor, constant: 20),
+                self.emotionsTableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,
+                                                                 constant: -20),
+                self.emotionsTableView.topAnchor.constraint(equalTo: self.reviewsAnalysisLabel.bottomAnchor, constant: 30),
+                self.emotionsTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
+                                                               constant: -30)
+            ])
         }
-        
-        NSLayoutConstraint.activate(constraints)
-        
     }
     
     func closeButtonConstraints(_ orientation: UIDeviceOrientation) {
