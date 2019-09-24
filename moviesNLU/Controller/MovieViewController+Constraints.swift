@@ -31,419 +31,149 @@ extension MovieViewController {
     }
     
     func posterConstraints(_ orientation: UIDeviceOrientation) {
-        var constraints: [NSLayoutConstraint] = []
-        
         self.posterImageView.removeFromSuperview()
         self.view.addSubview(posterImageView)
         
         self.posterImageView.translatesAutoresizingMaskIntoConstraints = false
         
         if orientation == .portrait || orientation == .faceUp || orientation == .faceDown {
-            constraints.append( // Height constraint
-                NSLayoutConstraint(item: self.posterImageView,
-                                   attribute: .height,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .height,
-                                   multiplier: 0.4,
-                                   constant: 0)
-            )
-            constraints.append( // Width constraint
-                NSLayoutConstraint(item: self.posterImageView,
-                                   attribute: .width,
-                                   relatedBy: .equal,
-                                   toItem: self.posterImageView,
-                                   attribute: .height,
-                                   multiplier: 1/1.5,
-                                   constant: 0)
-            )
-            constraints.append( // Align X
-                NSLayoutConstraint(item: self.posterImageView,
-                                   attribute: .centerX,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .centerX,
-                                   multiplier: 1,
-                                   constant: 0)
-            )
-            constraints.append( // Top constraint
-                NSLayoutConstraint(item: self.posterImageView,
-                                   attribute: .top,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .top,
-                                   multiplier: 1,
-                                   constant: 50)
-            )
+            NSLayoutConstraint.activate([
+                self.posterImageView.heightAnchor.constraint(equalTo: self.view.heightAnchor,
+                                                             multiplier: 0.4),
+                self.posterImageView.widthAnchor.constraint(equalTo: self.posterImageView.heightAnchor,
+                                                            multiplier: 1/1.5),
+                self.posterImageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                self.posterImageView.topAnchor.constraint(equalTo: self.view.topAnchor,
+                                                          constant: 50)
+                
+            ])
+            
         } else if orientation == .landscapeLeft || orientation == .landscapeRight {
-            constraints.append( // Height constraint
-                NSLayoutConstraint(item: self.posterImageView,
-                                   attribute: .height,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .height,
-                                   multiplier: 1,
-                                   constant: 0)
-            )
-            constraints.append( // Width constraint
-                NSLayoutConstraint(item: self.posterImageView,
-                                   attribute: .width,
-                                   relatedBy: .equal,
-                                   toItem: self.posterImageView,
-                                   attribute: .height,
-                                   multiplier: 1/1.5,
-                                   constant: 0)
-            )
-            constraints.append( // Leading constraint
-                NSLayoutConstraint(item: self.posterImageView,
-                                   attribute: .leading,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .leading,
-                                   multiplier: 1,
-                                   constant: 0)
-            )
-            constraints.append( // Align Y
-                NSLayoutConstraint(item: self.posterImageView,
-                                   attribute: .centerY,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .centerY,
-                                   multiplier: 1,
-                                   constant: 0)
-            )
+            NSLayoutConstraint.activate([
+                self.posterImageView.heightAnchor.constraint(equalTo: self.view.heightAnchor),
+                self.posterImageView.widthAnchor.constraint(equalTo: self.posterImageView.heightAnchor,
+                                                            multiplier: 1/1.5),
+                self.posterImageView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+                self.posterImageView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+            ])
         }
-        
-        NSLayoutConstraint.activate(constraints)
-        
     }
     
     func nameLabelConstraints(_ orientation: UIDeviceOrientation) {
-        var constraints: [NSLayoutConstraint] = []
-        
         self.nameLabel.removeFromSuperview()
         self.view.addSubview(nameLabel)
         
         self.nameLabel.translatesAutoresizingMaskIntoConstraints = false
         
         if orientation == .portrait || orientation == .faceUp || orientation == .faceDown {
-            constraints.append( // Width constraint
-                NSLayoutConstraint(item: self.nameLabel,
-                                   attribute: .width,
-                                   relatedBy: .equal,
-                                   toItem: self.posterImageView,
-                                   attribute: .width,
-                                   multiplier: 1.5,
-                                   constant: 0)
-            )
-            constraints.append( // Align X
-                NSLayoutConstraint(item: self.nameLabel,
-                                   attribute: .centerX,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .centerX,
-                                   multiplier: 1,
-                                   constant: 0)
-            )
-            constraints.append( // Top constraint
-                NSLayoutConstraint(item: self.nameLabel,
-                                   attribute: .top,
-                                   relatedBy: .equal,
-                                   toItem: self.posterImageView,
-                                   attribute: .bottom,
-                                   multiplier: 1,
-                                   constant: 10)
-            )
+            NSLayoutConstraint.activate([
+                self.nameLabel.widthAnchor.constraint(equalTo: self.posterImageView.widthAnchor,
+                                                      multiplier: 1.5),
+                self.nameLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                self.nameLabel.topAnchor.constraint(equalTo: self.posterImageView.bottomAnchor,
+                                                    constant: 10)
+            ])
         } else if orientation == .landscapeLeft || orientation == .landscapeRight {
-            constraints.append( // Leading constraint
-                NSLayoutConstraint(item: self.nameLabel,
-                                   attribute: .leading,
-                                   relatedBy: .equal,
-                                   toItem: self.posterImageView,
-                                   attribute: .trailing,
-                                   multiplier: 1,
-                                   constant: 20)
-            )
-            constraints.append( // Trailing constraint
-                NSLayoutConstraint(item: self.nameLabel,
-                                   attribute: .trailing,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .trailing,
-                                   multiplier: 1,
-                                   constant: -20)
-            )
-            constraints.append( // Top constraint
-                NSLayoutConstraint(item: self.nameLabel,
-                                   attribute: .top,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .top,
-                                   multiplier: 1,
-                                   constant: 20)
-            )
+            NSLayoutConstraint.activate([
+                self.nameLabel.leadingAnchor.constraint(equalTo: self.posterImageView.trailingAnchor,
+                                                        constant: 20),
+                self.nameLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,
+                                                         constant: -20),
+                self.nameLabel.topAnchor.constraint(equalTo: self.view.topAnchor,
+                                                    constant: 20)
+            ])
         }
-        
-        NSLayoutConstraint.activate(constraints)
         
     }
     
     func analysisLabelConstraints(_ orientation: UIDeviceOrientation) {
-        var constraints: [NSLayoutConstraint] = []
-        
         self.reviewsAnalysisLabel.removeFromSuperview()
         self.view.addSubview(reviewsAnalysisLabel)
         
         self.reviewsAnalysisLabel.translatesAutoresizingMaskIntoConstraints = false
         
         if orientation == .portrait || orientation == .faceUp || orientation == .faceDown {
-            constraints.append( // Width constraint
-                NSLayoutConstraint(item: self.reviewsAnalysisLabel,
-                                   attribute: .width,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .width,
-                                   multiplier: 0.6,
-                                   constant: 0)
-            )
-            constraints.append( // Leading constraint
-                NSLayoutConstraint(item: self.reviewsAnalysisLabel,
-                                   attribute: .leading,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .leading,
-                                   multiplier: 1,
-                                   constant: 20)
-            )
-            constraints.append( // Top constraint
-                NSLayoutConstraint(item: self.reviewsAnalysisLabel,
-                                   attribute: .top,
-                                   relatedBy: .equal,
-                                   toItem: self.nameLabel,
-                                   attribute: .bottom,
-                                   multiplier: 1,
-                                   constant: 30)
-            )
+            NSLayoutConstraint.activate([
+                self.reviewsAnalysisLabel.widthAnchor.constraint(equalTo: self.view.widthAnchor,
+                                                                 multiplier: 0.6),
+                self.reviewsAnalysisLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,
+                                                                   constant: 20),
+                self.reviewsAnalysisLabel.topAnchor.constraint(equalTo: self.nameLabel.bottomAnchor,
+                                                               constant: 30)
+            ])
         } else if orientation == .landscapeLeft || orientation == .landscapeRight {
-            constraints.append( // Leading constraint
-                NSLayoutConstraint(item: self.reviewsAnalysisLabel,
-                                   attribute: .leading,
-                                   relatedBy: .equal,
-                                   toItem: self.posterImageView,
-                                   attribute: .trailing,
-                                   multiplier: 1,
-                                   constant: 20)
-            )
-            constraints.append( // Top constraint
-                NSLayoutConstraint(item: self.reviewsAnalysisLabel,
-                                   attribute: .top,
-                                   relatedBy: .equal,
-                                   toItem: self.nameLabel,
-                                   attribute: .bottom,
-                                   multiplier: 1,
-                                   constant: 30)
-            )
+            NSLayoutConstraint.activate([
+                self.reviewsAnalysisLabel.leadingAnchor.constraint(equalTo: self.posterImageView.trailingAnchor, constant: 20),
+                self.reviewsAnalysisLabel.topAnchor.constraint(equalTo: self.nameLabel.bottomAnchor, constant: 30)
+                
+            ])
         }
-        
-        NSLayoutConstraint.activate(constraints)
-        
     }
     
     func readReviewsButtonConstraints() {
-        var constraints: [NSLayoutConstraint] = []
-        
         self.readReviewsButton.removeFromSuperview()
         self.view.addSubview(readReviewsButton)
         
         self.readReviewsButton.translatesAutoresizingMaskIntoConstraints = false
         
-        constraints.append( // Leading constraint
-            NSLayoutConstraint(item: self.readReviewsButton,
-                               attribute: .leading,
-                               relatedBy: .equal,
-                               toItem: self.reviewsAnalysisLabel,
-                               attribute: .trailing,
-                               multiplier: 1,
-                               constant: 0)
-        )
-        constraints.append( // Trailing constraint
-            NSLayoutConstraint(item: self.readReviewsButton,
-                               attribute: .trailing,
-                               relatedBy: .equal,
-                               toItem: self.view,
-                               attribute: .trailing,
-                               multiplier: 1,
-                               constant: -20)
-        )
-        constraints.append( // Center Y
-            NSLayoutConstraint(item: self.readReviewsButton,
-                               attribute: .bottom,
-                               relatedBy: .equal,
-                               toItem: self.reviewsAnalysisLabel,
-                               attribute: .bottom,
-                               multiplier: 1,
-                               constant: 0)
-        )
-        
-        NSLayoutConstraint.activate(constraints)
-        
+        NSLayoutConstraint.activate([
+            self.readReviewsButton.leadingAnchor.constraint(equalTo: self.reviewsAnalysisLabel.trailingAnchor),
+            self.readReviewsButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,
+                                                             constant: -20),
+            self.readReviewsButton.bottomAnchor.constraint(equalTo: self.reviewsAnalysisLabel.bottomAnchor)
+        ])
     }
     
     func emotionsTableViewConstraints(_ orientation: UIDeviceOrientation) {
-        var constraints: [NSLayoutConstraint] = []
-        
         self.emotionsTableView.removeFromSuperview()
         self.view.addSubview(emotionsTableView)
         
         self.emotionsTableView.translatesAutoresizingMaskIntoConstraints = false
         
         if orientation == .portrait || orientation == .faceUp || orientation == .faceDown {
-            constraints.append( // Leading constraint
-                NSLayoutConstraint(item: self.emotionsTableView,
-                                   attribute: .leading,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .leading,
-                                   multiplier: 1,
-                                   constant: 20)
-            )
-            constraints.append( // Trailing constraint
-                NSLayoutConstraint(item: self.emotionsTableView,
-                                   attribute: .trailing,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .trailing,
-                                   multiplier: 1,
-                                   constant: -20)
-            )
-            constraints.append( // Top constraint
-                NSLayoutConstraint(item: self.emotionsTableView,
-                                   attribute: .top,
-                                   relatedBy: .equal,
-                                   toItem: self.reviewsAnalysisLabel,
-                                   attribute: .bottom,
-                                   multiplier: 1,
-                                   constant: 30)
-            )
-            constraints.append( // Bottom constraint
-                NSLayoutConstraint(item: self.emotionsTableView,
-                                   attribute: .bottom,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .bottom,
-                                   multiplier: 1,
-                                   constant: -30)
-            )
+            NSLayoutConstraint.activate([
+                self.emotionsTableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,
+                                                                constant: 20),
+                self.emotionsTableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,
+                                                                 constant: -20),
+                self.emotionsTableView.topAnchor.constraint(equalTo: self.reviewsAnalysisLabel.bottomAnchor, constant: 30),
+                self.emotionsTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
+                                                               constant: -30)
+            ])
         } else if orientation == .landscapeLeft || orientation == .landscapeRight {
-            constraints.append( // Leading constraint
-                NSLayoutConstraint(item: self.emotionsTableView,
-                                   attribute: .leading,
-                                   relatedBy: .equal,
-                                   toItem: self.posterImageView,
-                                   attribute: .trailing,
-                                   multiplier: 1,
-                                   constant: 20)
-            )
-            constraints.append( // Trailing constraint
-                NSLayoutConstraint(item: self.emotionsTableView,
-                                   attribute: .trailing,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .trailing,
-                                   multiplier: 1,
-                                   constant: -20)
-            )
-            constraints.append( // Top constraint
-                NSLayoutConstraint(item: self.emotionsTableView,
-                                   attribute: .top,
-                                   relatedBy: .equal,
-                                   toItem: self.reviewsAnalysisLabel,
-                                   attribute: .bottom,
-                                   multiplier: 1,
-                                   constant: 30)
-            )
-            constraints.append( // Bottom constraint
-                NSLayoutConstraint(item: self.emotionsTableView,
-                                   attribute: .bottom,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .bottom,
-                                   multiplier: 1,
-                                   constant: -30)
-            )
+            NSLayoutConstraint.activate([
+                self.emotionsTableView.leadingAnchor.constraint(equalTo: self.posterImageView.trailingAnchor, constant: 20),
+                self.emotionsTableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,
+                                                                 constant: -20),
+                self.emotionsTableView.topAnchor.constraint(equalTo: self.reviewsAnalysisLabel.bottomAnchor, constant: 30),
+                self.emotionsTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
+                                                               constant: -30)
+            ])
         }
-        
-        NSLayoutConstraint.activate(constraints)
-        
     }
     
     func closeButtonConstraints(_ orientation: UIDeviceOrientation) {
-        var constraints: [NSLayoutConstraint] = []
-        
         self.closeButton.removeFromSuperview()
         self.view.addSubview(closeButton)
         
         self.closeButton.translatesAutoresizingMaskIntoConstraints = false
         
         if orientation == .portrait || orientation == .faceUp || orientation == .faceDown {
-            constraints.append( // Trailing constraint
-                NSLayoutConstraint(item: self.closeButton,
-                                   attribute: .leading,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .leading,
-                                   multiplier: 1,
-                                   constant: 20)
-            )
-            constraints.append( // Top constraint
-                NSLayoutConstraint(item: self.closeButton,
-                                   attribute: .top,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .top,
-                                   multiplier: 1,
-                                   constant: -10)
-            )
-            constraints.append( // Height constraint
-                NSLayoutConstraint(item: self.closeButton,
-                                   attribute: .height,
-                                   relatedBy: .equal,
-                                   toItem: nil,
-                                   attribute: .notAnAttribute,
-                                   multiplier: 1,
-                                   constant: 100)
-            )
+            NSLayoutConstraint.activate([
+                self.closeButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,
+                                                          constant: 20),
+                self.closeButton.topAnchor.constraint(equalTo: self.view.topAnchor,
+                                                      constant: -10),
+                self.closeButton.heightAnchor.constraint(equalToConstant: 100)
+            ])
         } else if orientation == .landscapeLeft || orientation == .landscapeRight {
-            constraints.append( // Leading constraint
-                NSLayoutConstraint(item: self.closeButton,
-                                   attribute: .leading,
-                                   relatedBy: .equal,
-                                   toItem: self.posterImageView,
-                                   attribute: .trailing,
-                                   multiplier: 1,
-                                   constant: 20)
-            )
-            constraints.append( // Top constraint
-                NSLayoutConstraint(item: self.closeButton,
-                                   attribute: .top,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .top,
-                                   multiplier: 1,
-                                   constant: -20)
-            )
-            constraints.append( // Height constraint
-                NSLayoutConstraint(item: self.closeButton,
-                                   attribute: .height,
-                                   relatedBy: .equal,
-                                   toItem: nil,
-                                   attribute: .notAnAttribute,
-                                   multiplier: 1,
-                                   constant: 100)
-            )
+            NSLayoutConstraint.activate([
+                self.closeButton.leadingAnchor.constraint(equalTo: self.posterImageView.trailingAnchor,
+                                                          constant: 20),
+                self.closeButton.topAnchor.constraint(equalTo: self.view.topAnchor,
+                                                      constant: -20),
+                self.closeButton.heightAnchor.constraint(equalToConstant: 100)
+            ])
         }
-        
-        NSLayoutConstraint.activate(constraints)
-        
     }
 }
