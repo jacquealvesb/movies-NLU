@@ -153,72 +153,27 @@ extension MovieViewController {
     }
     
     func closeButtonConstraints(_ orientation: UIDeviceOrientation) {
-        var constraints: [NSLayoutConstraint] = []
-        
         self.closeButton.removeFromSuperview()
         self.view.addSubview(closeButton)
         
         self.closeButton.translatesAutoresizingMaskIntoConstraints = false
         
         if orientation == .portrait || orientation == .faceUp || orientation == .faceDown {
-            constraints.append( // Trailing constraint
-                NSLayoutConstraint(item: self.closeButton,
-                                   attribute: .leading,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .leading,
-                                   multiplier: 1,
-                                   constant: 20)
-            )
-            constraints.append( // Top constraint
-                NSLayoutConstraint(item: self.closeButton,
-                                   attribute: .top,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .top,
-                                   multiplier: 1,
-                                   constant: -10)
-            )
-            constraints.append( // Height constraint
-                NSLayoutConstraint(item: self.closeButton,
-                                   attribute: .height,
-                                   relatedBy: .equal,
-                                   toItem: nil,
-                                   attribute: .notAnAttribute,
-                                   multiplier: 1,
-                                   constant: 100)
-            )
+            NSLayoutConstraint.activate([
+                self.closeButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,
+                                                          constant: 20),
+                self.closeButton.topAnchor.constraint(equalTo: self.view.topAnchor,
+                                                      constant: -10),
+                self.closeButton.heightAnchor.constraint(equalToConstant: 100)
+            ])
         } else if orientation == .landscapeLeft || orientation == .landscapeRight {
-            constraints.append( // Leading constraint
-                NSLayoutConstraint(item: self.closeButton,
-                                   attribute: .leading,
-                                   relatedBy: .equal,
-                                   toItem: self.posterImageView,
-                                   attribute: .trailing,
-                                   multiplier: 1,
-                                   constant: 20)
-            )
-            constraints.append( // Top constraint
-                NSLayoutConstraint(item: self.closeButton,
-                                   attribute: .top,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .top,
-                                   multiplier: 1,
-                                   constant: -20)
-            )
-            constraints.append( // Height constraint
-                NSLayoutConstraint(item: self.closeButton,
-                                   attribute: .height,
-                                   relatedBy: .equal,
-                                   toItem: nil,
-                                   attribute: .notAnAttribute,
-                                   multiplier: 1,
-                                   constant: 100)
-            )
+            NSLayoutConstraint.activate([
+                self.closeButton.leadingAnchor.constraint(equalTo: self.posterImageView.trailingAnchor,
+                                                          constant: 20),
+                self.closeButton.topAnchor.constraint(equalTo: self.view.topAnchor,
+                                                      constant: -20),
+                self.closeButton.heightAnchor.constraint(equalToConstant: 100)
+            ])
         }
-        
-        NSLayoutConstraint.activate(constraints)
-        
     }
 }
