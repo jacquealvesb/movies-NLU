@@ -56,72 +56,24 @@ extension MovieViewController {
     }
     
     func nameLabelConstraints(_ orientation: UIDeviceOrientation) {
-        var constraints: [NSLayoutConstraint] = []
-        
         self.nameLabel.removeFromSuperview()
         self.view.addSubview(nameLabel)
         
         self.nameLabel.translatesAutoresizingMaskIntoConstraints = false
         
         if orientation == .portrait || orientation == .faceUp || orientation == .faceDown {
-            constraints.append( // Width constraint
-                NSLayoutConstraint(item: self.nameLabel,
-                                   attribute: .width,
-                                   relatedBy: .equal,
-                                   toItem: self.posterImageView,
-                                   attribute: .width,
-                                   multiplier: 1.5,
-                                   constant: 0)
-            )
-            constraints.append( // Align X
-                NSLayoutConstraint(item: self.nameLabel,
-                                   attribute: .centerX,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .centerX,
-                                   multiplier: 1,
-                                   constant: 0)
-            )
-            constraints.append( // Top constraint
-                NSLayoutConstraint(item: self.nameLabel,
-                                   attribute: .top,
-                                   relatedBy: .equal,
-                                   toItem: self.posterImageView,
-                                   attribute: .bottom,
-                                   multiplier: 1,
-                                   constant: 10)
-            )
+            NSLayoutConstraint.activate([
+                self.nameLabel.widthAnchor.constraint(equalTo: self.posterImageView.widthAnchor, multiplier: 1.5),
+                self.nameLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                self.nameLabel.topAnchor.constraint(equalTo: self.posterImageView.bottomAnchor, constant: 10)
+            ])
         } else if orientation == .landscapeLeft || orientation == .landscapeRight {
-            constraints.append( // Leading constraint
-                NSLayoutConstraint(item: self.nameLabel,
-                                   attribute: .leading,
-                                   relatedBy: .equal,
-                                   toItem: self.posterImageView,
-                                   attribute: .trailing,
-                                   multiplier: 1,
-                                   constant: 20)
-            )
-            constraints.append( // Trailing constraint
-                NSLayoutConstraint(item: self.nameLabel,
-                                   attribute: .trailing,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .trailing,
-                                   multiplier: 1,
-                                   constant: -20)
-            )
-            constraints.append( // Top constraint
-                NSLayoutConstraint(item: self.nameLabel,
-                                   attribute: .top,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .top,
-                                   multiplier: 1,
-                                   constant: 20)
-            )
+            NSLayoutConstraint.activate([
+                self.nameLabel.leadingAnchor.constraint(equalTo: self.posterImageView.trailingAnchor, constant: 20),
+                self.nameLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
+                self.nameLabel.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 20)
+            ])
         }
-        
-        NSLayoutConstraint.activate(constraints)
         
     }
     
