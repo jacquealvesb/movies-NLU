@@ -111,43 +111,17 @@ extension MovieViewController {
     }
     
     func readReviewsButtonConstraints() {
-        var constraints: [NSLayoutConstraint] = []
-        
         self.readReviewsButton.removeFromSuperview()
         self.view.addSubview(readReviewsButton)
         
         self.readReviewsButton.translatesAutoresizingMaskIntoConstraints = false
         
-        constraints.append( // Leading constraint
-            NSLayoutConstraint(item: self.readReviewsButton,
-                               attribute: .leading,
-                               relatedBy: .equal,
-                               toItem: self.reviewsAnalysisLabel,
-                               attribute: .trailing,
-                               multiplier: 1,
-                               constant: 0)
-        )
-        constraints.append( // Trailing constraint
-            NSLayoutConstraint(item: self.readReviewsButton,
-                               attribute: .trailing,
-                               relatedBy: .equal,
-                               toItem: self.view,
-                               attribute: .trailing,
-                               multiplier: 1,
-                               constant: -20)
-        )
-        constraints.append( // Center Y
-            NSLayoutConstraint(item: self.readReviewsButton,
-                               attribute: .bottom,
-                               relatedBy: .equal,
-                               toItem: self.reviewsAnalysisLabel,
-                               attribute: .bottom,
-                               multiplier: 1,
-                               constant: 0)
-        )
-        
-        NSLayoutConstraint.activate(constraints)
-        
+        NSLayoutConstraint.activate([
+            self.readReviewsButton.leadingAnchor.constraint(equalTo: self.reviewsAnalysisLabel.trailingAnchor),
+            self.readReviewsButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,
+                                                             constant: -20),
+            self.readReviewsButton.bottomAnchor.constraint(equalTo: self.reviewsAnalysisLabel.bottomAnchor)
+        ])
     }
     
     func emotionsTableViewConstraints(_ orientation: UIDeviceOrientation) {
