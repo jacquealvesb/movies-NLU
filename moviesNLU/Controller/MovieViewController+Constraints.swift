@@ -31,91 +31,28 @@ extension MovieViewController {
     }
     
     func posterConstraints(_ orientation: UIDeviceOrientation) {
-        var constraints: [NSLayoutConstraint] = []
-        
         self.posterImageView.removeFromSuperview()
         self.view.addSubview(posterImageView)
         
         self.posterImageView.translatesAutoresizingMaskIntoConstraints = false
         
         if orientation == .portrait || orientation == .faceUp || orientation == .faceDown {
-            constraints.append( // Height constraint
-                NSLayoutConstraint(item: self.posterImageView,
-                                   attribute: .height,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .height,
-                                   multiplier: 0.4,
-                                   constant: 0)
-            )
-            constraints.append( // Width constraint
-                NSLayoutConstraint(item: self.posterImageView,
-                                   attribute: .width,
-                                   relatedBy: .equal,
-                                   toItem: self.posterImageView,
-                                   attribute: .height,
-                                   multiplier: 1/1.5,
-                                   constant: 0)
-            )
-            constraints.append( // Align X
-                NSLayoutConstraint(item: self.posterImageView,
-                                   attribute: .centerX,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .centerX,
-                                   multiplier: 1,
-                                   constant: 0)
-            )
-            constraints.append( // Top constraint
-                NSLayoutConstraint(item: self.posterImageView,
-                                   attribute: .top,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .top,
-                                   multiplier: 1,
-                                   constant: 50)
-            )
+            NSLayoutConstraint.activate([
+                self.posterImageView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.4),
+                self.posterImageView.widthAnchor.constraint(equalTo: self.posterImageView.heightAnchor, multiplier: 1/1.5),
+                self.posterImageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                self.posterImageView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 50)
+                
+            ])
+            
         } else if orientation == .landscapeLeft || orientation == .landscapeRight {
-            constraints.append( // Height constraint
-                NSLayoutConstraint(item: self.posterImageView,
-                                   attribute: .height,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .height,
-                                   multiplier: 1,
-                                   constant: 0)
-            )
-            constraints.append( // Width constraint
-                NSLayoutConstraint(item: self.posterImageView,
-                                   attribute: .width,
-                                   relatedBy: .equal,
-                                   toItem: self.posterImageView,
-                                   attribute: .height,
-                                   multiplier: 1/1.5,
-                                   constant: 0)
-            )
-            constraints.append( // Leading constraint
-                NSLayoutConstraint(item: self.posterImageView,
-                                   attribute: .leading,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .leading,
-                                   multiplier: 1,
-                                   constant: 0)
-            )
-            constraints.append( // Align Y
-                NSLayoutConstraint(item: self.posterImageView,
-                                   attribute: .centerY,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .centerY,
-                                   multiplier: 1,
-                                   constant: 0)
-            )
+            NSLayoutConstraint.activate([
+                self.posterImageView.heightAnchor.constraint(equalTo: self.view.heightAnchor),
+                self.posterImageView.widthAnchor.constraint(equalTo: self.posterImageView.heightAnchor, multiplier: 1/1.5),
+                self.posterImageView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+                self.posterImageView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+            ])
         }
-        
-        NSLayoutConstraint.activate(constraints)
-        
     }
     
     func nameLabelConstraints(_ orientation: UIDeviceOrientation) {
