@@ -38,17 +38,21 @@ extension MovieViewController {
         
         if orientation == .portrait || orientation == .faceUp || orientation == .faceDown {
             NSLayoutConstraint.activate([
-                self.posterImageView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.4),
-                self.posterImageView.widthAnchor.constraint(equalTo: self.posterImageView.heightAnchor, multiplier: 1/1.5),
+                self.posterImageView.heightAnchor.constraint(equalTo: self.view.heightAnchor,
+                                                             multiplier: 0.4),
+                self.posterImageView.widthAnchor.constraint(equalTo: self.posterImageView.heightAnchor,
+                                                            multiplier: 1/1.5),
                 self.posterImageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-                self.posterImageView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 50)
+                self.posterImageView.topAnchor.constraint(equalTo: self.view.topAnchor,
+                                                          constant: 50)
                 
             ])
             
         } else if orientation == .landscapeLeft || orientation == .landscapeRight {
             NSLayoutConstraint.activate([
                 self.posterImageView.heightAnchor.constraint(equalTo: self.view.heightAnchor),
-                self.posterImageView.widthAnchor.constraint(equalTo: self.posterImageView.heightAnchor, multiplier: 1/1.5),
+                self.posterImageView.widthAnchor.constraint(equalTo: self.posterImageView.heightAnchor,
+                                                            multiplier: 1/1.5),
                 self.posterImageView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
                 self.posterImageView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
             ])
@@ -63,79 +67,47 @@ extension MovieViewController {
         
         if orientation == .portrait || orientation == .faceUp || orientation == .faceDown {
             NSLayoutConstraint.activate([
-                self.nameLabel.widthAnchor.constraint(equalTo: self.posterImageView.widthAnchor, multiplier: 1.5),
+                self.nameLabel.widthAnchor.constraint(equalTo: self.posterImageView.widthAnchor,
+                                                      multiplier: 1.5),
                 self.nameLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-                self.nameLabel.topAnchor.constraint(equalTo: self.posterImageView.bottomAnchor, constant: 10)
+                self.nameLabel.topAnchor.constraint(equalTo: self.posterImageView.bottomAnchor,
+                                                    constant: 10)
             ])
         } else if orientation == .landscapeLeft || orientation == .landscapeRight {
             NSLayoutConstraint.activate([
-                self.nameLabel.leadingAnchor.constraint(equalTo: self.posterImageView.trailingAnchor, constant: 20),
-                self.nameLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
-                self.nameLabel.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 20)
+                self.nameLabel.leadingAnchor.constraint(equalTo: self.posterImageView.trailingAnchor,
+                                                        constant: 20),
+                self.nameLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,
+                                                         constant: -20),
+                self.nameLabel.topAnchor.constraint(equalTo: self.view.topAnchor,
+                                                    constant: 20)
             ])
         }
         
     }
     
     func analysisLabelConstraints(_ orientation: UIDeviceOrientation) {
-        var constraints: [NSLayoutConstraint] = []
-        
         self.reviewsAnalysisLabel.removeFromSuperview()
         self.view.addSubview(reviewsAnalysisLabel)
         
         self.reviewsAnalysisLabel.translatesAutoresizingMaskIntoConstraints = false
         
         if orientation == .portrait || orientation == .faceUp || orientation == .faceDown {
-            constraints.append( // Width constraint
-                NSLayoutConstraint(item: self.reviewsAnalysisLabel,
-                                   attribute: .width,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .width,
-                                   multiplier: 0.6,
-                                   constant: 0)
-            )
-            constraints.append( // Leading constraint
-                NSLayoutConstraint(item: self.reviewsAnalysisLabel,
-                                   attribute: .leading,
-                                   relatedBy: .equal,
-                                   toItem: self.view,
-                                   attribute: .leading,
-                                   multiplier: 1,
-                                   constant: 20)
-            )
-            constraints.append( // Top constraint
-                NSLayoutConstraint(item: self.reviewsAnalysisLabel,
-                                   attribute: .top,
-                                   relatedBy: .equal,
-                                   toItem: self.nameLabel,
-                                   attribute: .bottom,
-                                   multiplier: 1,
-                                   constant: 30)
-            )
+            NSLayoutConstraint.activate([
+                self.reviewsAnalysisLabel.widthAnchor.constraint(equalTo: self.view.widthAnchor,
+                                                                 multiplier: 0.6),
+                self.reviewsAnalysisLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,
+                                                                   constant: 20),
+                self.reviewsAnalysisLabel.topAnchor.constraint(equalTo: self.nameLabel.bottomAnchor,
+                                                               constant: 30)
+            ])
         } else if orientation == .landscapeLeft || orientation == .landscapeRight {
-            constraints.append( // Leading constraint
-                NSLayoutConstraint(item: self.reviewsAnalysisLabel,
-                                   attribute: .leading,
-                                   relatedBy: .equal,
-                                   toItem: self.posterImageView,
-                                   attribute: .trailing,
-                                   multiplier: 1,
-                                   constant: 20)
-            )
-            constraints.append( // Top constraint
-                NSLayoutConstraint(item: self.reviewsAnalysisLabel,
-                                   attribute: .top,
-                                   relatedBy: .equal,
-                                   toItem: self.nameLabel,
-                                   attribute: .bottom,
-                                   multiplier: 1,
-                                   constant: 30)
-            )
+            NSLayoutConstraint.activate([
+                self.reviewsAnalysisLabel.leadingAnchor.constraint(equalTo: self.posterImageView.trailingAnchor, constant: 20),
+                self.reviewsAnalysisLabel.topAnchor.constraint(equalTo: self.nameLabel.bottomAnchor, constant: 30)
+                
+            ])
         }
-        
-        NSLayoutConstraint.activate(constraints)
-        
     }
     
     func readReviewsButtonConstraints() {
