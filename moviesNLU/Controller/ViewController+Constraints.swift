@@ -92,52 +92,17 @@ extension ViewController {
     }
     
     func movieTextFieldConstraints() {
-        var constraints: [NSLayoutConstraint] = []
-        
         self.movieTextField.removeFromSuperview()
         self.view.addSubview(movieTextField)
         
         self.movieTextField.translatesAutoresizingMaskIntoConstraints = false
         
-        constraints.append( // Leading constraint
-            NSLayoutConstraint(item: self.movieTextField,
-                               attribute: .leading,
-                               relatedBy: .equal,
-                               toItem: self.lineView,
-                               attribute: .leading,
-                               multiplier: 1,
-                               constant: 0)
-        )
-        constraints.append( // Trailing constraint
-            NSLayoutConstraint(item: self.movieTextField,
-                               attribute: .trailing,
-                               relatedBy: .equal,
-                               toItem: self.lineView,
-                               attribute: .trailing,
-                               multiplier: 1,
-                               constant: 0)
-        )
-        constraints.append( // Height constraint - aspect ratio 3:1 with itself
-            NSLayoutConstraint(item: self.movieTextField,
-                               attribute: .height,
-                               relatedBy: .equal,
-                               toItem: nil,
-                               attribute: .notAnAttribute,
-                               multiplier: 1,
-                               constant: 56)
-        )
-        constraints.append( // Align Y
-            NSLayoutConstraint(item: self.movieTextField,
-                               attribute: .bottom,
-                               relatedBy: .equal,
-                               toItem: self.lineView,
-                               attribute: .top,
-                               multiplier: 1,
-                               constant: 0)
-        )
-        
-        NSLayoutConstraint.activate(constraints)
-        
+        NSLayoutConstraint.activate([
+            self.movieTextField.leadingAnchor.constraint(equalTo: self.lineView.leadingAnchor),
+            self.movieTextField.trailingAnchor.constraint(equalTo: self.lineView.trailingAnchor),
+            self.movieTextField.heightAnchor.constraint(equalToConstant: 56),
+            self.movieTextField.bottomAnchor.constraint(equalTo: self.lineView.topAnchor)
+        ])
     }
 }
 
