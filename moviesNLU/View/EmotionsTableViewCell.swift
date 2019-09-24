@@ -74,122 +74,39 @@ class EmotionsTableViewCell: UITableViewCell {
     }
     
     func nameLabelConstraints() {
-        var constraints: [NSLayoutConstraint] = []
-        
         self.addSubview(nameLabel)
         self.nameLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        constraints.append( // Height constraint
-            NSLayoutConstraint(item: self.nameLabel,
-                               attribute: .height,
-                               relatedBy: .equal,
-                               toItem: self,
-                               attribute: .height,
-                               multiplier: 1,
-                               constant: 0)
-        )
-        constraints.append( // Width constraint
-            NSLayoutConstraint(item: self.nameLabel,
-                               attribute: .width,
-                               relatedBy: .equal,
-                               toItem: self,
-                               attribute: .width,
-                               multiplier: 0.25,
-                               constant: 0)
-        )
-        constraints.append( // Leading constraint
-            NSLayoutConstraint(item: self.nameLabel,
-                               attribute: .leading,
-                               relatedBy: .equal,
-                               toItem: self,
-                               attribute: .leading,
-                               multiplier: 1,
-                               constant: 0)
-        )
-        
-        NSLayoutConstraint.activate(constraints)
+        NSLayoutConstraint.activate([
+            self.nameLabel.heightAnchor.constraint(equalTo: self.heightAnchor),
+            self.nameLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.25),
+            self.nameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor)
+        ])
     }
 
     func scoreLabelConstraints() {
-        var constraints: [NSLayoutConstraint] = []
-        
         self.addSubview(scoreLabel)
         self.scoreLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        constraints.append( // Height constraint
-            NSLayoutConstraint(item: self.scoreLabel,
-                               attribute: .height,
-                               relatedBy: .equal,
-                               toItem: self,
-                               attribute: .height,
-                               multiplier: 1,
-                               constant: 0)
-        )
-        constraints.append( // Width constraint
-            NSLayoutConstraint(item: self.scoreLabel,
-                               attribute: .width,
-                               relatedBy: .equal,
-                               toItem: self,
-                               attribute: .width,
-                               multiplier: 0.15,
-                               constant: 0)
-        )
-        constraints.append( // Trailing constraint
-            NSLayoutConstraint(item: self.scoreLabel,
-                               attribute: .trailing,
-                               relatedBy: .equal,
-                               toItem: self,
-                               attribute: .trailing,
-                               multiplier: 1,
-                               constant: 0)
-        )
-        
-        NSLayoutConstraint.activate(constraints)
+        NSLayoutConstraint.activate([
+            self.scoreLabel.heightAnchor.constraint(equalTo: self.heightAnchor),
+            self.scoreLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.15),
+            self.scoreLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+        ])
     }
     
     func scoreBarConstraints() {
-        var constraints: [NSLayoutConstraint] = []
-        
         self.addSubview(scoreBar)
         self.scoreBar.translatesAutoresizingMaskIntoConstraints = false
         
-        constraints.append( // Leading constraint
-            NSLayoutConstraint(item: self.scoreBar,
-                               attribute: .leading,
-                               relatedBy: .equal,
-                               toItem: self.nameLabel,
-                               attribute: .trailing,
-                               multiplier: 1,
-                               constant: 10)
-        )
-        constraints.append( // Trailing constraint
-            NSLayoutConstraint(item: self.scoreBar,
-                               attribute: .trailing,
-                               relatedBy: .equal,
-                               toItem: self.scoreLabel,
-                               attribute: .leading,
-                               multiplier: 1,
-                               constant: -10)
-        )
-        constraints.append( // Height constraint
-            NSLayoutConstraint(item: self.scoreBar,
-                               attribute: .height,
-                               relatedBy: .equal,
-                               toItem: self,
-                               attribute: .height,
-                               multiplier: 0.3,
-                               constant: 0)
-        )
-        constraints.append( // Center Y
-            NSLayoutConstraint(item: self.scoreBar,
-                               attribute: .centerY,
-                               relatedBy: .equal,
-                               toItem: self,
-                               attribute: .centerY,
-                               multiplier: 1,
-                               constant: 0)
-        )
-        
-        NSLayoutConstraint.activate(constraints)
+        NSLayoutConstraint.activate([
+            self.scoreBar.leadingAnchor.constraint(equalTo: self.nameLabel.trailingAnchor,
+                                                   constant: 10),
+            self.scoreBar.trailingAnchor.constraint(equalTo: self.scoreLabel.leadingAnchor,
+                                                    constant: -10),
+            self.scoreBar.heightAnchor.constraint(equalTo: self.heightAnchor,
+                                                  multiplier: 0.3),
+            self.scoreBar.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+        ])
     }
 }
