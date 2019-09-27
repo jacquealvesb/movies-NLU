@@ -28,8 +28,8 @@ class ViewController: UIViewController {
         self.analyzeButton.addTarget(self, action: #selector(analyzeMovie), for: .touchUpInside)
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         self.updateConstraints()
     }
