@@ -8,6 +8,7 @@
 
 import UIKit
 import NaturalLanguageUnderstanding
+import SafariServices
 
 var configuration: Configuration?
 
@@ -185,7 +186,10 @@ class MovieViewController: UIViewController {
     
     @objc func openReviewsURL() {
         if let url = URL(string: self.url) {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            let sf = SFSafariViewController(url: url)
+            
+            sf.modalPresentationStyle = .formSheet
+            self.present(sf, animated: true, completion: nil)
         }
         
     }

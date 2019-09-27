@@ -81,6 +81,7 @@ class RoundButton: UIButton {
     func labelSetup(text: String) {
         self.label.textColor = .white
         self.label.font = UIFont.systemFont(ofSize: 34, weight: .thin)
+        self.label.textAlignment = .center
         self.label.adjustsFontSizeToFitWidth = true
         
         self.label.text = text
