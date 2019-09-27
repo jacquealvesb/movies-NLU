@@ -138,7 +138,7 @@ extension MovieViewController {
                                                                  constant: -20),
                 self.emotionsTableView.topAnchor.constraint(equalTo: self.reviewsAnalysisLabel.bottomAnchor, constant: 30),
                 self.emotionsTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
-                                                               constant: -30)
+                                                               constant: 0)
             ])
         } else if orientation == .landscapeLeft || orientation == .landscapeRight {
             NSLayoutConstraint.activate([
@@ -147,7 +147,7 @@ extension MovieViewController {
                                                                  constant: -20),
                 self.emotionsTableView.topAnchor.constraint(equalTo: self.reviewsAnalysisLabel.bottomAnchor, constant: 30),
                 self.emotionsTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
-                                                               constant: -30)
+                                                               constant: 0)
             ])
         }
     }
