@@ -26,6 +26,10 @@ class ViewController: UIViewController {
         
         self.movieTextField.delegate = self
         self.analyzeButton.addTarget(self, action: #selector(analyzeMovie), for: .touchUpInside)
+        
+        if #available(iOS 13.0, *) {
+            self.overrideUserInterfaceStyle = .light
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
