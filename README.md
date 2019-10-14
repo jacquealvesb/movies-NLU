@@ -23,7 +23,7 @@ To run the app on XCode, you'll have to have the keys for both APIs (The Movie D
 
 ## Running the app
 
-After getting the keys, you'll need to put them on the project so you're app will be able to use the APIs. To do so, create a new Swift file on the *Model* folder and name it *Constants.swift*.
+After getting the keys, you'll need to put them on the project so your app can use the APIs. To do so, create a new Swift file on the *Model* folder and name it *Constants.swift*.
 Open the file you've created and write the following:
 
 ```swift
